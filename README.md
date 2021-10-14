@@ -1,18 +1,17 @@
 # Trainee2021.2
-# MyCão Pet Shop
+# Ara Ara Shop
 ## Projeto Trainee, Code Jr, Grupo 2, 2021.2
 
 Desenvolvedores:
-- Gabriel Duque
-- Igor Ernandes
-- Isabelly Cristine
-- João Pedro Banhato
-- Lucas de Oliveira
+- Gustavo Carvalhaes
+- Ana Beatriz Lana
+- Yuri Freitas
+- Daniel Freitas
 
 
 Scrum Master:
 
-- Maycon Douglas
+- Pedro Leopoldo
 
 ## GIT TUTORIAL
 ### Primeira configuração
