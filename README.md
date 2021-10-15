@@ -1,6 +1,6 @@
 # Trainee2021.2
 # Ara Ara Shop
-## Projeto Trainee, Code Jr, Grupo 2, 2021.2
+## Projeto Trainee, Code Jr, Grupo 1, 2021.2
 
 Desenvolvedores:
 - Gustavo Carvalhaes
