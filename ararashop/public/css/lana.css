@@ -1,0 +1,69 @@
+body {
+    background-color: #343A40;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    max-height: 433.33px;
+}
+
+.slidehome {
+    object-fit: cover !important;
+    margin-top: 100px;
+}
+
+.banner {
+    margin-top: 50px;
+    display: block;
+    text-align:center;
+}
+
+.banner img {
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.titlecard {
+    font-family: 'Oswald', sans-serif;
+    color: #FBFBFB;
+    background-color: #FF7700;
+    margin-top: 80px;
+    padding-left: 0%;
+    padding-right: 0%;
+    text-align: center;
+}
+
+.rowcar {
+    display: inline-block;
+}
+
+.card-title {
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.card-text {
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.quadradin {
+    font-family: 'Oswald', sans-serif !important;
+    background-color: #FF0211;
+}
+
+.quadradin:hover {
+    background-color: #343A40;
+}
+
+.callaction {
+    display: block;
+    text-align:center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.callaction img {
+    border-radius: 10px;
+    max-width: 80%;
+}
