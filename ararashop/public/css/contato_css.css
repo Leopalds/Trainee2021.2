@@ -7,13 +7,21 @@ body {
 }
 
 iframe {
-    margin: 50px 50px 50px 50px;
+    margin: 0 auto;
     height: 450px;
-    width: 800px;
+    width: 900px;
+    display: block;
+    margin-bottom: 30px;
+    background-color: #FBFBFB;
 }
 
 .title {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.title i {
+    font-size: 30px;
 }
 
 .title h1 {
@@ -43,6 +51,7 @@ iframe {
     font-size: 30px;
     font-weight: 100;
     color: #ff7700;
+    margin-bottom: 30px;
 }
 
 .contact {
@@ -71,6 +80,18 @@ iframe {
 
 .social-media li {
     color: #FBFBFB;
-    display: ruby;
+    display: inline-block;
     padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.social-media i {
+    font-size: 100px;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
