@@ -1,0 +1,179 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 100px;
+    background-color: #343A40;
+    color: #FBFBFB;
+}  
+
+.caminho ul {
+    margin-top: 0;
+	list-style: none;
+	padding-left: 0;
+	text-align: left;
+	height: 50px;
+    margin-left: 100px;
+}
+
+.caminho li {
+    display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.titulo h1 {
+    background-color: #FBFBFB;
+    color: #343A40;
+	margin-left: 15px; 
+    padding-left: 100px;
+    margin-right: 15px;
+}
+
+.tituloqs {
+    background-color: #FBFBFB;
+    color: #343A40;
+	margin-left: 15px; 
+    padding-left: 100px;
+    margin-right: 15px;
+}
+
+.titulomissao {
+    background-color: #FBFBFB;
+    color: #343A40;
+	margin-left: 15px; 
+    padding-left: 100px;
+    margin-right: 15px;
+}
+
+.titulovisao {
+    background-color: #FBFBFB;
+    color: #343A40;
+	margin-left: 15px; 
+    padding-left: 100px;
+    margin-right: 15px;
+
+}
+
+.titulovalores {
+    background-color: #FBFBFB;
+    color: #343A40;
+	margin-left: 15px; 
+    padding-left: 100px;
+    margin-right: 15px;
+
+}
+
+.imagem1 img {
+    width: 900px;
+    margin-bottom: 50px;
+    margin-left: 220px;
+    border-radius: 50px;
+}
+
+.imagem2 img {
+    width: 500px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+
+}
+
+.imagem3 img {
+    width: 500px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+
+}
+
+.imagem4 img {
+    width: 600px;
+    border-radius: 40px;
+    margin-bottom: 100px;
+
+}
+
+.textoqs p{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.textomissao p {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.textovisao p {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.textovalores li {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.textovalores ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 100px;
+}
+
+.tarja1 h2 {
+    background-color: #FF7700;
+    color: #FF7700;
+    line-height: 10px;
+    font-size: 1px;
+    margin-top: -10px;
+    padding-top: -10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tarja2 h2 {
+    background-color: #FF0211;
+    color: #FF0211;
+    line-height: 10px;
+    font-size: 1px;
+    margin-top: -10px;
+    padding-top: -10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tarja3 h2 {
+    background-color: #FF7700;
+    color: #FF7700;
+    line-height: 10px;
+    font-size: 1px;
+    margin-top: -10px;
+    padding-top: -10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*USAR O BOOTSTRAP CONTAINER PARA FAZER DIVISÕES DE TELA NUMA DIV
+    colocar a imagem no copntainer para centralizaçao responsiva!
+
+    ARREDONDAR AS PONTAS TRATAR AS IMAGENS MELHOR!
+*/
