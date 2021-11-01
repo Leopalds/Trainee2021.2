@@ -7,7 +7,7 @@ body {
 }
 
 .content-container {
-    display: block;
+    display: flex;
     margin: 0;
 }
 
@@ -58,19 +58,14 @@ body {
 }
 
 .contact {
+    width: auto;
     flex-basis: 60%;
     padding: 40px 60px;
-}
-
-.contact img {
-    display: none;
-    width: 250px;
 }
 
 .social-media {
     flex-basis: 40%;
     padding: 40px;
-    display: grid;
 }
 
 .social-media a {
@@ -94,7 +89,7 @@ body {
 }
 
 .social-media i {
-    font-size: 90px;
+    font-size: 80px;
 }
 
 .form-group {
@@ -105,14 +100,14 @@ body {
     .container-fluid {
         display: block;
     }
-    .social-media {
-        display: block;
-    }
     .social-media li {
+        display: inline-block;
         list-style-position: inside;
     }
-    /*
-        icone de telefone
-        map
-    */
+    .social-media i {
+        font-size: 35px;
+    }
+    .social-media span {
+        font-size: small;
+    }
 }
