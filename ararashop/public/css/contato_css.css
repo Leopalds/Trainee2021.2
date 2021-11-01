@@ -59,8 +59,17 @@ body {
 
 .contact {
     width: auto;
+    height: auto;
     flex-basis: 60%;
     padding: 40px 60px;
+}
+
+.contact input {
+    width: 900px;
+}
+
+.contact textarea {
+    width: 900px;
 }
 
 .contact label {
