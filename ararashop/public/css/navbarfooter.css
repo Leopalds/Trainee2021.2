@@ -6,6 +6,12 @@ nav {
     height: 90px;
 }
 
+.navbar .navbar-light {
+    padding-right: 0px;
+    padding-left: 15px;
+    align-items: center;
+}
+
 .navbar-brand img{
     padding-right: -90px !important;
     padding-left: -10px !important;
@@ -22,132 +28,95 @@ nav {
 }
 
 footer {
-    margin-top: 350px;
+    margin-top: 0px;
     background-color: #484848;
-    height: 300px;
 }
-
-footer img{
-    padding-left: -20px;
-}
-
-footer h1 {
-    
-    vertical-align: 80px !important;
+.row {
+    width: 100%;
 }
 
 footer div {
-    display: inline-block;
-    margin-top: 25px;
+    padding-top: 15px;
+    margin: 5px;
 }
 
-footer h1{
-    margin-top: 10px;
+footer h1 {
+    padding-left: 15px;
+}
+
+footer .navbar {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+footer .form-group {
+    margin-left: 0px;
+    padding-top: 0px;
 }
 
 .informacoes {
-    width: 20% !important;
-    padding-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     font-size: 16px;
     color: #ff7700;
-    height: 150px;
     
 }
 
 .informacoes a{
     color: white;
-    padding-left: 0px;
     line-height: 35px !important;
 }
 
 .informacoes h1{
     font-size: 20px;
-    padding-bottom: 35px;
 }
 
 .formas-de-pagamento {
-    width: 20%;
     color: #ff7700;
     font-size: 16px;
-    margin-left: 0px;
-    height: 150px;
 }
 
 .formas-de-pagamento h1{
     font-size: 20px;
-    padding-bottom: 10px !important;
-    text-align: start;
-}
-
-.formas-de-pagamento img {
-    padding-bottom: 70px;
 }
 
 .formas-de-envio{
-    width: 19%;
     color: #ff7700;
     font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 150px;
 }
 
 .formas-de-envio h1{
     font-size: 20px;
-    padding-bottom: 50px !important;
 }
 
 .formas-de-envio img{
-    padding-top: -30px;
-    padding-bottom: 30px;
     text-align: left;
 }
 
 .contato {
-    width: 19%;
     color: #ff7700;
     font-size: 12px;
-    height: 150px;
 }
 
 .contato h1 {
     font-size: 20px;
-    padding-top: 25px;
-
 }
 
 .contato i {
-    display: block;
+    display: inline-block;
     line-height: 20px;
+    padding-right: 5px;
 }
 
 .contato ul {
     list-style: none;
     list-style-type: none;
-}
-
-.iconsonly {
-    width: 1% !important;
-    text-align: left !important;
-    margin-left: -40px;
-}
-
-.contactonly {
-    width: 20%;
-    padding-left: 10px;
-}
-
-.contactonly li {
-    padding-bottom: 20px;
-    padding-top: -30px !important;
+    text-align: left;
+    padding-left: 0px;
 }
 
 .newsletter {
-    width: 20%;
     color: #ff7700;
     font-size: 20px;
-    margin-top: 20px !important;
-    height: 150px;
+    padding-left: 15px;
 }
