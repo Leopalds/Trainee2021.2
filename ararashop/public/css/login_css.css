@@ -1,0 +1,47 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 100px;
+    background-color: #343A40;
+    color: #FBFBFB;
+}
+
+.caminho li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.caminho ul {
+    height: 40px;
+    list-style-type: none;
+    padding: 10px 40px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo h1 {
+    font-size: 50px;
+}
+
+.container-logar {
+    font-size: xx-large;
+    color: #ff7700;
+    padding: 0 50px;
+}
+
+.container-logar small {
+    font: 10px;
+}
+
+.container-logar form {
+    margin-bottom: 30px;
+}
+
+.container-logar img {
+    width: 100%;
+    height: 290px;
+    margin-bottom: 30px;
+}
