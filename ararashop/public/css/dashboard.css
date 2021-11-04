@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.flex-dashboard {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    height: 100%;
+    width: 100%;
+    background-color: #343A40;
+    color: #FBFBFB;
+}
+
+sidebar {
+    display: block;
+    background-color:#FBFBFB;
+    color: #343A40;
+    height: 100%;
+    width: 20%;
+}
+
+main {
+    display: block;
+    height: 100%;
+    width: 80%;
+}
+
+.sidebar-title {
+    text-align: center;
+    size: 100%;
+}
+
+.sidebar-title img {
+    width: 60%;
+}
+
+.sidebar-title h2 {
+    font-size: 100%;
+    font-display: flex;
+    width: 100%;
+}
+
+.elementos li {
+    margin-top: 3%;
+    width: 100%;
+}
+
+.elementos ul {
+    list-style: none;
+    padding-left: 0;
+    color: #FBFBFB;
+    width: 100%;
+}
+
+.elementos a {
+    font-size: auto;
+    line-height: 32px;
+    font-weight: 300;
+    color: #FBFBFB;
+}
+
+.elementos button {
+    background-color: #343A40;
+    color: #FBFBFB;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.elementos {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.sair button {
+    background-color: #FF7700;
+    color: #343A40;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+.sair {
+    text-align: left;
+    margin-left: 4%;
+    margin-right: 70%;
+    margin-top: 105%;
+}
+/*background-color: #343A40;
+color: #FBFBFB;
+
+Caso precise de header já tá aqui
+
+.flex-dashboard header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
