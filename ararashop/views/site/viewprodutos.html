@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping - Catálogo Completo Ara Ara Shop</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../public/css/viewprodutos.css">
+        <script type="text/javascript" scr="../../public/js/viewprodutos.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">   
+</head>
+<body>
+    
+    <div class="container">
+
+        <section class="intro">
+            <div class="bg-image h-100 pesquisafiltro" style="background-color: #343A40;">
+              <div class="mask d-flex align-items-center h-100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                      <div class="card mb-2">
+                        <div class="card-body d-flex justify-content-between py-2">
+                          <div class="input-group input-group-lg">
+                            <span class="input-group-text border-0 px-1" id="basic-addon2"><i class="fas fa-search fa-lg" style="color: #939597;"></i></span>
+                            <input type="text" class="form-control form-control-lg rounded" placeholder="Search"
+                              aria-label="Search" aria-describedby="basic-addon2" />
+                          </div>
+                          <p class="mb-0 d-flex flex-row align-self-center" style="color: #939597;"><span class="font-weight-bold pe-1">Nº</span> Resultados</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body p-4">
+                          <h6 class="mt-3 mb-4" style="color: #939597;">Filtro de Busca</h6>
+                          <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <select class= "btn btn-outline-dark btn-rounded btn-lg btn-block filtrobotao" aria-expanded="false" name="select">
+                                  <option class= "btn btn-outline-dark btn-rounded btn-lg btn-block opcaofiltro" value="valor1" selected>Animes</option>
+                                  <option class= "btn btn-outline-dark btn-rounded btn-lg btn-block opcaofiltro" value="valor2">Naruto</option>
+                                  <option class= "btn btn-outline-dark btn-rounded btn-lg btn-block opcaofiltro" value="valor3">Jujutsu Kaizen</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <div class="dropdown">
+                                <a class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle filtrobotao" href="#" role="button"
+                                  id="dropdownMenuLink1" data-mdb-toggle="dropdown" aria-expanded="false">
+                                  Cores
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                  <li><a class="dropdown-item" href="#">Preto</a></li>
+                                  <li><a class="dropdown-item" href="#">Branco</a></li>
+                                  <li><a class="dropdown-item" href="#">Azul</a></li>
+                                  <li><a class="dropdown-item" href="#">Rosa</a></li>
+                                  <li><a class="dropdown-item" href="#">Verde</a></li>
+                                  <li><a class="dropdown-item" href="#">Amarelo</a></li>
+                                  <li><a class="dropdown-item" href="#">Vermelho</a></li>
+                                  <li><a class="dropdown-item" href="#">Laranja</a></li>
+                                  <li><a class="dropdown-item" href="#">Roxo</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <div class="dropdown">
+                                <a class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle filtrobotao" href="#" role="button"
+                                  id="dropdownMenuLink2" data-mdb-toggle="dropdown" aria-expanded="false">
+                                  Tamanhos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                                  <li><a class="dropdown-item" href="#">PP</a></li>
+                                  <li><a class="dropdown-item" href="#">P</a></li>
+                                  <li><a class="dropdown-item" href="#">M</a></li>
+                                  <li><a class="dropdown-item" href="#">G</a></li>
+                                  <li><a class="dropdown-item" href="#">GG</a></li>
+                                  <li><a class="dropdown-item" href="#">XG</a></li>
+                                  <li><a class="dropdown-item" href="#">XGG</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4 mb-3">
+                              <div class="dropdown">
+                                <a class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle filtrobotao" href="#" role="button"
+                                  id="dropdownMenuLink3" data-mdb-toggle="dropdown" aria-expanded="false">
+                                  Promoções
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                                  <li><a class="dropdown-item" href="#">Conjuntos</a></li>
+                                  <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                  <li><a class="dropdown-item" href="#">Produtos com Brindes!</a></li>
+                                  <li><a class="dropdown-item" href="#">Promoção de Inverno!</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <div class="dropdown">
+                                <a class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle filtrobotao" href="#" role="button"
+                                  id="dropdownMenuLink4" data-mdb-toggle="dropdown" aria-expanded="false">
+                                  Novidades
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
+                                  <li><a class="dropdown-item" href="#">Novas Estampas</a></li>
+                                  <li><a class="dropdown-item" href="#">Brindes</a></li>
+                                  <li><a class="dropdown-item" href="#">Tamanhos inclusivos!</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <div class="dropdown">
+                                <a class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle filtrobotao" href="#" role="button"
+                                  id="dropdownMenuLink5" data-mdb-toggle="dropdown" aria-expanded="false">
+                                  Produto
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
+                                  <li><a class="dropdown-item" href="#">Cosplays</a></li>
+                                  <li><a class="dropdown-item" href="#">Conjuntos</a></li>
+                                  <li><a class="dropdown-item" href="#">Moletons</a></li>
+                                  <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                              <button style="background-color: #FF7700;" type="button" class="btn btn-dark btn-rounded">Buscar</button>
+                              <button type="button" class="btn btn-link btn-rounded" style="color: #939597;" data-mdb-ripple-color="dark">
+                                Limpar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+            
+
+
+
+          <div class="row d-flex flex-wrap justify-content-center">
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/moletoma.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <p class="card-text nomeproduto">MOLETOM AKATSUKI PRETO COM MANGAS E CAPUZ BRANCOS</p>
+                    <p class="card-text precoproduto">R$ 78,99 ou 10x de R$ 7,99</p>
+                    <p class="card-text categoriaproduto">Produto: Moletom</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/cosplay3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <p class="card-text nomeproduto">COSPLAY VIOLET EVERGARDEN - VIOLET (PERUCA INCLUSA)</p>
+                    <p class="card-text precoproduto">R$ 199,80 ou 12x de R$ 20,00</p>
+                    <p class="card-text categoriaproduto">Produto: Cosplay</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/moletomb.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">MOLETOM SELAMENTO DE OITO TRIGRAMAS</p>
+                      <p class="card-text precoproduto">R$ 78,99 ou 10x de R$ 7,99</p>
+                      <p class="card-text categoriaproduto">Produto: Moletom</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/camisakillua.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">CAMISA PRETA HUNTER X HUNTER - KILLUA</p>
+                      <p class="card-text precoproduto">R$ 42,50 ou 10x de R$ 4,99</p>
+                      <p class="card-text categoriaproduto">Produto: Camisa</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/cosplay2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">DEMON SLAYER COSPLAY - TANJIRO, ZENITSU OU GIYU</p>
+                      <p class="card-text precoproduto">R$ 175,98 ou 10x de R$ 18,50</p>
+                      <p class="card-text categoriaproduto">Produto: Cosplay</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/camisanaruto.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">CAMISA TIME 7 - NARUTO, KAKASHI, SASUKE E SAKURA</p>
+                      <p class="card-text precoproduto">R$ 37,99 ou 10x de R$ 4,50</p>
+                      <p class="card-text categoriaproduto">Produto: Camisa</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/produtoa.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">CONJUNTO PRETO MOLETOM E CALÇA ALDEIA DA FOLHA</p>
+                      <p class="card-text precoproduto">R$ 169,90 ou 10x de R$ 18,00</p>
+                      <p class="card-text categoriaproduto">Produto: Conjunto</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/moletomsnkpretobranco.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">MOLETOM PRETO E BRANCO ATTACK ON TITAN</p>
+                      <p class="card-text precoproduto">R$ 82,99 ou 10x de R$ 9,50</p>
+                      <p class="card-text categoriaproduto">Produto: Moletom</p>
+                    </div>
+                </div>
+              </a>
+
+              <a class="linkproduto" href="#">
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top cim" src="../../public/img/moletomsnkpreto.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text nomeproduto">MOLETOM ATTACK ON TITAN FLOR DE CEREJEIRA</p>
+                      <p class="card-text precoproduto">R$ 85,90 ou 10x de R$ 9,50</p>
+                      <p class="card-text categoriaproduto">Produto: Moletom</p>
+                    </div>
+                </div>
+              </a>
+
+
+          </div>
+
+
+
+
+
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center navpgit">
+              <li class="page-item pgit">
+                <a class="page-link pgit" href="#" tabindex="-1">Anterior</a>
+              </li>
+              <li class="page-item"><a class="page-link pgit" href="#">1</a></li>
+              <li class="page-item"><a class="page-link pgit" href="#">2</a></li>
+              <li class="page-item"><a class="page-link pgit" href="#">3</a></li>
+              <li class="page-item pgit">
+                <a class="page-link pgit" href="#">Próxima</a>
+              </li>
+            </ul>
+          </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
