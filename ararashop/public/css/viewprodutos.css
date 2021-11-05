@@ -29,37 +29,29 @@ body,
   background-color: rgba(0,0,0,.05);
 }
 
-.megumegu img {
-  max-width: 60%;
+.custom-select .options {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  outline-color: #343A40 !important;
 }
 
-.pesquisafiltro {
-    font-family: 'Oswald', sans-serif;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.custom-select select {
+  display: none !important;
 }
 
-.filtrobotao:hover {
-    color: #FF7700;
-}
-
-.opcaofiltro {
-  background-color: #FBFBFB;
-  text-align: center !important;
-  padding-right: 0% !important;
-}
-
-.opcaofiltro:hover {
-  color: #FBFBFB;
-  color: #FF7700 !important;
-}
-
-select {
-  appearance: none;
+option {
+   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   -ms-appearance: none;
+}
+
+option:hover {
+  background-color: #FF7700 !important;
 }
 
 .card {
