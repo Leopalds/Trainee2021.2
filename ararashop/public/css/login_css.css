@@ -63,4 +63,7 @@ body {
     .container-logar {
         width: 260px;
     }
+    .container-form img {
+        display: none;
+    }
 }
