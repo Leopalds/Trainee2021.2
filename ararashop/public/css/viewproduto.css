@@ -1,0 +1,135 @@
+body{
+    background-color: #343A40;
+    font-family: 'Oswald', sans-serif;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: first baseline;
+    height: 100%;
+}
+
+.row div{
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.caminhodoproduto {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    list-style: none;
+    color: #ff7700;
+    padding-left: 140px;
+    padding-top: 30px;
+}
+
+.caminhodoproduto a{
+    color: #ff7700;
+    transition: 300ms;
+    opacity: 0.8;
+}
+
+.caminhodoproduto a:hover{
+    color: #ff7700;
+    opacity: 1;
+}
+
+.cardbranco {
+    background-color: white;
+    border-radius: 5px;
+    border: 15px;
+    border-color: #ff7700;
+    color: #343A40;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    height: 70rem;
+}
+
+.detalhesdoproduto {
+    padding-top: 30px;
+    padding-left: 10%;
+}
+
+.informacoesdoproduto{
+    color: #ff7700;
+    font-size: 24px;
+    height: 500px;
+    width: 400px;
+    display: block;
+    margin-left: 10%;
+}
+
+.informacoesdoproduto span{
+    font-size: 18px;
+    color: #f8a053;
+    vertical-align: 10px;
+    text-decoration: line-through;
+}
+
+.escolhaotamanho{
+    font-size: 18px;
+}
+
+.form-group{
+    font-size: 18px;
+    padding-top: 25px;
+}
+
+.form-check-label{
+    font-size: 18px;
+}
+
+
+#zoom-img {
+    width: 100%;
+    height: 60%;
+    background: url("../img/produtoa.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .botaocomprar {
+      background-color: #ff7700;
+  }
+
+  .produtosrelacionados {
+      margin-left: 9%;
+      margin-top: 5%;
+  }
+
+  .produtosrelacionados h1{
+      color: #ff7700;
+      font-size: 32px;
+  }
+
+  .card-body {
+      padding-right: 0px;
+      height: 30% !important;
+      padding: 0px;
+  }
+
+ .imagemcard {
+    display: flexbox;
+ }
+
+  .botaoprodutorelacionado {
+      background-color: #ff7700;
+      border-color: #ff7700;
+      text-align: center;
+
+  }
+
+  .card-title {
+      text-align: center;
+  }
+
+.card-text {
+    text-align: center;
+}
