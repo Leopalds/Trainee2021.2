@@ -15,11 +15,6 @@ html, body {
     grid-template-columns: 29.3vw 40vw 29.3vw;
 }
 
-.header {
-    height: 20%;
-    background-color: #343a40;
-}
-
 .main1 {
     height: 100%;
     background-image: url(../img/backnuvem.png);
@@ -38,11 +33,6 @@ html, body {
     background-color: #fbfbfb;
     grid-column: 2/3;
     border-radius: 30px;
-}
-
-.footer {
-    height: 100%;
-    background-color: #343a40;
 }
 
 .menu-title {
