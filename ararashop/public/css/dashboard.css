@@ -17,14 +17,12 @@ html, body {
 
 .main1 {
     height: 100%;
-    background-image: url(../img/backnuvem.png);
     grid-column: 1/2;
     border-radius: 30px;
 }
 
 .main2 {
     height: 100%;
-    background-image: url(../img/backnuvem.png);
     grid-column: 3/4;
     border-radius: 30px;
 }
@@ -113,22 +111,84 @@ html, body {
     text-align: center;
 }
 
-@media (max-width: 1441px) {
+@media (max-width: 2800px) {
     .main1 {
-        background-image: url(../img/backnuvem3.png);
+        background-image: url(../img/back6.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back6.png);
+    }
+}
+
+@media (max-width: 1600px) {
+    .main1 {
+        background-image: url(../img/back3.png);
     }
 
     .main2 {
-        background-image: url(../img/backnuvem3.png);
+        background-image: url(../img/back3.png);
+    }
+}
+
+@media (max-width: 1300px) {
+    .main1 {
+        background-image: url(../img/back7.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back7.png);
+    }
+}
+
+@media (max-width: 1040px) {
+    .main1 {
+        background-image: url(../img/back8.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back8.png);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .main1 {
+        background-image: url(../img/back23.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back23.png);
     }
 }
 
 @media (max-width: 600px) {
     .main1 {
-        background-image: url(../img/backnuvem4.png);
+        background-image: url(../img/back4.png);
     }
     
     .main2 {
-        background-image: url(../img/backnuvem4.png);
+        background-image: url(../img/back4.png);
     }
 }
+
+@media (max-width: 500px) {
+    .main1 {
+        background-image: url(../img/back4.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back4.png);
+    }
+}
+
+@media (max-width: 400px) {
+    .main1 {
+        background-image: url(../img/back5.png);
+    }
+    
+    .main2 {
+        background-image: url(../img/back5.png);
+    }
+}
+
