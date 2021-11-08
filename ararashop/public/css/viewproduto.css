@@ -11,7 +11,6 @@ body{
     list-style-type: none;
     list-style: none;
     color: #ff7700;
-    padding-left: 140px;
     padding-top: 30px;
 }
 
@@ -38,7 +37,7 @@ body{
 }
 
 .imagem-produto {
-    width: 40%;
+    width: 100%;
     border-radius: 5px;
     
 }
@@ -55,9 +54,6 @@ body{
     color: #ff7700;
     font-size: 24px;
     height: 100%;
-    width: 40%;
-    display: inline-block;
-    margin-left: 5%;
 }
 
 .informacoesdoproduto span{
@@ -93,25 +89,24 @@ body{
 
   .produtosrelacionados {
     height: 100%;
-    width: 40%;
     position: relative;
     margin-left: 5%;
+    margin-top: 20px;
   }
 
-  .produtosrelacionados h1{
+  .titulo-div{
       color: #ff7700;
       font-size: 32px;
-      display: flex;
-      justify-content: center;
   }
 
-  .card {
+  .card-produto-relacionado {
       display: flex;
       justify-content: center;
       position: relative;
-      height: 50% !important;
-      width: 49% !important;
+      height: 100%!important;
+      width: 200px!important;
       border-radius: 5px;
+      margin-bottom: 10px;
   }
 
   .card-body {
@@ -121,9 +116,7 @@ body{
   }
 
  .imagemcard {
-    display: flex !important;
-    height: 180px;
-
+    height: 180px !important;
  }
 
   .botaoprodutorelacionado {
@@ -160,7 +153,6 @@ a:hover {
 }
 
 .caminhodoproduto {
-    margin-left: 12%;
     padding: 0%;
 }
 
@@ -170,18 +162,6 @@ a:hover {
 
 .detalhesdoproduto {
     padding-left: 5%;
-}
-
-.informacoesdoproduto {
-    margin-left: 2%;
-    margin-top: 10%;
-}
-
-.produtosrelacionados {
-    display: flex;
-    justify-content: center;
-    margin-top: 20%;
-    margin-left: 20%;
 }
 
 .card-img-top {
@@ -195,7 +175,6 @@ a:hover {
 }
 
 
-@media (max-width: 700px) {
-
+@media (max-width: 750px) {
 
 }
