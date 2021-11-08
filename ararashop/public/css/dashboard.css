@@ -112,6 +112,15 @@ html, body {
 }
 
 @media (max-width: 2800px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+
     .main1 {
         background-image: url(../img/back6.png);
     }
@@ -122,6 +131,15 @@ html, body {
 }
 
 @media (max-width: 1600px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+
     .main1 {
         background-image: url(../img/back3.png);
     }
@@ -132,6 +150,15 @@ html, body {
 }
 
 @media (max-width: 1300px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+
     .main1 {
         background-image: url(../img/back7.png);
     }
@@ -142,6 +169,15 @@ html, body {
 }
 
 @media (max-width: 1040px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 20vw 60vw 20vw;
+    }
+    
     .main1 {
         background-image: url(../img/back8.png);
     }
@@ -153,6 +189,15 @@ html, body {
 
 
 @media (max-width: 767px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 20vw 60vw 20vw;
+    }
+
     .main1 {
         background-image: url(../img/back23.png);
     }
@@ -163,6 +208,15 @@ html, body {
 }
 
 @media (max-width: 600px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 20vw 60vw 20vw;
+    }
+
     .main1 {
         background-image: url(../img/back4.png);
     }
@@ -173,6 +227,15 @@ html, body {
 }
 
 @media (max-width: 500px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 20vw 60vw 20vw;
+    }
+
     .main1 {
         background-image: url(../img/back4.png);
     }
@@ -183,6 +246,15 @@ html, body {
 }
 
 @media (max-width: 400px) {
+
+    .container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 15vw 70vw 15vw;
+    }
+
     .main1 {
         background-image: url(../img/back5.png);
     }
