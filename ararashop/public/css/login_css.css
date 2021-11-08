@@ -3,7 +3,10 @@ body {
     padding: 100px 0;
     background-color: #343A40;
     color: #FBFBFB;
+    background-image: url(../../public/img/login_imgs/akatsuki-login.png);
 }
+
+.main-login {}
 
 .caminho li {
     display: inline-block;
@@ -24,7 +27,7 @@ body {
 }
 
 .titulo img {
-    width: 200px;
+    width: 300px;
     margin: 0;
 }
 
@@ -33,6 +36,7 @@ body {
 }
 
 .container-logar {
+    background-color: #343A40;
     -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
     margin: auto;
@@ -44,7 +48,6 @@ body {
 
 .container-form {
     padding: 10px;
-    text-align: center;
     display: block;
     width: 100%;
 }
