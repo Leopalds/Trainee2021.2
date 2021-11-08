@@ -4,9 +4,8 @@ body {
     background-color: #343A40;
     color: #FBFBFB;
     background-image: url(../../public/img/login_imgs/akatsuki-login.png);
+    background-position: unset;
 }
-
-.main-login {}
 
 .caminho li {
     display: inline-block;
@@ -60,6 +59,7 @@ body {
     width: 100%;
     height: 290px;
     margin-bottom: 0px;
+    border-radius: 20%;
 }
 
 @media (max-width: 500px) {
