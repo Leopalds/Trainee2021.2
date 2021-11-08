@@ -1,0 +1,126 @@
+
+body {
+    background-image: url(../img/fundositeview.png);
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-color: #343A40;
+    background-position: center center;
+}
+
+.menufiltro {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.menumenu {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+.menumenu button {
+  background-color: #FF7700 !important;
+}
+
+.filtroselect {
+  padding-left: 10px;
+  color: #343A40;
+  font-size: 18px;
+}
+
+.filtroselect:hover {
+  color: #FBFBFB;
+  text-decoration: none;
+}
+
+.listamenu li {
+  margin: auto;
+}
+
+.listamenu li:hover {
+  background-color: #FF7700;
+}
+
+.barrabusca {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 300px;
+  font-family: 'Oswald', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barrabusca button {
+  background-color: #FF7700;
+  color: #FBFBFB;
+}
+
+.card {
+    font-family: 'Oswald', sans-serif;
+}
+
+.cim:hover {
+    background-color: #FF7700;
+    opacity: 60%;
+}
+
+.navpgit {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pgit {
+    background-color: #FF7700;
+    font-family: 'Oswald', sans-serif;
+    color: #FBFBFB;
+}
+
+.linkproduto {
+  color: #343A40;
+}
+
+.linkproduto:hover {
+  color: #FF7700;
+}
+
+.pgit:hover {
+    background-color: #343A40;
+    font-family: 'Oswald', sans-serif;
+    color: #FBFBFB;
+}
+
+/* .megumegu img {
+    max-width:500px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    margin: 10px;
+
+    position: absolute;
+    top: 5px;
+    left: 870px;
+} */
+
+@media (max-width: 1000px) {
+
+  body {
+    background-image: url(../img/fundocelsite.png);
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-color: #343A40;
+    background-position: center center;
+  }
+
+  .menumenu {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    margin: auto;
+    text-align: center;
+    max-width: 40%;
+  }
+
+}
