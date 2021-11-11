@@ -2,6 +2,10 @@ body {
     background-color: #343A40;
 }
 
+.btn-secondary.focus, .btn-secondary:focus, .btn-primary.focus, .btn-primary:focus {
+  box-shadow: none !important;
+}
+
 .barrabusca {
     margin-top: 30px;
     margin-bottom: 30px;
