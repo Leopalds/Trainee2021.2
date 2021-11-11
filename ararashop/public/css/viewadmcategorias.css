@@ -1,0 +1,92 @@
+body {
+    background-image: url("../img/backnuvem4.png");
+    font-family: 'Oswald', sans-serif;
+}
+
+.categorias-adm {
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+}
+
+.barra-de-pesquisa {
+    width: 40%;
+    height: 40% !important; 
+    margin-left: 5%;
+    margin-top: 2% !important;
+
+}
+
+.adiciona-categoria {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 40% !important;
+    margin-top: 2%;
+    background-color: #ff7700;
+    color: #343A40;
+    border-radius: 7px;
+    border-color: #414141;
+    margin-left: 5%;
+}
+
+.adiciona-categoria button {
+    background-color: #ff7700;
+    color: #343A40;
+    width: 100%;
+}
+
+.modal-grande {
+    width: 100%;
+}
+
+.formulario-modal {
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.formulario-modal h1{
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+.conteudo-modal h2{
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+.seletor-de-cor {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.lista-de-categorias {
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.lista-de-categorias ul {
+    display: inline-block !important;
+    list-style-type: none !important;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.lista-de-categorias ul li {
+    display: inline;
+    width: 100%;
+    margin-right: 5%;
+}
+
+.lista-de-categorias ul a{
+    color: #343A40;
+}
