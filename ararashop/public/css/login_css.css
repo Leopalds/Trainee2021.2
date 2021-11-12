@@ -1,80 +1,96 @@
-body {
-    font-family: 'Oswald', sans-serif;
-    padding: 100px 0;
-    background-color: #343A40;
-    color: #FBFBFB;
-    background-image: url(../../public/img/login_imgs/akatsuki-login.png);
-    background-position: unset;
-}
-
-.caminho li {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 100;
-}
-
-.caminho ul {
-    height: 40px;
-    list-style-type: none;
-    padding: 10px 40px;
-}
-
-.titulo {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
-.titulo img {
-    width: 300px;
-    margin: 0;
-}
-
-.titulo h1 {
-    font-size: 45px;
-}
-
-.container-logar {
-    background-color: #343A40;
-    -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
-    box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
-    margin: auto;
-    width: 100%;
-    max-width: 600px;
-    justify-content: center;
-    padding: 50px;
-}
-
-.container-form {
-    padding: 10px;
-    display: block;
-    width: 100%;
-    font-size: 30px;
-}
-
-.container-form input {
-    margin-bottom: 10px;
-    height: 60px;
-    font-size: 30px;
-}
-
-.container-form form {
-    margin-bottom: 30px;
-}
-
-.container-form img {
-    width: 100%;
-    height: 290px;
-    margin-bottom: 0px;
-    border-radius: 20%;
-    text-align: center;
-}
-
-@media (max-width: 790px) {
+    body {
+        font-family: 'Oswald', sans-serif;
+        padding: 100px 0;
+        background-color: #343A40;
+        color: #FBFBFB;
+        background-image: url(../../public/img/login_imgs/akatsuki-login.png);
+        background-position: unset;
+    }
+    
+    .caminho li {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+    .caminho ul {
+        height: 40px;
+        list-style-type: none;
+        padding: 10px 40px;
+    }
+    
+    .titulo {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+    
+    .titulo img {
+        width: 300px;
+        margin: 0;
+    }
+    
+    .titulo h1 {
+        font-size: 45px;
+    }
+    
     .container-logar {
-        width: 50%;
+        background-color: #343A40;
+        -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
+        box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
+        margin: auto;
+        width: 100%;
+        max-width: 600px;
+        justify-content: center;
+        padding: 50px;
     }
+    
+    .container-form {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .container-form label {
+        font-size: 30px;
+    }
+    
+    .container-form input {
+        height: 60px;
+        font-size: 30px;
+    }
+    
     .container-form img {
-        display: none;
+        width: 100%;
+        height: 290px;
+        margin-bottom: 0px;
+        border-radius: 20%;
+        text-align: center;
     }
-}
+    
+    .form-check {
+        display: flex;
+        align-items: center;
+    }
+    
+    @media (max-width: 790px) {
+        .container-logar {
+            width: 50%;
+        }
+        .container-form img {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 630px) {
+        .container-logar {
+            width: 260px;
+        }
+        .container-form img {
+            display: none;
+        }
+        .container-form input {
+            font-size: 20px;
+        }
+    }
