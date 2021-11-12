@@ -39,8 +39,8 @@ body {
     -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.84);
     margin: auto;
-    width: 500px;
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px;
     justify-content: center;
     padding: 50px;
 }
@@ -49,6 +49,13 @@ body {
     padding: 10px;
     display: block;
     width: 100%;
+    font-size: 30px;
+}
+
+.container-form input {
+    margin-bottom: 10px;
+    height: 60px;
+    font-size: 30px;
 }
 
 .container-form form {
@@ -60,11 +67,12 @@ body {
     height: 290px;
     margin-bottom: 0px;
     border-radius: 20%;
+    text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 790px) {
     .container-logar {
-        width: 260px;
+        width: 50%;
     }
     .container-form img {
         display: none;
