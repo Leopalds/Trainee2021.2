@@ -1,0 +1,305 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #343A40;
+    background-image: url(../img/adm_usuarios/back-usuarios4.png);
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-color: #343A40;
+    background-position: center center;
+}
+
+.container-fluid {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.container-fluid button {
+    width: 10%;
+    margin-left: 2%;
+    border: 0;
+    background-color:#212429;
+}
+
+table {
+    width: auto;
+}
+
+.table {
+    text-align: end;
+}
+
+#editar {
+    width: 70%;
+}
+
+#excluir {
+    width: 70%;
+}
+
+#conf-modal {
+    background-color: #ff7700;
+}
+
+#adicionar {
+    width: 40%;
+    color: #fbfbfb;
+    background-color: 0;
+}
+
+#addbutton {
+    margin-left: 0;
+}
+
+#td {
+    text-align: left;
+    width: 9%;
+}
+
+#nomebutton {
+    width: 100%;
+    height: 100%;
+    color: #fbfbfb;
+    text-align: left;
+}
+
+.modal-body img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width: 1043px) {
+    html, body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        background-color: #343A40;
+        background-attachment: fixed;
+        background-image: none;
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-color: #343A40;
+        background-position: center center;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 10%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 12%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 750px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 16%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 650px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 20%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 560px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 24%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 490px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 28%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+}
+
+@media (max-width: 420px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 32%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back1.png);
+    }
+
+}
+  
+@media (max-width: 400px) {
+    .button {
+        width: 100px;
+    }
+
+    #adicionar, #addbutton {
+        width: auto;
+    }
+
+    #editar, #excluir{
+        width: 100%;
+    }
+
+    #editbutton, #excluibutton {
+        width: 42%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        background-image: url(../img/adm_usuarios/back1.png);
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .table, #nomebutton {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .table, #nomebutton {
+        font-size: 48px;
+    }
+}
