@@ -29,62 +29,59 @@
         <div class="modal-body">
           <form>
 
-            <div class="form-group">
-              <label for="input-nome">Nome Produto</label>
-              <input type="text" class="form-control" id="input-nome" placeholder="Nome do Produto">
-            </div>
-
-            <div class="form-group">
-              <label for="descricao">Descrição</label>
-              <textarea class="form-control" id="descricao" rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="input-nome">Preço</label>
-              <input type="number" class="form-control" id="input-nome" placeholder="R$">
-            </div>
+                  <div class="form-group">
+                    <label for="input-nome">Nome Produto</label>
+                    <input type="text" class="form-control" id="input-nome" placeholder="Nome do Produto">
+                  </div>
 
                   <div class="form-group">
-                    <label for="exampleFormControlFile1">Imagem Principal do Produto</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" rows="3"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input-nome">Preço</label>
+                    <input type="number" class="form-control" id="input-nome" placeholder="R$">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input-imagem">Imagem Principal do Produto</label>
+                    <input type="file" class="form-control-file" id="imgproduto">
                   </div>
 
                   <p>CATEGORIA:</p>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1">
-                    <label class="form-check-label" for="exampleRadios1">
+                    <input class="form-check-input" type="radio" name="Camisa" id="cat-camisa" value="Camisa">
+                    <label class="form-check-label" for="cat-camisa">
                       Camisa
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-                    <label class="form-check-label" for="exampleRadios2">
+                    <input class="form-check-input" type="radio" name="Conjunto" id="cat-conjunto" value="Conjunto">
+                    <label class="form-check-label" for="cat-conjunto">
                       Conjunto
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
+                    <input class="form-check-input" type="radio" name="Cosplay" id="cat-cosplay" value="Cosplay">
+                    <label class="form-check-label" for="cat-cosplay">
                       Cosplay
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
+                    <input class="form-check-input" type="radio" name="Moletom" id="cat-moletom" value="Moletom">
+                    <label class="form-check-label" for="cat-moletom">
                       Moletom
                     </label>
                   </div>
 
-                  <p> </p>
-
-            <button type="submit" class="btn btn-primary modbut">Enviar</button>
           </form>
 
         </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary modbut">Confirmar</button>
+              <button type="submit" class="btn btn-primary modbut">Confirmar</button>
             </div>
        </div>
 
@@ -104,11 +101,29 @@
           </button>
         </div>
 
-        <img src="../../public/img/moletomb.jpg">
+
+            <div class="textview">
+
+                <p>DESCRIÇÃO:</p>
+                <p>Material: Algodão - Com capuz</p>
+
+                <p>Preço: R$ 78,99</p>
+
+                <p>CATEGORIA:</p>
+                <p>Moletom</p>
+
+            </div>
+
+            <img class="imgview" src="../../public/img/moletomb.jpg">
+
+            <p> </p>
+            <p> </p>
+            <p> </p>
 
       </div>
     </div>
-  </div>
+</div>
+
   <!-- Fim modal Vizualizar Produto -->
 
   <!-- Modal Editar Produto -->
@@ -124,23 +139,23 @@
         <div class="modal-body">
           <form>
 
-            <div class="form-group">
-              <label for="input-nome">Novo Nome</label>
-              <input type="text" class="form-control" id="input-nome" placeholder="Nome do Produto">
-            </div>
-
-            <div class="form-group">
-              <label for="descricao">Nova Descrição</label>
-              <textarea class="form-control" id="descricao" rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="input-nome">Novo Preço</label>
-              <input type="number" class="form-control" id="input-nome" placeholder="R$">
-            </div>
+                  <div class="form-group">
+                    <label for="input-nome">Nome</label>
+                    <input type="text" class="form-control" id="input-nome" placeholder="Moletom Selamento de Oito Trigramas">
+                  </div>
 
                   <div class="form-group">
-                    <label for="exampleFormControlFile1">Nova Imagem Principal do Produto</label>
+                    <label for="input-descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" placeholder="Material: Algodão - Com capuz" rows="3"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input-nome">Preço</label>
+                    <input type="number" class="form-control" id="input-nome" placeholder="R$78,99">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input-imagem">Nova Imagem Principal do Produto</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                   </div>
 
@@ -148,38 +163,37 @@
 
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1">
-                    <label class="form-check-label" for="exampleRadios1">
+                    <label class="form-check-label" for="cat-camisa">
                       Camisa
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-                    <label class="form-check-label" for="exampleRadios2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2" checked>
+                    <label class="form-check-label" for="cat-conjunto">
                       Conjunto
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
+                    <label class="form-check-label" for="cat-cosplay">
                       Cosplay
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
+                    <label class="form-check-label" for="cat-moletom">
                       Moletom
                     </label>
                   </div>
 
                   <p> </p>
 
-            <button type="submit" class="btn btn-primary modbut">Enviar</button>
           </form>
 
         </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary modbut">Salvar mudanças</button>
+              <button type="submit" class="btn btn-primary modbut">Salvar mudanças</button>
             </div>
        </div>
        
@@ -221,98 +235,103 @@
     <button type="button" class="btn btn-secondary btn-lg btn-block botaoadd" data-toggle="modal" data-target=".modal-adicionar-produto">Adiconar Produto</button>
     
     <!-- Tabela de Itens -->
-    <table class="table table-hover table-dark table-responsive{-sm|-md|-lg|-xl} tabelinha">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Descrição</th>
-          <th scope="col">Preço</th>
-          <th scope="col">Categoria</th>
-          <th class="acoes" scope="col">Ações</th>
-        </tr>
-      </thead>
-      <tbody>
 
-        <tr>
-          <th scope="row">2021a456</th>
-          <th>Moletom Selamento de Oito Trigramas</th>
-          <td>Material: Algodão - Com capuz</td>
-          <td>R$ 78,99 ou 10x de R$ 7,99</td>
-          <td>Moletom</td>
-          <td class="colunaacoes">
-            <div class="btn-group listaacoes">
+      <div class="table-responsive">
 
-              <!-- Botão Visualizar -->
-            <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-visualisar">
-              <i class="far fa-eye iconebotao"></i>
-            </button>
-               
-              <!-- Botão Editar -->
-            <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-editar-produto">
-              <i class="far fa-edit iconebotao"></i>
-            </button>
+          <table class="table table-hover table-dark table-responsive{-sm|-md|-lg|-xl} tabelinha">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th class="acoes" scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
 
-            <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-excluir-produto">
-              <i class="far fa-trash-alt iconebotao"></i>
-            </button>
+              <tr>
+                <th scope="row">2021a456</th>
+                <th>Moletom Selamento de Oito Trigramas</th>
+                <td>Material: Algodão - Com capuz</td>
+                <td>R$ 78,99</td>
+                <td>Moletom</td>
+                <td class="colunaacoes">
+                  <div class="btn-group listaacoes">
 
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2021e347</th>
-          <th>Camisa Hunter X Hunter - Killua</th>
-          <td>Material: Algodão - Apenas cor preta</td>
-          <td>R$ 42,50 ou 10x R$ 4,99</td>
-          <td>Camisa</td>
-          <td class="colunaacoes">
-            <div class="btn-group listaacoes">
+                    <!-- Botão Visualizar -->
+                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-visualisar">
+                    <i class="far fa-eye iconebotao"></i>
+                  </button>
+                    
+                    <!-- Botão Editar -->
+                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-editar-produto">
+                    <i class="far fa-edit iconebotao"></i>
+                  </button>
 
-                <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
+                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-excluir-produto">
+                    <i class="far fa-trash-alt iconebotao"></i>
+                  </button>
 
-            </div>
-          </td>
-        </tr>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2021e347</th>
+                <th>Camisa Hunter X Hunter - Killua</th>
+                <td>Material: Algodão - Apenas cor preta</td>
+                <td>R$ 42,50</td>
+                <td>Camisa</td>
+                <td class="colunaacoes">
+                  <div class="btn-group listaacoes">
 
-        <tr>
-          <th scope="row">2021g678</th>
-          <th>Conjunto Preto Moletom e Calça Aldeia da Folha</th>
-          <td>Oversized - Material: Algodão</td>
-          <td>R$ 169,90 ou 10x R$ 18,00</td>
-          <td>Conjunto</td>
-          <td class="colunaacoes">
-            <div class="btn-group listaacoes">
+                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
 
-                <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
+                  </div>
+                </td>
+              </tr>
 
-            </div>
-          </td>
-        </tr>
+              <tr>
+                <th scope="row">2021g678</th>
+                <th>Conjunto Preto Moletom e Calça Aldeia da Folha</th>
+                <td>Oversized - Material: Algodão</td>
+                <td>R$ 169,90</td>
+                <td>Conjunto</td>
+                <td class="colunaacoes">
+                  <div class="btn-group listaacoes">
 
-        <tr>
-          <th scope="row">2021k809</th>
-          <th>Cosplay Violet Evergarden - Violet</th>
-          <td>Peruca e Enchimento da saia inclusos</td>
-          <td>R$ 199,80 ou 12x R$ 20,00</td>
-          <td>Cosplay</td>
-          <td class="colunaacoes">
-            <div class="btn-group listaacoes">
+                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
 
-                <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
+                  </div>
+                </td>
+              </tr>
 
-            </div>
-          </td>
-        </tr>
-        
-      </tbody>
-    </table>
+              <tr>
+                <th scope="row">2021k809</th>
+                <th>Cosplay Violet Evergarden - Violet</th>
+                <td>Peruca e Enchimento da saia inclusos</td>
+                <td>R$ 199,80</td>
+                <td>Cosplay</td>
+                <td class="colunaacoes">
+                  <div class="btn-group listaacoes">
+
+                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
+                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
+
+                  </div>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+      </div>    
 
 
   </div>
