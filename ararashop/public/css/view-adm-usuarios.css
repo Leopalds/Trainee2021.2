@@ -36,6 +36,10 @@ table {
     text-align: end;
 }
 
+#usuario {
+    width: 70%;
+}
+
 #editar {
     width: 70%;
 }
@@ -108,11 +112,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 10%;
     }
 
@@ -133,11 +137,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 12%;
     }
 
@@ -157,11 +161,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 16%;
     }
 
@@ -181,11 +185,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 20%;
     }
 
@@ -205,11 +209,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 24%;
     }
 
@@ -229,11 +233,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 28%;
     }
 
@@ -253,11 +257,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 32%;
     }
 
@@ -277,11 +281,11 @@ table {
         width: auto;
     }
 
-    #editar, #excluir{
+    #usuario, #editar, #excluir{
         width: 100%;
     }
 
-    #editbutton, #excluibutton {
+    #usubutton, #editbutton, #excluibutton {
         width: 42%;
     }
 
