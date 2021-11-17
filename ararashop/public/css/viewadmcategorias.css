@@ -24,14 +24,14 @@ button {
 }
 
 .barra-de-pesquisa button {
-    background-color: white;
-    color: #ff7700;
+    background-color: #ff7700;
+    color: #343A40;
     transition: 200ms;
+    opacity: 0.9;
 }
 
 .barra-de-pesquisa button:hover {
-    background-color: #ff7700;
-    color: #343A40;
+    opacity: 1;
 }
 
 
@@ -188,6 +188,16 @@ ul button {
     background-repeat: no-repeat;
     background-color: #343A40;
     background-position: center center;
+    }
+
+   .lista-de-categorias ul li{
+        display: block;
+        margin-top: 2% !important;
+        margin-bottom: 2% !important;
+    }
+
+    .lista-de-categorias button {
+        width: 50% !important;
     }
 }
 
