@@ -16,36 +16,35 @@
 
 </head>
 <body>
-    
     <div class="container-fluid">
+      <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#Modaladiciona" id="add">Adicionar usuário</button>
         <table class="table table-dark">
             <thead>
             <tr>
                 <th scope="col" id="td">Nº</th>
                 <th scope="col" id="td">Nome</th>
-                <th scope="col">Funcionalidades</th>
+                <th scope="col">Ações</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <th scope="row" id="td">1</th>
                 <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Gustavo</button></td>
-                <td><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+                <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
             <tr>
                 <th scope="row" id="td">2</th>
                 <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Jacob</button></td>
-                <td><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+                <td id="tdbutton"><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
             <tr>
                 <th scope="row" id="td">3</th>
                 <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Larry</button></td>
-                <td><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+                <td id="tdbutton"><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-outline-dark" id="addbutton" data-toggle="modal" data-target="#Modaladiciona"><img src="../../public/img/adm_usuarios/add.png" id="adicionar"></button>
-    </div>
+      </div>
 
     <div class="modal fade" id="Modalusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

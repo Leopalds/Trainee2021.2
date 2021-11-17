@@ -12,17 +12,18 @@ html, body {
     background-repeat: no-repeat;
     background-color: #343A40;
     background-position: center center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .container-fluid {
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 4%;
+    padding-left: 8%;
+    padding-right: 8%;
+    max-width: 2000px;
 }
 
 
 .container-fluid button {
-    width: 10%;
     margin-left: 2%;
     border: 0;
     background-color:#212429;
@@ -60,6 +61,10 @@ table {
 
 #addbutton {
     margin-left: 0;
+}
+
+#add {
+    margin: 0;
 }
 
 #td {
@@ -248,7 +253,7 @@ table {
 
 }
 
-@media (max-width: 420px) {
+@media (max-width: 421px) {
     .button {
         width: 100px;
     }
@@ -263,6 +268,13 @@ table {
 
     #usubutton, #editbutton, #excluibutton {
         width: 32%;
+        display: block;
+        margin-right: 0;
+        margin-left: 70%;
+    }
+
+    #tdbutton {
+        align-content: flex-end;
     }
 
     .container-fluid {
@@ -287,6 +299,8 @@ table {
 
     #usubutton, #editbutton, #excluibutton {
         width: 42%;
+        margin-right: 0;
+        margin-left: 60%;
     }
 
     .container-fluid {
@@ -300,6 +314,7 @@ table {
     .table, #nomebutton {
         font-size: 28px;
     }
+    
 }
 
 @media (min-width: 2000px) {
