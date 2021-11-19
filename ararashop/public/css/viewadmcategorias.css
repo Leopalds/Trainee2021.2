@@ -194,10 +194,11 @@ ul button {
         display: block;
         margin-top: 2% !important;
         margin-bottom: 2% !important;
+        justify-content: center;
     }
 
     .lista-de-categorias button {
-        width: 50% !important;
+        width: 95% !important;
     }
 }
 
