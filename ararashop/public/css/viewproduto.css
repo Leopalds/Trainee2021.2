@@ -2,21 +2,8 @@ body{
     background-color: #343A40;
     font-family: 'Oswald', sans-serif;
 }
-.row{
-    width: 100%;
-    display: flex;
-    justify-content: first baseline;
-    height: 100%;
-}
 
-.row div{
-    display: inline-block;
-}
 
-a:hover {
-    text-decoration: none;
-    opacity: 1;
-}
 
 .caminhodoproduto {
     display: inline-block;
@@ -24,7 +11,6 @@ a:hover {
     list-style-type: none;
     list-style: none;
     color: #ff7700;
-    padding-left: 140px;
     padding-top: 30px;
 }
 
@@ -46,23 +32,28 @@ a:hover {
     border-color: #ff7700;
     color: #343A40;
     margin-left: 10%;
-    display: flex;
+    display: flexbox;
     justify-content: center;
-    height: 70rem;
+}
+
+.imagem-produto {
+    width: 100%;
+    border-radius: 5px;
+    
 }
 
 .detalhesdoproduto {
+    height: 40%;
+    width: 50%;
     padding-top: 30px;
     padding-left: 10%;
+    color: white;
 }
 
 .informacoesdoproduto{
     color: #ff7700;
     font-size: 24px;
-    height: 500px;
-    width: 400px;
-    display: block;
-    margin-left: 5%;
+    height: 100%;
 }
 
 .informacoesdoproduto span{
@@ -74,6 +65,8 @@ a:hover {
 
 .escolhaotamanho{
     font-size: 18px;
+    display: flex;
+    justify-content: center;
 }
 
 .form-group{
@@ -81,31 +74,39 @@ a:hover {
     padding-top: 25px;
 }
 
+.formtamanho {
+    display: flex;
+    justify-content: center;
+}
+
 .form-check-label{
     font-size: 18px;
 }
-
-
-#zoom-img {
-    width: 100%;
-    height: 60%;
-    background: url("../img/produtoa.jpg");
-    background-position: center;
-    background-size: cover;
-  }
 
   .botaocomprar {
       background-color: #ff7700;
   }
 
   .produtosrelacionados {
-      margin-left: 10%;
-      margin-top: 5%;
+    height: 100%;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 20px;
   }
 
-  .produtosrelacionados h1{
+  .titulo-div{
       color: #ff7700;
       font-size: 32px;
+  }
+
+  .card-produto-relacionado {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 100%!important;
+      width: 200px!important;
+      border-radius: 5px;
+      margin-bottom: 10px;
   }
 
   .card-body {
@@ -115,8 +116,7 @@ a:hover {
   }
 
  .imagemcard {
-    display: flex !important;
-    height: 20%;
+    height: 180px !important;
  }
 
   .botaoprodutorelacionado {
@@ -134,6 +134,16 @@ a:hover {
     text-align: center;
 }
 
+@media (min-width: 1001px){
+
+a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+}
+
 
 @media (max-width: 1000px){
 
@@ -143,7 +153,6 @@ a:hover {
 }
 
 .caminhodoproduto {
-    margin-left: 12%;
     padding: 0%;
 }
 
@@ -155,18 +164,6 @@ a:hover {
     padding-left: 5%;
 }
 
-.informacoesdoproduto {
-    margin-left: 2%;
-    margin-top: 10%;
-}
-
-.produtosrelacionados {
-    display: flex;
-    justify-content: center;
-    margin-top: 20%;
-    margin-left: 20%;
-}
-
 .card-img-top {
     height: 20%;
 }
@@ -174,5 +171,10 @@ a:hover {
 
 
 
+
+}
+
+
+@media (max-width: 750px) {
 
 }
