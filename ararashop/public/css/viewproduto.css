@@ -66,6 +66,7 @@ body{
 }
 
 .escolha-o-tamanho{
+    margin-top: 10%;
     font-size: 18px;
     display: flex;
     justify-content: center;

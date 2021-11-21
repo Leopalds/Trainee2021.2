@@ -191,7 +191,7 @@ ul button {
     }
 
    .lista-de-categorias ul li{
-        display: block;
+        display: flex;
         margin-top: 2% !important;
         margin-bottom: 2% !important;
         justify-content: center;

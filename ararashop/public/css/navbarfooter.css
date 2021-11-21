@@ -63,6 +63,12 @@ footer .form-group {
     
 }
 
+.lista-informacoes {
+    list-style-type: none;
+    display: block;
+    padding-left: 0;
+}
+
 .informacoes a{
     color: white;
     line-height: 35px !important;
