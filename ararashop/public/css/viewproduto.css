@@ -11,6 +11,7 @@ body{
     color: #ff7700;
     margin-left: 0%;
     margin-top: 5%;
+    padding-top: 30px;
 }
 
 .caminho-do-produto a{
@@ -36,7 +37,7 @@ body{
 }
 
 .imagem-produto {
-    width: 40%;
+    width: 100%;
     border-radius: 5px;
     
 }
@@ -53,9 +54,6 @@ body{
     color: #ff7700;
     font-size: 24px;
     height: 100%;
-    width: 40%;
-    display: inline-block;
-    margin-left: 5%;
 }
 
 .informacoes-do-produto span{
@@ -90,6 +88,7 @@ body{
     background-color: #ff7700;
 }
 
+
 .produtos-relacionados {
 height: 100%;
 width: 55%;
@@ -123,8 +122,41 @@ display: inline-block;
 .imagem-card {
 display: flex !important;
 height: 60%;
-
 }
+.produtosrelacionados {
+    height: 100%;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 20px;
+  }
+
+  .titulo-div{
+      color: #ff7700;
+      font-size: 32px;
+  }
+
+  .card-produto-relacionado {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 100%!important;
+      width: 200px!important;
+      border-radius: 5px;
+      margin-bottom: 10px;
+  }
+
+  .card-body {
+      padding-right: 0px;
+      height: 30% !important;
+      padding: 0px;
+  }
+
+ .imagemcard {
+    height: 180px !important;
+ }
+
+
+
 
 .botao-produto-relacionado {
     background-color: #ff7700;
@@ -167,6 +199,7 @@ a:hover {
     width: 90%;
 }
 
+
 .caminho-do-produto {
     margin-left: 12%;
     padding: 0%;
@@ -180,6 +213,7 @@ a:hover {
     margin-top: 3%;
     margin-left: 5%;
 }
+
 
 .informacoes-do-produto {
     margin-left: 2%;
@@ -206,11 +240,20 @@ a:hover {
     width: 48% !important;
 }
 
+.card-img-top {
+    height: 20%;
+}
 
 }
 
 
+
+
 @media (max-width: 450px) {
+}
+
+
+@media (max-width: 750px) {
 
 
 .card-produtos-relacionados {
