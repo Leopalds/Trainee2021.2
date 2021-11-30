@@ -3,29 +3,29 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-
-
-.caminhodoproduto {
+.caminho-do-produto {
     display: inline-block;
     font-size: 14px;
     list-style-type: none;
     list-style: none;
     color: #ff7700;
+    margin-left: 0%;
+    margin-top: 5%;
     padding-top: 30px;
 }
 
-.caminhodoproduto a{
+.caminho-do-produto a{
     color: #ff7700;
     transition: 300ms;
     opacity: 0.8;
 }
 
-.caminhodoproduto a:hover{
+.caminho-do-produto a:hover{
     color: #ff7700;
     opacity: 1;
 }
 
-.cardbranco {
+.card-branco {
     background-color: white;
     border-radius: 5px;
     border: 15px;
@@ -42,28 +42,29 @@ body{
     
 }
 
-.detalhesdoproduto {
+.detalhes-do-produto {
     height: 40%;
-    width: 50%;
-    padding-top: 30px;
-    padding-left: 10%;
+    width: 40%;
+    padding-top: 2%;
+    padding-left: 0%;
     color: white;
 }
 
-.informacoesdoproduto{
+.informacoes-do-produto{
     color: #ff7700;
     font-size: 24px;
     height: 100%;
 }
 
-.informacoesdoproduto span{
+.informacoes-do-produto span{
     font-size: 18px;
     color: #f8a053;
     vertical-align: 10px;
     text-decoration: line-through;
 }
 
-.escolhaotamanho{
+.escolha-o-tamanho{
+    margin-top: 10%;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -74,7 +75,7 @@ body{
     padding-top: 25px;
 }
 
-.formtamanho {
+.form-tamanho {
     display: flex;
     justify-content: center;
 }
@@ -83,11 +84,46 @@ body{
     font-size: 18px;
 }
 
-  .botaocomprar {
-      background-color: #ff7700;
-  }
+.botao-comprar {
+    background-color: #ff7700;
+}
 
-  .produtosrelacionados {
+
+.produtos-relacionados {
+height: 100%;
+width: 55%;
+position: relative;
+margin-top: 5%;
+margin-left: 5%;
+display: inline-block;
+}
+
+.produtos-relacionados h1{
+    color: #ff7700;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-produtos-relacionados {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 40% !important;
+    border-radius: 5px;
+}
+
+.card-body {
+    padding-right: 0px;
+    height: 40% !important;
+    padding: 0px;
+}
+
+.imagem-card {
+display: flex !important;
+height: 60%;
+}
+.produtosrelacionados {
     height: 100%;
     position: relative;
     margin-left: 5%;
@@ -119,18 +155,25 @@ body{
     height: 180px !important;
  }
 
-  .botaoprodutorelacionado {
-      background-color: #ff7700;
-      border-color: #ff7700;
-      text-align: center;
 
-  }
 
-  .card-title {
-      text-align: center;
-  }
+
+.botao-produto-relacionado {
+    background-color: #ff7700;
+    border-color: #ff7700;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end !important;
+
+}
+
+.card-title {
+    display: flexbox;
+    text-align: center;
+}
 
 .card-text {
+    display: flexbox;
     text-align: center;
 }
 
@@ -149,32 +192,74 @@ a:hover {
 
 .row div{
     width: 100%;
-
+    
 }
 
-.caminhodoproduto {
+.imagem-produto {
+    width: 90%;
+}
+
+
+.caminho-do-produto {
+    margin-left: 12%;
     padding: 0%;
 }
 
-.cardbranco {
+.card-branco {
     margin-left: 2%;
 }
 
-.detalhesdoproduto {
-    padding-left: 5%;
+.detalhes-do-produto {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+
+.informacoes-do-produto {
+    margin-left: 2%;
+    margin-top: 10%;
+}
+
+.produtos-relacionados {
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+
+.produtos-relacionados h1{
+    color: #ff7700;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-produtos-relacionados {
+    margin-top: 5%;
+    width: 48% !important;
 }
 
 .card-img-top {
     height: 20%;
 }
 
+}
 
 
 
 
+@media (max-width: 450px) {
 }
 
 
 @media (max-width: 750px) {
+
+
+.card-produtos-relacionados {
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 100% !important;
+}
 
 }
