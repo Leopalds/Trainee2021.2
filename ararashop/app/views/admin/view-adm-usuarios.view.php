@@ -18,7 +18,7 @@
 <body>
     <div class="container-fluid">
       <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#Modaladiciona" id="add">Adicionar usuário</button>
-        <table class="table table-dark">
+      <table class="table table-dark">
             <thead>
             <tr>
                 <th scope="col" id="td">Nº</th>
@@ -27,11 +27,13 @@
             </tr>
             </thead>
             <tbody>
+        <?php foreach ($tb_adm_usuarios as $function) : ?>    
             <tr>
-                <th scope="row" id="td">1</th>
-                <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Gustavo</button></td>
-                <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
-            </tr>
+              <th scope="row" id="td"><?=$function->id?></th>
+              <td id="td"><button class="btn btn-outline-dark" id="nomebutton"><?=$function->nome?></button></td>
+              <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+          </tr>
+        <?php endforeach; ?> <!--
             <tr>
                 <th scope="row" id="td">2</th>
                 <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Jacob</button></td>
@@ -43,7 +45,7 @@
                 <td id="tdbutton"><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
             </tbody>
-        </table>
+        </table> !-->
       </div>
 
     <div class="modal fade" id="Modalusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -142,7 +144,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="Modaladiciona" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="Modaladiciona" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" action="tb_adm_usuarios/create" method="POST">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -154,10 +156,10 @@
             <div class="modal-body">
                 <div class="formulario-adiciona">
                     <h2>Preencha o formulário para adicionar novos Usuários</h2>
-                    <form>
+                    <form action="/tb_adm_usuarios/create" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nome de usuário:</label>
-                            <input type="text" class="form-control" id="nameFormInput" placeholder="Izuku Midoriya">
+                            <input type="text" class="form-control" id="nameFormInput" name='nome' placeholder="Izuku Midoriya">
                             <small id="emailHelp" class="form-text text-muted">Indique o nome para o cadastro</small>
                         </div>
                         <div class="form-group">
@@ -168,17 +170,19 @@
                             <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vou ser o herói número 1!"></textarea>
                         </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">Foto de perfil:</label>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                          <button type="submit" class="btn btn-warning" id="conf-modal" action="/tb_adm_usuarios/create" method="POST">Adicionar</button>
+                        </div>
                     </form>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">Foto de perfil:</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                      </div>
+                    
                 </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-warning" id="conf-modal">Adicionar</button>
-            </div>
+    
           </div>
         </div>
       </div>

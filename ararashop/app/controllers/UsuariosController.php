@@ -14,7 +14,15 @@ class UsuariosController
 
     public function usuarios()
     {
-        return view('admin/view-adm-usuarios');
+
+        $tb_adm_usuarios = App::get('database')->selectAll('tb_adm_usuarios');
+        $tables = [
+
+            'tb_adm_usuarios' => $tb_adm_usuarios,
+
+        ];
+
+        return view('admin/view-adm-usuarios', $tables);
     }
     
 
@@ -25,7 +33,13 @@ class UsuariosController
 
     public function create()
     {
- 
+        $parametros = [
+
+            'nome' => $_POST['nome']
+        ];
+
+        app::get('database')->insert('tb_adm_usuarios', $parametros);
+        header('Location: /admin/view-adm-usuarios');
     }
 
     public function store()
