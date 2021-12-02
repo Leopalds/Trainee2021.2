@@ -27,12 +27,12 @@
             </tr>
             </thead>
             <tbody>
-        <?php foreach ($tb_adm_usuarios as $function) : ?>    
+        <?php foreach ($tb_adm_usuarios as $function) : ?>
             <tr>
               <th scope="row" id="td"><?=$function->id?></th>
               <td id="td"><button class="btn btn-outline-dark" id="nomebutton"><?=$function->nome?></button></td>
-              <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
-          </tr>
+              <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button type="button" id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+            </tr>
         <?php endforeach; ?> <!--
             <tr>
                 <th scope="row" id="td">2</th>
@@ -134,12 +134,14 @@
               </button>
             </div>
             <div class="modal-body">
-                <p>Vou sentir saudade da tropa de exploração :(</p>
-                <div class="modal-footer" action="/tb_adm_usuarios/delete" method="POST">
-                  <imput type="hidden" value="<?= $tb_adm_usuarios->id ?>" name="id">
+              <p>Vou sentir saudade da tropa de exploração :(</p>
+            </div>
+            <div class="modal-footer">
+                <form id="form_deleta" action="/tb_adm_usuarios/delete" method="POST">
+                  <input type="hidden" value="<?= $function->id ?>" name="id">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                   <button type="submit" class="btn btn-warning" id="conf-modal">Excluir</button>
-                </div>  
+                </form>
             </div>
           </div>
         </div>

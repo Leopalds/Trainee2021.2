@@ -57,6 +57,7 @@ class QueryBuilder
 
     public function delete($table, $idp)
     {
+        print_r('chegou no querybuilder');
         $sql = "delete from {$table} where id = {$idp}";
 
         try {

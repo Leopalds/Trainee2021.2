@@ -37,6 +37,10 @@ table {
     text-align: end;
 }
 
+#form_deleta {
+    display: inline;
+}
+
 #usuario {
     width: 70%;
 }
