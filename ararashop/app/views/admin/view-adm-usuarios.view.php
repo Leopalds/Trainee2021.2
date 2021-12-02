@@ -135,10 +135,11 @@
             </div>
             <div class="modal-body">
                 <p>Vou sentir saudade da tropa de exploração :(</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-warning" id="conf-modal">Excluir</button>
+                <div class="modal-footer" action="/tb_adm_usuarios/delete" method="POST">
+                  <imput type="hidden" value="<?= $tb_adm_usuarios->id ?>" name="id">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-warning" id="conf-modal">Excluir</button>
+                </div>  
             </div>
           </div>
         </div>
@@ -164,19 +165,19 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha:</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Oru_Maito">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name='senha' placeholder="Oru_Maito">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vou ser o herói número 1!"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='informacoes' placeholder="Vou ser o herói número 1!"></textarea>
                         </div>
                         <div class="form-group">
                           <label for="exampleFormControlFile1">Foto de perfil:</label>
-                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1" name='foto_perfil'>
+                        </div> 
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                          <button type="submit" class="btn btn-warning" id="conf-modal" action="/tb_adm_usuarios/create" method="POST">Adicionar</button>
+                          <button type="submit" class="btn btn-warning" id="conf-modal">Adicionar</button>
                         </div>
                     </form>
                     

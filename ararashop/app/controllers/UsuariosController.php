@@ -33,15 +33,18 @@ class UsuariosController
 
     public function create()
     {
-        $parametros = [
 
-            'nome' => $_POST['nome']
+        $parameters = [
+
+            'nome' => $_POST['nome'],
+            'senha' => $_POST['senha'],
+            'informacoes' => $_POST['informacoes'],
+            'foto_perfil' => $_POST['foto_perfil']
         ];
+        app::get('database')->insert('tb_adm_usuarios', $parameters);
 
-        app::get('database')->insert('tb_adm_usuarios', $parametros);
-        header('Location: /admin/view-adm-usuarios');
+        header('Location: /admin/usuarios');
     }
-
     public function store()
     {
 
@@ -59,6 +62,7 @@ class UsuariosController
 
     public function delete()
     {
- 
+        app::get('database')->delete('tb_adm_usuarios', $_POST['id']);
+        header('Location: /admin/usuarios');
     }
 }
