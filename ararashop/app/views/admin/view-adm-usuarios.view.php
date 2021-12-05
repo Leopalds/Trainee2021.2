@@ -33,21 +33,10 @@
               <td id="td"><button class="btn btn-outline-dark" id="nomebutton"><?=$function->nome?></button></td>
               <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton" type="submit"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button type="button" id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
-        <?php endforeach; ?> <!--
-            <tr>
-                <th scope="row" id="td">2</th>
-                <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Jacob</button></td>
-                <td id="tdbutton"><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
-            </tr>
-            <tr>
-                <th scope="row" id="td">3</th>
-                <td id="td"><button class="btn btn-outline-dark" id="nomebutton">Larry</button></td>
-                <td id="tdbutton"><button class="btn btn-outline-dark" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button id="excluibutton" class="btn btn-outline-danger"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
-            </tr>
-            </tbody>
-        </table> !-->
+        <?php endforeach; ?>
       </div>
 
+    <?php foreach ($tb_adm_usuarios as $function) : ?>
     <div class="modal fade" id="Modalusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -59,26 +48,25 @@
             </div>
             <div class="modal-body">
                 <form action="/tb_adm_usuarios/show" method="GET">
-                    <input type="hidden" value="<?= $function->id ?>" name="id">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Foto de Perfil:</label>
-                        <input type="image" class="form-control" id="nameFormInput" readonly placeholder="">     
+                        <input type="image" class="form-control" id="nameFormInput" valeu="<?=$function->foto_perfil?>" readonly placeholder="">     
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nome de usuário:</label>
-                        <input type="text" class="form-control" id="nameFormInput" readonly placeholder="">     
+                        <input type="text" class="form-control" id="nameFormInput" value="<?=$function->nome?>" readonly placeholder="">     
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email:</label>
-                        <input type="text" class="form-control" id="nameFormInput" readonly placeholder="">     
+                        <input type="text" class="form-control" id="nameFormInput" value="<?=$function->email?>" readonly placeholder="">     
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Senha:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" readonly placeholder="">
+                        <input type="text" class="form-control" id="exampleInputPassword1" value="<?=$function->senha?>" readonly placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly placeholder=""></textarea>
+                        <input class="form-control" id="exampleFormControlTextarea1" rows="3" value="<?=$function->informacoes?>" readonly placeholder="">
                     </div>
                 </form>
             </div>
@@ -87,8 +75,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+      <?php endforeach; ?> 
 
+    <?php foreach ($tb_adm_usuarios as $function) : ?>
     <div class="modal fade" id="Modaledita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -105,19 +95,19 @@
                         <input type="hidden" value="<?= $function->id ?>" name="id">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nome de usuário:</label>
-                            <input type="text" class="form-control" id="nameFormInput" name='nome' placeholder="Izuku Midoriya">
+                            <input type="text" class="form-control" id="nameFormInput" name='nome' value="<?=$function->nome?>" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Email:</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name='email' placeholder="Orumaitofan@gmail">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name='email' value="<?=$function->email?>" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha:</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" name='senha' placeholder="Oru_Maito">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name='senha' value="<?=$function->senha?>" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='informacoes' placeholder="Vou ser o herói número 1!"></textarea>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name='informacoes' value="<?=$function->informacoes?>" placeholder="">
                         </div>
                         <div class="form-group">
                           <label for="exampleFormControlFile1">Foto de perfil:</label>
@@ -127,13 +117,16 @@
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                           <button type="submit" class="btn btn-warning" id="conf-modal">Salvar Alterações</button>
                         </div>  
-                      </form>                  
+                      </form>      
+            
                 </div>
             </div>
           </div>
         </div>
-    </div>
+    </div>  
+    <?php endforeach; ?> 
 
+    <?php foreach ($tb_adm_usuarios as $function) : ?>
     <div class="modal fade" id="Modalexclui" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -156,7 +149,9 @@
           </div>
         </div>
     </div>
+    <?php endforeach; ?> 
 
+    <?php foreach ($tb_adm_usuarios as $function) : ?>
     <div class="modal fade" id="Modaladiciona" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" action="tb_adm_usuarios/create" method="POST">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -203,6 +198,8 @@
           </div>
         </div>
       </div>
+      <?php endforeach; ?> 
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
