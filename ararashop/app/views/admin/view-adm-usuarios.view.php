@@ -31,7 +31,7 @@
             <tr>
               <th scope="row" id="td"><?=$function->id?></th>
               <td id="td"><button class="btn btn-outline-dark" id="nomebutton"><?=$function->nome?></button></td>
-              <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button type="button" id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
+              <td id="tdbutton"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modalusuario" id="usubutton" type="submit"><img src="../../public/img/adm_usuarios/usuario.png" id="usuario"></button><button class="btn btn-outline-dark" data-toggle="modal" data-target="#Modaledita" id="editbutton"><img src="../../public/img/adm_usuarios/edit.png" id="editar"></button><button type="button" id="excluibutton" class="btn btn-outline-danger" data-toggle="modal" data-target="#Modalexclui"><img src="../../public/img/adm_usuarios/lixeira2.png" id="excluir"></button></td>
             </tr>
         <?php endforeach; ?> <!--
             <tr>
@@ -58,10 +58,18 @@
               </button>
             </div>
             <div class="modal-body">
-                <img src="../../public/img/adm_usuarios/mirio-perfil.jpg">
-                <form>
+                <form action="/tb_adm_usuarios/show" method="GET">
+                    <input type="hidden" value="<?= $function->id ?>" name="id">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Foto de Perfil:</label>
+                        <input type="image" class="form-control" id="nameFormInput" readonly placeholder="">     
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nome de usuário:</label>
+                        <input type="text" class="form-control" id="nameFormInput" readonly placeholder="">     
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email:</label>
                         <input type="text" class="form-control" id="nameFormInput" readonly placeholder="">     
                     </div>
                     <div class="form-group">
@@ -93,32 +101,34 @@
             <div class="modal-body">
                 <div class="formulario-adiciona">
                     <h2>Altere os dados desejados</h2>
-                    <form>
+                      <form action="/tb_adm_usuarios/update" method="POST">
+                        <input type="hidden" value="<?= $function->id ?>" name="id">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nome de usuário:</label>
-                            <input type="text" class="form-control" id="nameFormInput" placeholder="Izuku Midoriya">
-                            <small id="emailHelp" class="form-text text-muted">Indique o nome para o cadastro</small>
+                            <input type="text" class="form-control" id="nameFormInput" name='nome' placeholder="Izuku Midoriya">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email:</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name='email' placeholder="Orumaitofan@gmail">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha:</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Oru_Maito">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name='senha' placeholder="Oru_Maito">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vou ser o herói número 1!"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='informacoes' placeholder="Vou ser o herói número 1!"></textarea>
                         </div>
-                    </form>
-                    <form>
                         <div class="form-group">
                           <label for="exampleFormControlFile1">Foto de perfil:</label>
-                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                      </form>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1" name='foto_perfil'>
+                        </div> 
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                          <button type="submit" class="btn btn-warning" id="conf-modal">Salvar Alterações</button>
+                        </div>  
+                      </form>                  
                 </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-warning" id="conf-modal">Salvar alterações</button>
             </div>
           </div>
         </div>
@@ -166,8 +176,12 @@
                             <small id="emailHelp" class="form-text text-muted">Indique o nome para o cadastro</small>
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Email:</label>
+                            <input type="text" class="form-control" id="nameFormInput" name='email' placeholder="orumaito@email">
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputPassword1">Senha:</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name='senha' placeholder="Oru_Maito">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name='senha' placeholder="Oru_Maito">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>

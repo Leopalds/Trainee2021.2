@@ -28,7 +28,20 @@ class UsuariosController
 
     public function show()
     {
+        $parameters = [
 
+            'nome' => $_GET['nome'],
+            'email' => $_GET['email'],
+            'senha' => $_GET['senha'],
+            'informacoes' => $_GET['informacoes'],
+            'foto_perfil' => $_GET['foto_perfil']
+        ];
+
+        print_r($parameters);
+
+        app::get('database')->select($_POST['id'], 'tb_adm_usuarios', $parameters)->get();
+
+        header('Location: /admin/usuarios');
     }
 
     public function create()
@@ -37,6 +50,7 @@ class UsuariosController
         $parameters = [
 
             'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
             'senha' => $_POST['senha'],
             'informacoes' => $_POST['informacoes'],
             'foto_perfil' => $_POST['foto_perfil']
@@ -52,12 +66,22 @@ class UsuariosController
 
     public function edit()
     {
-  
+        
     }
 
     public function update()
     {
-        
+        $parameters = [
+
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
+            'informacoes' => $_POST['informacoes'],
+            'foto_perfil' => $_POST['foto_perfil']
+        ];
+        app::get('database')->edit($_POST['id'], 'tb_adm_usuarios', $parameters);
+
+        header('Location: /admin/usuarios');  
     }
 
     public function delete()

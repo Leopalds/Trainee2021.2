@@ -29,15 +29,18 @@ class QueryBuilder
         }
     }
 
-    public function select()
+    public function select($idp, $table, $parametros)
     {
+        $sql= "select * from '{$table}' WHERE id = '{$idp}'";
+        
 
     }
 
     public function insert($table, $parametros)
     {
 
-        $sql = "insert into `{$table}` (nome, senha, informacoes, foto_perfil) values ('{$parametros['nome']}', '{$parametros['senha']}', '{$parametros['informacoes']}', '{$parametros['foto_perfil']}')";
+        $sql = "insert into `{$table}` (nome, email, senha, informacoes, foto_perfil) values ('{$parametros['nome']}',
+        '{$parametros['email']}', '{$parametros['senha']}', '{$parametros['informacoes']}', '{$parametros['foto_perfil']}')";
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -49,15 +52,23 @@ class QueryBuilder
 
 
     }
-
-    public function edit()
+    
+    public function edit($idp, $table, $parametros)
     {
-         
+        $sql = "update `{$table}` set nome = '{$parametros['nome']}', email = '{$parametros['email']}', senha = '{$parametros['senha']}',
+        informacoes = '{$parametros['informacoes']}', foto_perfil = '{$parametros['foto_perfil']}' WHERE id = {$idp}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function delete($table, $idp)
     {
-        print_r('chegou no querybuilder');
         $sql = "delete from {$table} where id = {$idp}";
 
         try {

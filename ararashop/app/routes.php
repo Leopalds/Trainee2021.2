@@ -7,4 +7,8 @@
 
     $router->post('tb_adm_usuarios/delete', 'UsuariosController@delete');
 
+    $router->post('tb_adm_usuarios/update', 'UsuariosController@update');
+
+    $router->get('tbm_adm_usuarios/show', 'UsuariosController@show');
+
 ?>
