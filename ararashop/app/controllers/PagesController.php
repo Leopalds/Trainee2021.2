@@ -7,7 +7,7 @@
     class PagesController {
 
         public function admProdutos(){
-            $produtosadm = App::get('database')->selectAll('produtosAdm');
+            $produtosAdm = App::get('database')->selectAll('produtosAdm');
         
             return view('admin/produtosADM', compact("produtosAdm")); 
         }
