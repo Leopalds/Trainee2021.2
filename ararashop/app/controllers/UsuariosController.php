@@ -22,7 +22,7 @@ class UsuariosController
 
         ];
 
-        return view('admin/view-adm-usuarios', $tables);
+        return view('admin/usuarios', $tables);
     }
     
 
