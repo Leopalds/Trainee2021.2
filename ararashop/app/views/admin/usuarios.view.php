@@ -20,7 +20,7 @@
     
     <table class="table table-dark">
       <?php require 'modal/usuarios/modal-create.php' ?>
-      <button type="button" id="add" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#modal-create-<?=$function->id?>">Adicionar usuário</button>
+      <button type="button" id="add" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#modal-create">Adicionar usuário</button>
       <thead>
          <tr>
             <th scope="col" id="td">Nº</th>
