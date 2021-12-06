@@ -31,8 +31,8 @@ class QueryBuilder
 
     public function select($idp, $table, $parametros)
     {
-        $sql= "select * from '{$table}' WHERE id = '{$idp}'";
-        
+        $sql= "select * from '{$table}' WHERE id = {$idp}";
+        print_r($sql);
 
     }
 
@@ -57,6 +57,7 @@ class QueryBuilder
     {
         $sql = "update `{$table}` set nome = '{$parametros['nome']}', email = '{$parametros['email']}', senha = '{$parametros['senha']}',
         informacoes = '{$parametros['informacoes']}', foto_perfil = '{$parametros['foto_perfil']}' WHERE id = {$idp}";
+        print_r($sql);
 
         try {
             $stmt = $this->pdo->prepare($sql);

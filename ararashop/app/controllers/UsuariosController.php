@@ -39,7 +39,7 @@ class UsuariosController
 
         print_r($parameters);
 
-        app::get('database')->select($_POST['id'], 'tb_adm_usuarios', $parameters)->get();
+        app::get('database')->select($_GET['id'], 'tb_adm_usuarios', $parameters)->get();
 
         header('Location: /admin/usuarios');
     }
