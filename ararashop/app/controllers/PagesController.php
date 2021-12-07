@@ -9,8 +9,8 @@
         public function admProdutos(){
             $produtosadm = App::get('database')->selectAll('produtos');
 
-        
-        return view('admin/produtosADM', compact("produtosadm"));
+            
+            return view('admin/produtosADM', compact("produtosadm"));
         }
         public function produtos(){
             return view('site/produtos');

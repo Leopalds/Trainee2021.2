@@ -11,7 +11,7 @@ class QueryBuilder
 
     public function __construct($pdo)
     {
-        $this->pdo = $pdo;
+        $this-> pdo = $pdo;
     }
 
     public function selectAll($table)
@@ -33,8 +33,28 @@ class QueryBuilder
     {
     }
 
-    public function insert()
+    public function insert($table, $parametros)
     {
+
+      $sql = "INSERT INTO `produtosa` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
+
+
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+
+          return $stmt->fetchAll(PDO::FETCH_CLASS);
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+      
     }
 
     public function edit()
