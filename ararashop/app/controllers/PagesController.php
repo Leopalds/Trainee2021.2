@@ -9,24 +9,29 @@ class PagesController
 {
     public function home()
     {
-        return view('site/home'); 
-    }
+        $produtosadm = App::get('database')->selectAlldesc('categoriasexemplo');
+        return view('site/home', compact("produtosadm")); 
+    } 
 
     public function produtos()
     {
-        return view('site/produtos'); 
+        $produtosadm = App::get('database')->selectAll('produtosadm');
+        return view('site/produtos', compact("produtosadm")); 
     }
 
     public function ADMprodutos()
     {
 
+        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         $produtosadm = App::get('database')->selectAll('produtosadm');
+        return view('admin/ADMprodutos', compact("produtosadm","categoriasexemplo")); 
 
         
-        return view('admin/ADMprodutos', compact("produtosadm")); 
     }
 
-    public function create()
+
+
+    public function createprodutos()
     {
  
          $parameters = [
@@ -37,18 +42,34 @@ class PagesController
              'imagem' => $_POST['imagem']
          ];
 
-         app::get('database')->insert('produtosadm', $parameters);
+         app::get('database')->insertprodutos('produtosadm', $parameters);
          
          header('location: /ADMprodutos');
 
     }
 
-    public function delete()
+    public function deleteprodutos()
     {
 
-        app::get('database')->delete('produtosadm', $_POST['id']);
+        app::get('database')->deleteprodutos('produtosadm', $_POST['id']);
         header('location: /ADMprodutos');  
  
+    }
+
+    public function updateprodutos()
+    {
+
+        $parameters = [
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'preco' => $_POST['preco'],
+            'categoria' => $_POST['categoria'],
+            'imagem' => $_POST['imagem']
+        ];
+
+        app::get('database')->updateprodutos('produtosadm', $parameters, $_POST['id']);
+        header('location: /ADMprodutos'); 
+        
     }
 
 
@@ -68,8 +89,5 @@ class PagesController
   
     }
 
-    public function update()
-    {
-        
-    }
+    
 }
