@@ -26,7 +26,7 @@ class UsuariosController
     }
     
 
-    public function show()
+    public function showusuario()
     {
         $parameters = [
 
@@ -44,7 +44,7 @@ class UsuariosController
         header('Location: /admin/usuarios');
     }
 
-    public function create()
+    public function createusuario()
     {
 
         $parameters = [
@@ -69,7 +69,7 @@ class UsuariosController
         
     }
 
-    public function update()
+    public function updateusuario()
     {
         $parameters = [
 
@@ -84,7 +84,7 @@ class UsuariosController
         header('Location: /admin/usuarios');  
     }
 
-    public function delete()
+    public function deleteusuario()
     {
         app::get('database')->delete('tb_adm_usuarios', $_POST['id']);
         header('Location: /admin/usuarios');

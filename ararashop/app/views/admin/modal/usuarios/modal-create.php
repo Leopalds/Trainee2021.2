@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <div class="formulario-adiciona">
                     <h2>Preencha o formulário para adicionar novos Usuários</h2>
-                    <form action="/tb_adm_usuarios/create" method="POST">
+                    <form action="/admin/usuarios/create" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nome de usuário:</label>
                             <input type="text" class="form-control" id="nameFormInput" name='nome' placeholder="Izuku Midoriya">

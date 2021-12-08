@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <div class="formulario-adiciona">
                   <h2>Altere os dados desejados</h2>
-                  <form action="/tb_adm_usuarios/update" method="POST">
+                  <form action="/admin/usuarios/update" method="POST">
                     <input type="hidden" value="<?= $function->id ?>" name="id">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nome de usuário:</label>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlFile1">Foto de perfil:</label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name='foto_perfil'>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1" name='foto_perfil' value="<?=$function->foto_perfil?>">
                     </div> 
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

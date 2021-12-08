@@ -33,6 +33,10 @@ table {
     width: auto;
 }
 
+.foto_perfil img {
+    width: 20%;
+}
+
 .table {
     text-align: end;
 }

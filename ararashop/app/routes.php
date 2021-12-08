@@ -3,12 +3,14 @@
 
     $router->get('admin/usuarios', 'UsuariosController@usuarios');
 
-    $router->post('tb_adm_usuarios/create', 'UsuariosController@create');
+    $router->post('admin/usuarios/create', 'UsuariosController@createusuario');
 
-    $router->post('tb_adm_usuarios/delete', 'UsuariosController@delete');
+    $router->post('admin/usuarios/delete', 'UsuariosController@deleteusuario');
 
-    $router->post('tb_adm_usuarios/update', 'UsuariosController@update');
+    $router->post('admin/usuarios/update', 'UsuariosController@updateusuario');
 
-    $router->get('tbm_adm_usuarios/show', 'UsuariosController@show');
+    $router->get('admin/usuarios/show', 'UsuariosController@showusuario');
+
+    $router->post('admin/login', 'LoginController@login');
 
 ?>
