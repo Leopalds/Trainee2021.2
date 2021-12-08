@@ -5,7 +5,7 @@
 //         imgsrc = container.currentStyle || window.getComputedStyle(container, false),
 //         imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, ""),
 //         img = new Image();
-  
+
 //     // (B) LOAD IMAGE + ATTACH ZOOM
 //     img.src = imgsrc;
 //     img.onload = function () {
@@ -13,7 +13,7 @@
 //           imgHeight = img.naturalHeight,
 //           ratio = imgHeight / imgWidth,
 //           percentage = ratio * 100 + '%';
-  
+
 //       // (C) ZOOM ON MOUSE MOVE
 //       container.onmousemove = function (e) {
 //         var boxWidth = container.clientWidth,
@@ -22,13 +22,13 @@
 //             yPos = e.clientY - rect.top,
 //             xPercent = xPos / (boxWidth / 100) + "%",
 //             yPercent = yPos / ((boxWidth * ratio) / 100) + "%";
-  
+
 //         Object.assign(container.style, {
 //           backgroundPosition: xPercent + ' ' + yPercent,
 //           backgroundSize: imgWidth + 'px'
 //         });
 //       };
-  
+
 //       // (D) RESET ON MOUSE LEAVE
 //       container.onmouseleave = function (e) {
 //         Object.assign(container.style, {
@@ -36,9 +36,9 @@
 //           backgroundSize: 'cover'
 //         });
 //       };
-    }
-  };
-  
-  window.addEventListener("load", function(){
+// }
+// };
+
+window.addEventListener("load", function() {
     addZoom("zoom-img");
-  });
+});
