@@ -1,5 +1,10 @@
 body {
+    background-image: url(../img/homebg.png);
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
     background-color: #343A40;
+    background-position: center center;
 }
 
 .container {
@@ -66,4 +71,16 @@ body {
 .callaction img {
     border-radius: 10px;
     max-width: 80%;
+}
+
+@media (max-width: 735px) {
+
+    body {
+      background-image: url(../img/fundocelsite.png);
+      background-attachment: fixed;
+      background-size:100% 100%;
+      background-repeat: no-repeat;
+      background-color: #343A40;
+      background-position: center center;
+    }
 }
