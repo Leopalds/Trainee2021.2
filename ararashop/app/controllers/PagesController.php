@@ -9,7 +9,7 @@ class PagesController
 {
     public function home()
     {
-        $produtosadm = App::get('database')->selectAlldesc('categoriasexemplo');
+        $produtosadm = App::get('database')->selectAlldesc('produtosadm');
         return view('site/home', compact("produtosadm")); 
     } 
 
