@@ -15,7 +15,12 @@
         public function produtos(){
             return view('site/produtos');
         }
+        public function admDashboard(){
+            $produtosadm = App::get('database')->selectAll('produtos');
 
+
+             return view('admin/dashboard', compact('produtosadm'));
+         }
         public function home(){
             return view('site/home');
         }
