@@ -85,15 +85,6 @@
                   </div>
 
 
-                  <?php foreach ($categoriasexemplo as $cat) : ?>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->categ ?>" value="<?= $cat->categ ?>">
-                    <label class="form-check-label" for="cat-<?= $cat->categ ?>">
-                      <?= $cat->categ ?> 
-                    </label>
-                  </div>
-                  <?php endforeach; ?>
-
 
                   
                 </div>
@@ -145,12 +136,12 @@
             <tbody>
 
               <tr>
-                <?php 
-                foreach ($produtos as $itemProdutos) : ?>
 
-                  <?php require 'modal/produtos/modal-view.php' ?>
-                  <?php require 'modal/produtos/modal_edit.php' ?>
-                  <?php require 'modal/produtos/modal-excluir.php' ?>
+                <?php foreach ($tableProdutos as $itemProdutos) : ?>
+
+                  <?php require 'modal/produto/modal-view.php' ?>
+                  <?php require 'modal/produto/modal-edit.php' ?>
+                  <?php require 'modal/produto/modal-excluir.php' ?>
                 
                 <th class="id" scope="row"><?= $itemProdutos->id ?></th>
                 <th class="nome"><?= $itemProdutos->nome ?></th>
@@ -181,14 +172,6 @@
                   </div>
                 </td>
               </tr>
-                          
-                          
-                         
-
-
-
-
-
               <?php endforeach; ?>
             </tbody>
           </table>

@@ -23,7 +23,7 @@
 
             </div>
 
-            <img class="imgview" <?= $itemProdutos->image ?>">
+            <img class="imgview"  src="../../../../../public/img/<?php $itemProdutos->imagem ?>">
 
             <p> </p>
             <p> </p>

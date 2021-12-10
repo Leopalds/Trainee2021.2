@@ -9,26 +9,26 @@
         public function admProdutos(){
             $tableProdutos = App::get('database')->selectAll('produtos');
 
-            return view('admin/produtosADM', compact('tableProdutos'));
+            return view('admin/produtosADM', compact("tableProdutos"));
         }
         public function produtos(){
             $tableProdutos = App::get('database')->selectAll('produtos');
             
-            return view('site/produtos', compact('tableProdutos'));
+            return view('site/produtos', compact("tableProdutos"));
         }
         public function admDashboard(){
             $tableProdutos = App::get('database')->selectAll('produtos');
 
 
-             return view('admin/dashboard', compact('tableProdutos'));
+             return view('admin/dashboard', compact("tableProdutos"));
          }
         public function home(){
             return view('site/home');
         }
 
         public function delete(){
-            app::get('database')->delete('produtosAdm', $_POST['id']);
-            header('location: admin/produtos');
+            app::get('database')->delete('produtos', $_POST['id']);
+            header('location: /admin/produtos');
         }
         public function create(){
             $parameters = [
@@ -40,7 +40,7 @@
             ];
 
             app::get('database')->insert('produtos', $parameters);
-            header('location: admin/produtos');
+            header('location: /admin/produtos');
         }
 
     }
