@@ -7,19 +7,20 @@
     class PagesController {
 
         public function admProdutos(){
-            $produtosadm = App::get('database')->selectAll('produtos');
+            $tableProdutos = App::get('database')->selectAll('produtos');
 
-            
-            return view('admin/produtosADM', compact("produtosadm"));
+            return view('admin/produtosADM', compact('tableProdutos'));
         }
         public function produtos(){
-            return view('site/produtos');
+            $tableProdutos = App::get('database')->selectAll('produtos');
+            
+            return view('site/produtos', compact('tableProdutos'));
         }
         public function admDashboard(){
-            $produtosadm = App::get('database')->selectAll('produtos');
+            $tableProdutos = App::get('database')->selectAll('produtos');
 
 
-             return view('admin/dashboard', compact('produtosadm'));
+             return view('admin/dashboard', compact('tableProdutos'));
          }
         public function home(){
             return view('site/home');
@@ -27,19 +28,19 @@
 
         public function delete(){
             app::get('database')->delete('produtosAdm', $_POST['id']);
-            header('location: /produtosADM');
+            header('location: admin/produtos');
         }
         public function create(){
             $parameters = [
-                'name'=>$_POST['name'],
-                'price'=>$_POST['price'],
-                'img'=>$_POST['img'],
-                'descpt'=>$_POST['descpt'],
-                'category'=>$_POST['category']
+                'nome'=>$_POST['nome'],
+                'preco'=>$_POST['preco'],
+                'imagem'=>$_POST['imagem'],
+                'descricao'=>$_POST['descricao'],
+                'categoria'=>$_POST['categoria']
             ];
 
-            app::get('database')->insert('produtosAdm', $parameters);
-            header('location: /produtosADM');
+            app::get('database')->insert('produtos', $parameters);
+            header('location: admin/produtos');
         }
 
     }

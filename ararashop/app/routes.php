@@ -10,4 +10,5 @@
 
     $router->post('admin/create','PagesController@create');
     $router->post('admin/delete','PagesController@delete');
+    $router->post('admin/update','PagesController@update');
 ?>

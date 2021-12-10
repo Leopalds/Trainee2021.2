@@ -9,18 +9,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../../public/css/view_ADM_produtos.css">
+  <!-- <link href="../../../public/css/navbar-adm.css" rel="stylesheet"> -->
+  <script src="../../../public/js/navbarAdm.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-  <link href="../../../public/css/navbar-adm.css" rel="stylesheet">
-  <script src="../../../public/js/navbarAdm.js"></script>
+
 </head>
 
-<body>
- 
-<?php require 'navbar.php' ?>
 
+
+<body>
+
+  
+  <!-- <?php require 'navbar.php' ?> -->
   <!-- Modal Adiconar Produto -->
   <div class="modal fade modal-adicionar-produto modais" id="modal-adicionar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -32,203 +35,88 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="/admin/create" method="POST">
 
                   <div class="form-group">
                     <label for="input-nome">Nome Produto</label>
-                    <input type="text" class="form-control" id="input-nome" placeholder="Nome do Produto">
+                    <input type="text" class="form-control" id="input-nome" name="nome" placeholder="Nome do Produto">
                   </div>
 
                   <div class="form-group">
                     <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" rows="3"></textarea>
+                    <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="input-nome">Preço</label>
-                    <input type="number" class="form-control" id="input-nome" placeholder="R$">
+                    <input step="0.01" type="number" class="form-control" id="input-nome" name="preco" placeholder="R$">
                   </div>
 
                   <div class="form-group">
                     <label for="input-imagem">Imagem Principal do Produto</label>
-                    <input type="file" class="form-control-file" id="imgproduto">
+                    <input type="file" class="form-control-file" id="imgproduto" name="imagem" >
                   </div>
 
                   <p>CATEGORIA:</p>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="Camisa" id="cat-camisa" value="Camisa">
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-camisa" value="Camisa">
                     <label class="form-check-label" for="cat-camisa">
                       Camisa
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="Conjunto" id="cat-conjunto" value="Conjunto">
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-conjunto" value="Conjunto">
                     <label class="form-check-label" for="cat-conjunto">
                       Conjunto
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="Cosplay" id="cat-cosplay" value="Cosplay">
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-cosplay" value="Cosplay">
                     <label class="form-check-label" for="cat-cosplay">
                       Cosplay
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="Moletom" id="cat-moletom" value="Moletom">
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-moletom" value="Moletom">
                     <label class="form-check-label" for="cat-moletom">
                       Moletom
                     </label>
                   </div>
 
-          </form>
 
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary modbut">Confirmar</button>
-            </div>
-       </div>
+                  <?php foreach ($categoriasexemplo as $cat) : ?>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->categ ?>" value="<?= $cat->categ ?>">
+                    <label class="form-check-label" for="cat-<?= $cat->categ ?>">
+                      <?= $cat->categ ?> 
+                    </label>
+                  </div>
+                  <?php endforeach; ?>
+
+
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-primary modbut">Confirmar</button>
+                </div>
+              </div>
+              
+          </form>
 
     </div>
   </div>
   <!-- Fim Modal Adicionar Produto -->
 
-  <!-- Modal Vizualizar Produto -->
-  <div class="modal fade modal-visualisar modais" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Moletom Selamento de Oito Trigramas</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+  
 
 
-            <div class="textview">
 
-                <p>DESCRIÇÃO:</p>
-                <p>Material: Algodão - Com capuz</p>
-
-                <p>Preço: R$ 78,99</p>
-
-                <p>CATEGORIA:</p>
-                <p>Moletom</p>
-
-            </div>
-
-            <img class="imgview" src="../../public/img/moletomb.jpg">
-
-            <p> </p>
-            <p> </p>
-            <p> </p>
-
-      </div>
-    </div>
-</div>
-
-  <!-- Fim modal Vizualizar Produto -->
-
-  <!-- Modal Editar Produto -->
-  <div class="modal fade modal-editar-produto modais" id="modal-editar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modificar Detalhes do Produto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-
-                  <div class="form-group">
-                    <label for="input-nome">Nome</label>
-                    <input type="text" class="form-control" id="input-nome" placeholder="Moletom Selamento de Oito Trigramas">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="input-descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" placeholder="Material: Algodão - Com capuz" rows="3"></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="input-nome">Preço</label>
-                    <input type="number" class="form-control" id="input-nome" placeholder="R$78,99">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="input-imagem">Nova Imagem Principal do Produto</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                  </div>
-
-                  <p>Mudança de Categoria:</p>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1">
-                    <label class="form-check-label" for="cat-camisa">
-                      Camisa
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2" checked>
-                    <label class="form-check-label" for="cat-conjunto">
-                      Conjunto
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="cat-cosplay">
-                      Cosplay
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="cat-moletom">
-                      Moletom
-                    </label>
-                  </div>
-
-                  <p> </p>
-
-          </form>
-
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary modbut">Salvar mudanças</button>
-            </div>
-       </div>
-       
-    </div>
-  </div>
-  <!-- Fim Modal Editar Produto -->
-
-  <!-- Início Modal Excluir-->
-  <div class="modal fade modal-excluir-produto modais" id="modal-excluir-produto" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">EXCLUIR PRODUTO</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>TEM CERTEZA QUE DESEJA EXCLUIR ESTE PRODUTO DO BANCO DE DADOS?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary modbut">Confirmar</button>
-        </div>
-      </div>
-    </div>
-  </div>     
-  <!-- Fim Modal Excluir -->
+  
 
   <div class="container">
+    
 
     <div class="input-group barrabusca">
       <input type="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
@@ -257,87 +145,60 @@
             <tbody>
 
               <tr>
-              <?php foreach($produtos as $itemProdutos) : ?>
+                <?php 
+                foreach ($produtos as $itemProdutos) : ?>
+
+                  <?php require 'modal/produtos/modal-view.php' ?>
+                  <?php require 'modal/produtos/modal_edit.php' ?>
+                  <?php require 'modal/produtos/modal-excluir.php' ?>
+                
                 <th class="id" scope="row"><?= $itemProdutos->id ?></th>
                 <th class="nome"><?= $itemProdutos->nome ?></th>
-                <td class="descricao"><?= $itemProdutos->descicao ?></td>
-                <td class="preco">R$ <?= number_format($itemProdutos->preco , 2, ',') ?></td>
+                <td class="descricao"><?= $itemProdutos->descricao ?></td>
+                <td class="preco"> R$ <?= number_format($itemProdutos->preco ,2,',') ?></td>
                 <td class="categoria"><?= $itemProdutos->categoria ?></td>
                 <td class="colunaacoes">
                   <div class="btn-group listaacoes">
 
-                    <!-- Botão Visualizar -->
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-visualisar">
-                    <i class="far fa-eye iconebotao"></i>
-                  </button>
-                    
-                    <!-- Botão Editar -->
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-editar-produto">
-                    <i class="far fa-edit iconebotao"></i>
-                  </button>
+                          <!-- Botão Visualizar -->
+                             <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-visualisar-<?= $itemProdutos->id ?>">
+                                 <i class="far fa-eye iconebotao"></i>
+                             </button>
+                          <!-- Final Botão Visualizar -->
 
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target=".modal-excluir-produto">
-                    <i class="far fa-trash-alt iconebotao"></i>
-                  </button>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2021e347</th>
-                <th>Camisa Hunter X Hunter - Killua</th>
-                <td>Material: Algodão - Apenas cor preta</td>
-                <td>R$ 42,50</td>
-                <td>Camisa</td>
-                <td class="colunaacoes">
-                  <div class="btn-group listaacoes">
-
-                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
+                          <!-- Botão Editar -->
+                             <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-editar-produto-<?= $itemProdutos->id ?>">
+                                  <i class="far fa-edit iconebotao"></i>
+                             </button>
+                          <!-- Final Botão Editar -->
+                         
+                          <!-- Botão Excluir -->
+                            <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-excluir-produto-<?= $itemProdutos->id ?>">
+                                 <i class="far fa-trash-alt iconebotao"></i>
+                           </button>
+                           <!-- Final Botão Excluir -->
 
                   </div>
                 </td>
               </tr>
+                          
+                          
+                         
 
-              <tr>
-                <th scope="row">2021g678</th>
-                <th>Conjunto Preto Moletom e Calça Aldeia da Folha</th>
-                <td>Oversized - Material: Algodão</td>
-                <td>R$ 169,90</td>
-                <td>Conjunto</td>
-                <td class="colunaacoes">
-                  <div class="btn-group listaacoes">
 
-                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
 
-                  </div>
-                </td>
-              </tr>
 
-              <tr>
-                <th scope="row">2021k809</th>
-                <th>Cosplay Violet Evergarden - Violet</th>
-                <td>Peruca e Enchimento da saia inclusos</td>
-                <td>R$ 199,80</td>
-                <td>Cosplay</td>
-                <td class="colunaacoes">
-                  <div class="btn-group listaacoes">
 
-                      <button class="botaoacao"><i class="far fa-eye iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-edit iconebotao"></i></button>
-                      <button class="botaoacao"><i class="far fa-trash-alt iconebotao"></i></button>
-
-                  </div>
-                </td>
-              </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-
+        
       </div>    
+
+
+              
+              
+
 
 
   </div>

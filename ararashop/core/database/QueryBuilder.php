@@ -33,10 +33,11 @@ class QueryBuilder
     {
     }
 
+
     public function insert($table, $parametros)
     {
 
-      $sql = "INSERT INTO `produtosa` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
+      $sql = "INSERT INTO `produtos` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
 
 
       try 
