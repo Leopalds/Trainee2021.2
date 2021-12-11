@@ -34,7 +34,7 @@ class QueryBuilder
     }
 
 
-    public function insert($table, $parametros)
+    public function create($table, $parametros)
     {
 
       $sql = "INSERT INTO `produtos` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
@@ -58,8 +58,31 @@ class QueryBuilder
       
     }
 
-    public function edit()
+    public function update($table, $parametros, $idprod)
     {
+      $sql = "UPDATE `produtos` SET `nome`='{$parametros['nome']}', `descricao`='{$parametros['descricao']}', `preco`='{$parametros['preco']}', `categoria`='{$parametros['categoria']}' ";
+
+      if (isset($parametros['imagem']) && $parametros['imagem'] != "")
+        {
+            $sql .=  ", `imagem`='{$parametros['imagem']}'";
+        }
+
+        $sql .= " WHERE `id`= '{$idprod}' ";
+
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+
     }
 
     public function delete($table, $idprod)

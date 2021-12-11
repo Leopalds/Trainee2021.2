@@ -39,7 +39,20 @@
                 'categoria'=>$_POST['categoria']
             ];
 
-            app::get('database')->insert('produtos', $parameters);
+            app::get('database')->create('produtos', $parameters);
+            header('location: /admin/produtos');
+        }
+
+        public function update(){
+            $parameters = [
+                'nome'=>$_POST['nome'],
+                'preco'=>$_POST['preco'],
+                'imagem'=>$_POST['imagem'],
+                'descricao'=>$_POST['descricao'],
+                'categoria'=>$_POST['categoria']
+            ];
+
+            app::get('database')->update('produtos', $parameters, $_POST['id']);
             header('location: /admin/produtos');
         }
 
