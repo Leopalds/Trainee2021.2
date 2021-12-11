@@ -9,16 +9,16 @@ class UsuariosController
 {
     public function index()
     {
-       
+        
     }
 
     public function usuarios()
     {
 
-        $tb_adm_usuarios = App::get('database')->selectAll('tb_adm_usuarios');
+        $usuarios = App::get('database')->selectAll('usuarios');
         $tables = [
 
-            'tb_adm_usuarios' => $tb_adm_usuarios,
+            'usuarios' => $usuarios,
 
         ];
 
@@ -37,9 +37,8 @@ class UsuariosController
             'foto_perfil' => $_GET['foto_perfil']
         ];
 
-        print_r($parameters);
 
-        app::get('database')->select($_GET['id'], 'tb_adm_usuarios', $parameters)->get();
+        app::get('database')->select($_GET['id'], 'usuarios', $parameters)->get();
 
         header('Location: /admin/usuarios');
     }
@@ -55,7 +54,7 @@ class UsuariosController
             'informacoes' => $_POST['informacoes'],
             'foto_perfil' => $_POST['foto_perfil']
         ];
-        app::get('database')->insert('tb_adm_usuarios', $parameters);
+        app::get('database')->insert('usuarios', $parameters);
 
         header('Location: /admin/usuarios');
     }
@@ -79,14 +78,14 @@ class UsuariosController
             'informacoes' => $_POST['informacoes'],
             'foto_perfil' => $_POST['foto_perfil']
         ];
-        app::get('database')->edit($_POST['id'], 'tb_adm_usuarios', $parameters);
+        app::get('database')->edit($_POST['id'], 'usuarios', $parameters);
 
         header('Location: /admin/usuarios');  
     }
 
     public function deleteusuario()
     {
-        app::get('database')->delete('tb_adm_usuarios', $_POST['id']);
+        app::get('database')->delete('usuarios', $_POST['id']);
         header('Location: /admin/usuarios');
     }
 }

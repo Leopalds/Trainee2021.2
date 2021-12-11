@@ -29,7 +29,7 @@
         </tr>
       </thead>
         <tbody>
-      <?php foreach ($tb_adm_usuarios as $function) : ?>
+      <?php foreach ($usuarios as $function) : ?>
       <?php require 'modal/usuarios/modal-view.php' ?>
       <?php require 'modal/usuarios/modal-delete.php' ?>
       <?php require 'modal/usuarios/modal-edit.php' ?>

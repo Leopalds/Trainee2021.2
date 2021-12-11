@@ -32,8 +32,6 @@ class QueryBuilder
     public function select($idp, $table, $parametros)
     {
         $sql= "select * from '{$table}' WHERE id = {$idp}";
-        print_r($sql);
-
     }
 
     public function insert($table, $parametros)
@@ -57,7 +55,6 @@ class QueryBuilder
     {
         $sql = "update `{$table}` set nome = '{$parametros['nome']}', email = '{$parametros['email']}', senha = '{$parametros['senha']}',
         informacoes = '{$parametros['informacoes']}', foto_perfil = '{$parametros['foto_perfil']}' WHERE id = {$idp}";
-        print_r($sql);
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -84,5 +81,25 @@ class QueryBuilder
     public function read()
     {
       
+    }
+
+    public function login($parametros, $table)
+    {
+        $sql = "select * from '{$table}' where email = '{$parametros['email']}', senha = '{$parametros['senha']}'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':email', $this->_get('email'));
+            $stmt->bindValue(':senha', $this->_get('senha'));
+
+            $stmt->execute();
+
+            $usuario = $stmt->fetch(\PDO::FETCH_ASSOC);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+        return $usuario;
+
     }
 }
