@@ -89,7 +89,7 @@ class QueryBuilder
     {
 
       $sql = "DELETE FROM `produtos` WHERE id = {$idprod}";
-      die(var_dump($sql));
+      
 
       try 
       {

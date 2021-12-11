@@ -28,7 +28,7 @@
         }
 
         public function delete(){
-            die(var_dump('oi'));
+            
             app::get('database')->delete('produtos', $_POST['id']);
             
             header('location: /admin/produtos');

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../../public/css/view_ADM_produtos.css">
-  <!-- <link href="../../../public/css/navbar-adm.css" rel="stylesheet"> -->
+  <link href="../../../public/css/navbar-adm.css" rel="stylesheet"> 
   <script src="../../../public/js/navbarAdm.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
 <body>
 
   
-  <!-- <?php require 'navbar.php' ?> -->
+   <?php require 'navbar.php' ?>
   <!-- Modal Adiconar Produto -->
   <div class="modal fade modal-adicionar-produto modais" id="modal-adicionar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
