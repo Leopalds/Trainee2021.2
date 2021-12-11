@@ -50,7 +50,7 @@
 
                   <div class="rowcar d-flex flex-wrap justify-content-center">
 
-                       <?php foreach ($produtosadm as $produtoad) : ?>
+                       <?php foreach ($produtos as $produtoad) : ?>
 
                        <div class="card m-2" style="width: 16rem;">
                           <img class="card-img-top" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Imagem de capa do card">

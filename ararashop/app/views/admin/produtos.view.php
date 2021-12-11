@@ -33,7 +33,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/produtosadm/createprodutos" method="POST">
+          <form action="/produtos/createprodutos" method="POST">
 
                   <div class="form-group">
                     <label for="input-nome">Nome Produto</label>
@@ -52,36 +52,10 @@
 
                   <div class="form-group">
                     <label for="input-imagem">Imagem Principal do Produto</label>
-                    <input type="file" class="form-control-file" id="imgproduto" name="imagem" >
+                    <input type="file" class="form-control-file" id="imgproduto" name="imagem">
                   </div>
 
                   <p>CATEGORIA:</p>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-camisa" value="Camisa">
-                    <label class="form-check-label" for="cat-camisa">
-                      Camisa
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-conjunto" value="Conjunto">
-                    <label class="form-check-label" for="cat-conjunto">
-                      Conjunto
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-cosplay" value="Cosplay">
-                    <label class="form-check-label" for="cat-cosplay">
-                      Cosplay
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-moletom" value="Moletom">
-                    <label class="form-check-label" for="cat-moletom">
-                      Moletom
-                    </label>
-                  </div>
-
 
                   <?php foreach ($categoriasexemplo as $cat) : ?>
                     <div class="form-check form-check-inline">
@@ -144,7 +118,7 @@
 
               <tr>
                 <?php 
-                foreach ($produtosadm as $produtoad) : ?>
+                foreach ($produtos as $produtoad) : ?>
 
                   <?php require 'modal/produtos/modal-view.php' ?>
                   <?php require 'modal/produtos/modal_edit.php' ?>
@@ -153,7 +127,7 @@
                 <th class="id" scope="row"><?= $produtoad->id ?></th>
                 <th class="nome"><?= $produtoad->nome ?></th>
                 <td class="descricao"><?= $produtoad->descricao ?></td>
-                <td class="preco"> R$ <?= number_format($produtoad->preco ,2,',') ?></td>
+                <td class="preco"> R$ <?= number_format($produtoad->preco ,2) ?></td>
                 <td class="categoria"><?= $produtoad->categoria ?></td>
                 <td class="colunaacoes">
                   <div class="btn-group listaacoes">

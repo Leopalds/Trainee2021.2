@@ -2,13 +2,13 @@
 
 use App\Core\Router;
 
-    $router->get('', 'PagesController@home');
-    $router->get('produtos', 'PagesController@produtos');
-    $router->get('ADMprodutos', 'PagesController@ADMprodutos');
+    $router->get('', 'ProdutosController@home');
+    $router->get('produtos', 'ProdutosController@produtoscatalogo');
+    $router->get('admin/produtos', 'ProdutosController@produtos');
 
-    $router->post('produtosadm/createprodutos','PagesController@createprodutos');
-    $router->post('produtosadm/deleteprodutos','PagesController@deleteprodutos');
-    $router->post('produtosadm/updateprodutos','PagesController@updateprodutos');
+    $router->post('produtos/createprodutos','ProdutosController@createprodutos');
+    $router->post('produtos/deleteprodutos','ProdutosController@deleteprodutos');
+    $router->post('produtos/updateprodutos','ProdutosController@updateprodutos');
     
 
 ?>

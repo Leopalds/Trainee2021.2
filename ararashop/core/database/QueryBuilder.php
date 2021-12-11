@@ -37,7 +37,7 @@ class QueryBuilder
     public function insertprodutos($table, $parametros)
     {
 
-      $sql = "INSERT INTO `produtosadm` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
+      $sql = "INSERT INTO `produtos` (nome, descricao, preco, categoria, imagem) VALUES ('{$parametros['nome']}','{$parametros['descricao']}','{$parametros['preco']}','{$parametros['categoria']}','{$parametros['imagem']}')";
 
 
       try 
@@ -45,8 +45,6 @@ class QueryBuilder
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
 
-
-          return $stmt->fetchAll(PDO::FETCH_CLASS);
       }
 
       catch (Exception $e)
@@ -61,7 +59,7 @@ class QueryBuilder
     public function deleteprodutos($table, $idproduto)
     {
 
-      $sql = "DELETE FROM `produtosadm` WHERE id = {$idproduto}";
+      $sql = "DELETE FROM `produtos` WHERE id = {$idproduto}";
 
       try 
       {
@@ -82,7 +80,17 @@ class QueryBuilder
     public function updateprodutos($table, $parametros, $idproduto)
     {
 
-      $sql = "UPDATE `produtosadm` SET `nome`='{$parametros['nome']}', `descricao`='{$parametros['descricao']}', `preco`='{$parametros['preco']}', `categoria`='{$parametros['categoria']}', `imagem`='{$parametros['imagem']}' WHERE `id`= '{$idproduto}'";
+      $sql = "UPDATE `produtos` SET `nome`='{$parametros['nome']}', `descricao`='{$parametros['descricao']}', `preco`='{$parametros['preco']}', `categoria`='{$parametros['categoria']}' ";
+
+      if (isset($parametros['imagem']) && $parametros['imagem'] != "")
+        {
+            $sql .=  ", `imagem`='{$parametros['imagem']}'";
+        }
+
+        $sql .= " WHERE `id`= '{$idproduto}' ";
+      
+
+      
 
       try 
       {

@@ -89,7 +89,7 @@
 
             <div class="row d-flex flex-wrap justify-content-center card-deck card-columns cadiv">
   
-                <?php foreach ($produtosadm as $produtoad) : ?>
+                <?php foreach ($produtos as $produtoad) : ?>
                 <a class="linkproduto" href="#">
                   <div class="card m-2 ccprod" style="width: 18rem;">
                       <img class="card-img-top img-responsive cim" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Card image cap">
