@@ -58,33 +58,14 @@
                   </div>
 
                   <p>CATEGORIA:</p>
-
+                  <?php foreach($categorias as $categoria) : ?> 
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="categoria" id="cat-camisa" value="Camisa">
                     <label class="form-check-label" for="cat-camisa">
-                      Camisa
+                      <?= $categoria->nome ?>
                     </label>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-conjunto" value="Conjunto">
-                    <label class="form-check-label" for="cat-conjunto">
-                      Conjunto
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-cosplay" value="Cosplay">
-                    <label class="form-check-label" for="cat-cosplay">
-                      Cosplay
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-moletom" value="Moletom">
-                    <label class="form-check-label" for="cat-moletom">
-                      Moletom
-                    </label>
-                  </div>
-
-
+                  <?php endforeach; ?>
 
                   
                 </div>

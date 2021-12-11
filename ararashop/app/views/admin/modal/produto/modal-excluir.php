@@ -1,5 +1,5 @@
      <!-- Início Modal Excluir-->
-     <div class="modal fade modais" id="modal-excluir-produto-<?= $produtoad->id ?>" tabindex="-1" role="dialog">
+     <div class="modal fade modais" id="modal-excluir-produto-<?= $itemProdutos->id ?>" tabindex="-1" role="dialog">
        <div class="modal-dialog" role="document">
          <div class="modal-content">
            <div class="modal-header">

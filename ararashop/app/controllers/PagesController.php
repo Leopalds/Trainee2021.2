@@ -7,9 +7,10 @@
     class PagesController {
 
         public function admProdutos(){
+            $categorias = App::get('database')->selectAll('categorias');
             $tableProdutos = App::get('database')->selectAll('produtos');
 
-            return view('admin/produtosADM', compact("tableProdutos"));
+            return view('admin/produtosADM', compact("tableProdutos", "categorias"));
         }
         public function produtos(){
             $tableProdutos = App::get('database')->selectAll('produtos');
@@ -27,8 +28,11 @@
         }
 
         public function delete(){
+            die(var_dump('oi'));
             app::get('database')->delete('produtos', $_POST['id']);
+            
             header('location: /admin/produtos');
+
         }
         public function create(){
             $parameters = [
@@ -52,7 +56,18 @@
                 'categoria'=>$_POST['categoria']
             ];
 
-            app::get('database')->update('produtos', $parameters, $_POST['id']);
+            if($parameters['imagem'] == ""){
+                $parameters['imagem'] = $_POST['imagem-antiga'];
+            }
+            
+            if($parameters['descricao'] == ""){
+                $parameters['descricao'] = $_POST['descricao-antiga'];
+            }
+
+            
+
+
+            app::get('database')->updateProd('produtos', $parameters, $_POST['id']);
             header('location: /admin/produtos');
         }
 

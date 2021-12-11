@@ -58,7 +58,7 @@ class QueryBuilder
       
     }
 
-    public function update($table, $parametros, $idprod)
+    public function updateProd($table, $parametros, $idprod)
     {
       $sql = "UPDATE `produtos` SET `nome`='{$parametros['nome']}', `descricao`='{$parametros['descricao']}', `preco`='{$parametros['preco']}', `categoria`='{$parametros['categoria']}' ";
 
@@ -89,6 +89,7 @@ class QueryBuilder
     {
 
       $sql = "DELETE FROM `produtos` WHERE id = {$idprod}";
+      die(var_dump($sql));
 
       try 
       {

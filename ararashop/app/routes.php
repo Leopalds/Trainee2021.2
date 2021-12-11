@@ -8,7 +8,7 @@
     $router->get('admin/dashboard', 'PagesController@admDashboard');
 
 
-    $router->post('admin/create','PagesController@create');
+    $router->post('admin/create','PagesController@create'); //mudar isso nas pages
     $router->post('admin/delete','PagesController@delete');
     $router->post('admin/update','PagesController@update');
 ?>
