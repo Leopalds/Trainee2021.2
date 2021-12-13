@@ -54,7 +54,14 @@ class QueryBuilder
     public function edit($idp, $table, $parametros)
     {
         $sql = "update `{$table}` set nome = '{$parametros['nome']}', email = '{$parametros['email']}', senha = '{$parametros['senha']}',
-        informacoes = '{$parametros['informacoes']}', foto_perfil = '{$parametros['foto_perfil']}' WHERE id = {$idp}";
+        informacoes = '{$parametros['informacoes']}' ";
+
+        if($parametros['foto_perfil'] != ''){
+            $sql = $sql.", foto_perfil = '{$parametros['foto_perfil']}' WHERE id = {$idp}";
+        }
+        else{
+            $sql = $sql."WHERE id = {$idp}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
