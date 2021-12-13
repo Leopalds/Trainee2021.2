@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../../public/css/view_ADM_produtos.css">
-  <link href="../../../public/css/navbar-adm.css" rel="stylesheet"> 
+  <!-- <link href="../../../public/css/navbar-adm.css" rel="stylesheet">  -->
   <script src="../../../public/js/navbarAdm.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
 <body>
 
   
-   <?php require 'navbar.php' ?>
+   <!-- <?php require 'navbar.php' ?>  -->
   <!-- Modal Adiconar Produto -->
   <div class="modal fade modal-adicionar-produto modais" id="modal-adicionar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -35,7 +35,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/admin/create" method="POST">
+          <form action="/admin/produtos/create" method="POST">
 
                   <div class="form-group">
                     <label for="input-nome">Nome Produto</label>
@@ -89,13 +89,13 @@
 
   <div class="container">
     
-
+<form action="" method="GET">
     <div class="input-group barrabusca">
-      <input type="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
+      <input type="search" class="form-control rounded" value="<?php if(isset($_GET['search'])){echo $_GET['search']; }?>" placeholder="Nome Produto" aria-label="Search"
         aria-describedby="search-addon" />
       <button type="button" class="btn btn-outline-white">Buscar</button>
     </div>
-
+</form>
     <!-- Botão Modal Adicionar Produto -->
     <button type="button" class="btn btn-secondary btn-lg btn-block botaoadd" data-toggle="modal" data-target=".modal-adicionar-produto">Adiconar Produto</button>
     
@@ -117,7 +117,7 @@
             <tbody>
 
               <tr>
-
+                
                 <?php foreach ($tableProdutos as $itemProdutos) : ?>
 
                   <?php require 'modal/produto/modal-view.php' ?>

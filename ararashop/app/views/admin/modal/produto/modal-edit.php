@@ -10,7 +10,7 @@
                 </button>
               </div>
 
-              <form action="/admin/update" method="POST">
+              <form action="/admin/produtos/update" method="POST">
                 <div class="modal-body">
 
 

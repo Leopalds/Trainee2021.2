@@ -15,7 +15,7 @@
 
            <div class="modal-footer">
              <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
-             <form action="/admin/delete" method="POST">
+             <form action="/admin/produtos/delete" method="POST">
                <input type="hidden" value="<?= $itemProdutos->id ?>" name="id">
                <button type="submit" class="btn btn-primary modbut">Confirmar</button>
              </form>
