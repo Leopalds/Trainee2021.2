@@ -27,6 +27,10 @@
             return view('site/home');
         }
 
+        public function contato(){
+            return view('site/contato');
+        }
+
         public function delete(){
             
             app::get('database')->delete('produtos', $_POST['id']);

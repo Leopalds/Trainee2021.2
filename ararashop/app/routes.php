@@ -4,8 +4,10 @@
     
     $router->get('', 'PagesController@home');
     $router->get('user/produtos', 'PagesController@produtos');
+    $router->get('user/contato', 'PagesController@contato');
     $router->get('admin/produtos', 'PagesController@admProdutos');
     $router->get('admin/dashboard', 'PagesController@admDashboard');
+    
 
 
     $router->post('admin/produtos/create','PagesController@create'); //mudar isso nas pages
