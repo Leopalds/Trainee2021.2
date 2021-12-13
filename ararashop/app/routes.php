@@ -9,8 +9,8 @@
     $router->get('admin/dashboard', 'PagesController@admDashboard');
     
 
-
-    $router->post('admin/produtos/create','PagesController@create'); //mudar isso nas pages
+    $router->post('user/contato/sendEmail','PagesController@sendEmail');
+    $router->post('admin/produtos/create','PagesController@create'); 
     $router->post('admin/produtos/delete','PagesController@delete');
     $router->post('admin/produtos/update','PagesController@update');
     $router->post('admin/produtos/search','PagesController@search');
