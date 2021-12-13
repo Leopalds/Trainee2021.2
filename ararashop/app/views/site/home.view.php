@@ -9,6 +9,8 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
           <link rel="stylesheet" href="../../public/css/home.css">
           <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+          
+
       </head>
 
       <body>
@@ -20,16 +22,16 @@
                   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                       <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <img class="d-block w-100 slidehome" src="../../public/img/aashcum.gif" alt="First slide">
+                          <img class="d-block w-100 slidehome" src="../../public/img/carousel/aashcum.gif" alt="First slide">
                       </div>
                       <div class="carousel-item">
-                          <img class="d-block w-100 slidehome" src="../../public/img/aashcdois.gif" alt="Second slide">
+                          <img class="d-block w-100 slidehome" src="../../public/img/carousel/aashcdois.gif" alt="Second slide">
                       </div>
                       <div class="carousel-item">
-                          <img class="d-block w-100 slidehome" src="../../public/img/aashctres.gif" alt="Third slide">
+                          <img class="d-block w-100 slidehome" src="../../public/img/carousel/aashctres.gif" alt="Third slide">
                       </div>
                       <div class="carousel-item">
-                          <img class="d-block w-100 slidehome" src="../../public/img/aashcquatro.gif" alt="Fourth slide">
+                          <img class="d-block w-100 slidehome" src="../../public/img/carousel/aashcquatro.gif" alt="Fourth slide">
                       </div>
                       </div>
 
@@ -48,61 +50,18 @@
 
                   <div class="rowcar d-flex flex-wrap justify-content-center">
 
-                      <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtoa.jpg" alt="Imagem de capa do card">
+                       <?php foreach ($produtos as $produtoad) : ?>
+
+                       <div class="card m-2" style="width: 16rem;">
+                          <img class="card-img-top" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Imagem de capa do card">
                           <div class="card-body">
-                            <h5 class="card-title">CONJUNTO ALDEIA DA FOLHA</h5>
-                            <p class="card-text"> R$ 169,90</p>
-                            <a href="#" class="btn btn-primary quadradin">Confortável como um ninja!</a>
+                            <h5 class="card-title"><?= $produtoad->nome ?></h5>
+                            <p class="card-text"> R$ <?= number_format($produtoad->preco ,2,',') ?></p>
+                            <a href="#" class="btn btn-primary quadradin">Conferir agora!</a>
                           </div>
                         </div>
 
-                        <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtoi.jpg" alt="Imagem de capa do card">
-                          <div class="card-body">
-                            <h5 class="card-title">MOLETOM UNIFORME BOKU NO HERO ACADEMIA</h5>
-                            <p class="card-text"> R$ 75,99</p>
-                            <a href="#" class="btn btn-primary quadradin">Amei!</a>
-                          </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtoc.jpg" alt="Imagem de capa do card">
-                          <div class="card-body">
-                            <h5 class="card-title"> <br> MOLETOM HOKAGE - NARUTO UZUMAKI</h5>
-                            <p class="card-text"> R$ 80,90</p>
-                            <a href="#" class="btn btn-primary quadradin">Naruto aprova!</a>
-                          </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtoh.jpg" alt="Imagem de capa do card">
-                          <div class="card-body">
-                            <h5 class="card-title">MOLETOM ATTACK ON TITAN - TROPA DE EXPLORAÇÃO</h5>
-                            <p class="card-text"> R$ 85,90</p>
-                            <a href="#" class="btn btn-primary quadradin">Sasageyo!</a>
-                          </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtoe.jpg" alt="Imagem de capa do card">
-                          <div class="card-body">
-                            <h5 class="card-title">MOLETOM HUNTERxHUNTER KILLUA</h5>
-                            <p class="card-text"> R$ 80,90</p>
-                            <a href="#" class="btn btn-primary quadradin">Incrível!</a>
-                          </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 16rem;">
-                          <img class="card-img-top" src="../../public/img/produtof.jpg" alt="Imagem de capa do card">
-                          <div class="card-body">
-                            <h5 class="card-title">MOLETOM AKATSUKI</h5>
-                            <p class="card-text"> R$ 85,99</p>
-                            <a href="#" class="btn btn-primary quadradin">Sou renegado com orgulho!</a>
-                          </div>
-                        </div>
-
-                        </div>
+                       <?php endforeach; ?>
 
                   </div>
 
@@ -118,18 +77,12 @@
 
               </div>
 
-
-
           </div>
-
-          <br><br><br>
-
-      
-
 
 
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       </body>
+ 
       </html>
