@@ -36,7 +36,7 @@
 
         <div class="contact">
             <h2 class="div-tittle">Alguma dúvida? Fale conosco!</h2>
-            <form action="/user/contato/sendEmail">
+            <form action="/user/contato/sendEmail" method="POST">
 
                 <div class="row d-flex">
                     <div class="form-group col-12">

@@ -5,7 +5,6 @@ namespace App\Controllers;
 
 
 use App\Core\App;
-use Exception;
 
 class PagesController
 {
@@ -98,7 +97,7 @@ class PagesController
 
         require 'mailer/PHPMailerAutoload.php';
 
-        $mail = new PHPMailer;
+        $mail = new PHPMailer\PHPMailer\PHPMailer;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
@@ -119,7 +118,7 @@ class PagesController
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
         } else {
-            header('Location: user/contato');
+            header('Location: /user/contato');
         }
     }
 }
