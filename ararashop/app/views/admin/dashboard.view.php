@@ -26,9 +26,9 @@
                     </div> 
                     <div class="elementos">
                         <ul>
-                            <li><a href=""><button id="botaoprod">Produtos</button></a></li>
-                            <li><a href=""><button id="botaocat">Categorias</button></a></li>
-                            <li><a href=""><button id="botaousu">Usuários</button></a></li>
+                            <li><a href="/admin/produtos"><button id="botaoprod">Produtos</button></a></li>
+                            <li><a href="/admin/categorias"><button id="botaocat">Categorias</button></a></li>
+                            <li><a href="/admin/usuarios"><button id="botaousu">Usuários</button></a></li>
                         </ul>
                     </div>
 

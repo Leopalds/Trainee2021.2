@@ -21,6 +21,7 @@ class ProdutosController
 
     public function produtos()
     {
+        include('verificalogin.php');
 
         $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         $produtos = App::get('database')->selectAll('produtos');
@@ -28,8 +29,6 @@ class ProdutosController
 
         
     }
-
-
 
     public function createprodutos()
     {

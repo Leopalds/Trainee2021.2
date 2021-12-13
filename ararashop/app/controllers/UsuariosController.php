@@ -14,6 +14,7 @@ class UsuariosController
 
     public function usuarios()
     {
+        include('verificalogin.php');
 
         $usuarios = App::get('database')->selectAll('usuarios');
         $tables = [
@@ -87,5 +88,10 @@ class UsuariosController
     {
         app::get('database')->delete('usuarios', $_POST['id']);
         header('Location: /admin/usuarios');
+    }
+
+    public function quemsomos()
+    {
+        return view('site/quemsomos');
     }
 }

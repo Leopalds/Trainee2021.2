@@ -25,8 +25,6 @@
         <h1>Um pouco sobre nós..</h1>
     </div>
 
-    <br>
-
     <div class="container c1">
         <div class="row">
             <div class="col-sm">
