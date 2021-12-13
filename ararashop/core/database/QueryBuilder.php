@@ -81,25 +81,6 @@ class QueryBuilder
     public function read()
     {
       
-    }
+    }       
 
-    public function login($parametros, $table)
-    {
-        $sql = "select * from '{$table}' where email = '{$parametros['email']}', senha = '{$parametros['senha']}'";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':email', $this->_get('email'));
-            $stmt->bindValue(':senha', $this->_get('senha'));
-
-            $stmt->execute();
-
-            $usuario = $stmt->fetch(\PDO::FETCH_ASSOC);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-        return $usuario;
-
-    }
 }

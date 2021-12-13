@@ -26,31 +26,33 @@ class LoginController
 
     public function loginvalidacao()
     { 
-
-        $parameters = [
-
-            'email' => $_GET['email'],
-            'senha' => $_GET['senha']
-        ];
-
-        $retorno = app::get('database')->login($parameters, 'login_adm');
-
-        print_r($retorno);
-
-        if($retorno > 0 )
-        {
-            $_SESSION['email'] = $email;
-            $_SESSION['senha'] = $senha;
-
-            header('Location: /admin/dashboard');
-        }
-        else{
-            unset ($_SESSION['login']);
-            unset ($_SESSION['senha']);
-
+        session_start();
+        include('conexao.php');
+    
+        if(empty($_POST['email']) || empty($_POST['senha'])) {
             header('Location: /admin/login');
-
+            exit();
         }
+
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $query = "select id from usuarios where email = '{$email}' and senha = '{$senha}' "; 
+
+        $result = mysqli_query($conexao, $query);
+
+        $row = mysqli_num_rows($result);
+
+        if($row == 1){
+            $_SESSION['email'] = $email;
+	        header('Location: /admin/dashboard');
+	        exit();
+        } else {
+	        $_SESSION['nao_autenticado'] = true;
+	        header('Location: /admin/login');
+	        exit();
+        }
+        
     }
 
     public function show()

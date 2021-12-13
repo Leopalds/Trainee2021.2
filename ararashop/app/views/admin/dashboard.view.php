@@ -24,7 +24,6 @@
                         <img src="../../public/img/tanjnezu.png"> 
                         <h2>Dashboard samurai</h2>
                     </div> 
-                    <br>
                     <div class="elementos">
                         <ul>
                             <li><a href=""><button id="botaoprod">Produtos</button></a></li>
@@ -34,7 +33,7 @@
                     </div>
 
                     <div class="sair">
-                        <a href=""><button id="botaosair">Sair</button></a>
+                        <a href="/admin/dashboard/logout"><button id="botaosair">Sair</button></a>
                     </div>
 
                     <div class="menu-foot">

@@ -14,12 +14,16 @@ class DashboardController
 
     public function dash()
     {
+        include('verificalogin.php');
         return view('admin/dashboard');
     }
 
-    public function show()
+    public function sair()
     {
+        session_start();
+        session_destroy();
 
+        header('Location: /admin/login');
     }
 
     public function create()

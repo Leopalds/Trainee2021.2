@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,9 +31,20 @@
         <img class="img-fluid" src="../../../public/img/login_imgs/logo-ara-ara.png" alt="logo-ara-ara">
     </div>
 
+    <?php
+    if(isset($_SESSION['nao_autenticado'])):
+    ?>
+    <div class="erro">
+        <p>Erro: email ou senha inválidos</p>
+    </div>
+    <?php
+    endif;
+    unset($_SESSION['nao_autenticado']);
+    ?>
+
     <div class="container-logar">
         <div class="container container-form">
-            <form action="/admin/login/validacao" method="GET">
+            <form action="/admin/login/validacao" method="POST">
                 <div class="form-group">
                     <label style="font-size: 20px;" for="exampleInputEmail">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="akeno@hotmail.com">

@@ -13,8 +13,10 @@
 
     $router->get('admin/login', 'LoginController@login');
 
-    $router->get('admin/login/validacao', 'LoginController@loginvalidacao');
+    $router->post('admin/login/validacao', 'LoginController@loginvalidacao');
 
     $router->get('admin/dashboard', 'DashboardController@dash');
+
+    $router->get('admin/dashboard/logout', 'DashboardController@sair');
 
 ?>
