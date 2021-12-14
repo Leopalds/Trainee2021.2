@@ -9,10 +9,11 @@ html, body {
 
 .container {
     height: 100%;
-    padding: 0;
+    width: 100%;
+    padding: 0px;
     margin: 0;
     display: grid;
-    grid-template-columns: 29.3vw 40vw 29.3vw;
+    grid-template-columns: 30vw 40vw 30vw;
 }
 
 .main1 {

@@ -16,6 +16,8 @@
 
 </head>
 <body>
+<?php require 'navbarAdm.html'; ?>
+
   <div class="container-fluid">
     
     <table class="table table-dark">

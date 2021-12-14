@@ -12,9 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../..//public/css/dashboard.css">
+    <link rel="stylesheet" href="../..//public/css/navbar-adm.css">
     <title>Dashboard Admin</title>
 </head>
 <body>
+    <?php require 'navbarAdm.html'; ?>
    
     <div class="container">
             <div class="main1"></div>

@@ -1,6 +1,5 @@
 body {
     font-family: 'Oswald', sans-serif;
-    margin-top: 8%;
     background-color: #343A40;
     color: #FBFBFB;
 }  
@@ -82,7 +81,7 @@ body {
 }
 
 .textoqs p{
-    margin-top: 2.8%;
+    margin-top: 1%;
     font-size: 18px;
     line-height: 32px;
     font-weight: 300;
@@ -117,7 +116,7 @@ body {
 .textovalores ul {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 40%;
+    margin-bottom: 25%;
 }
 
 .tarja1 h2 {
