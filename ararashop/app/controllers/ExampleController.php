@@ -7,9 +7,16 @@ use Exception;
 
 class ExampleController
 {
-    public function index()
+    public function viewadmcategorias()
     {
-        
+        $tarefas = App::get('database')->selectAll('categorias');
+
+        $tables = [
+
+            'categorias' => $categorias,
+        ];
+
+        return view('viewadmcategorias');
     }
 
     public function show()

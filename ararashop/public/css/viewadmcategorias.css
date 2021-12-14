@@ -65,14 +65,14 @@ button {
 
 
 
-.modal-adiciona-categoria button {
+.modal-adiciona-categoria {
     background-color: #343A40;
     color: white;
     transition: 300ms;
     border-radius: 15px;
 }
 
-.modal-adiciona-categoria button:hover {
+.modal-adiciona-categoria:hover {
     background-color: #ff7700;
 }
 
@@ -137,12 +137,15 @@ button {
     margin-right: 5%;
 }
 
-.lista-de-categorias ul a{
-    color: #343A40;
+.lista-de-categorias ul button{
+    background-color: #272626;
+    border-radius: 5px;
+    border: #272626;
+    color: white;
 }
 
 .botao-deleta-categoria:hover {
-    background-color: rgba(252, 46, 46, 0.856);
+    background-color: rgba(252, 46, 46, 0.856) !important;
 }
 
 .deleta-categoria {
@@ -152,10 +155,10 @@ button {
 .deleta-categoria h5 {
     color: #ff0211;
 }
-
+/* 
 ul button {
     color: white !important;
-}
+} */
 
 @media (min-width: 1044px){
 
