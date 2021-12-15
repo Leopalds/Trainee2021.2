@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="../../../public/css/navbar-adm.css" rel="stylesheet">
+  <script src="../../../public/js/navbarAdm.js"></script>
 
 </head>
 
@@ -20,7 +22,7 @@
 
 <body>
 
-  
+  <?php require 'navbar.php' ?>
 
   <!-- Modal Adiconar Produto -->
   <div class="modal fade modal-adicionar-produto modais" id="modal-adicionar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -57,7 +59,7 @@
 
                   <p>CATEGORIA:</p>
 
-                  <?php foreach ($categoriasexemplo as $cat) : ?>
+                  <?php foreach ($categorias as $cat) : ?>
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->categ ?>" value="<?= $cat->categ ?>">
                     <label class="form-check-label" for="cat-<?= $cat->categ ?>">
