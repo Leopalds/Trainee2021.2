@@ -1,6 +1,8 @@
 <?php
     use App\Core\Router;
 
+    $router->get('contato', 'UsuariosController@contato');
+
     $router->get('admin/usuarios', 'UsuariosController@usuarios');
 
     $router->post('admin/usuarios/create', 'UsuariosController@createusuario');
