@@ -33,7 +33,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/produtos/createprodutos" method="POST">
+          <form action="/admin/produtos/createprodutos" method="POST">
 
                   <div class="form-group">
                     <label for="input-nome">Nome Produto</label>
@@ -90,11 +90,13 @@
   <div class="container">
     
 
-    <div class="input-group barrabusca">
-      <input type="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
-        aria-describedby="search-addon" />
-      <button type="button" class="btn btn-outline-white">Buscar</button>
-    </div>
+    <form action="/admin/produtos/searchprodutos" method="GET">
+        <div class="input-group barrabusca">
+          <input type="search" name="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
+            aria-describedby="search-addon" />
+          <button type="submit" class="btn btn-outline-white">Buscar</button>
+        </div>
+    </form>
 
     <!-- Botão Modal Adicionar Produto -->
     <button type="button" class="btn btn-secondary btn-lg btn-block botaoadd" data-toggle="modal" data-target=".modal-adicionar-produto">Adiconar Produto</button>
@@ -117,8 +119,7 @@
             <tbody>
 
               <tr>
-                <?php 
-                foreach ($produtos as $produtoad) : ?>
+                <?php foreach ($produtos as $produtoad) : ?>
 
                   <?php require 'modal/produtos/modal-view.php' ?>
                   <?php require 'modal/produtos/modal_edit.php' ?>
@@ -154,6 +155,10 @@
                 </td>
               </tr>
                           
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+      </div>    
                           
                          
 
@@ -161,11 +166,7 @@
 
 
 
-              <?php endforeach; ?>
-            </tbody>
-          </table>
         
-      </div>    
 
 
               

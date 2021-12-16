@@ -23,9 +23,14 @@
     $router->get('produtos', 'ProdutosController@produtoscatalogo');
     $router->get('admin/produtos', 'ProdutosController@produtos');
 
-    $router->post('produtos/createprodutos','ProdutosController@createprodutos');
-    $router->post('produtos/deleteprodutos','ProdutosController@deleteprodutos');
-    $router->post('produtos/updateprodutos','ProdutosController@updateprodutos');
+    $router->post('admin/produtos/createprodutos','ProdutosController@createprodutos');
+    $router->post('admin/produtos/deleteprodutos','ProdutosController@deleteprodutos');
+    $router->post('admin/produtos/updateprodutos','ProdutosController@updateprodutos');
+    $router->get('admin/produtos/searchprodutos','ProdutosController@searchprodutos');
+    $router->get('produtos/searchcatalogo','ProdutosController@searchcatalogo');
+    $router->get('produtos/categoriacatalogo','ProdutosController@categoriacatalogo');
+
+
     
 
 ?>

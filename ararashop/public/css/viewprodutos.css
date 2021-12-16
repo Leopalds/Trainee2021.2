@@ -36,6 +36,12 @@ body {
   text-decoration: none;
 }
 
+.filtroselect button {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+}
+
 .listamenu li {
   margin: auto;
 }

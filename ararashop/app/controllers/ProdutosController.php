@@ -16,14 +16,14 @@ class ProdutosController
     public function produtoscatalogo()
     {
         $produtos = App::get('database')->selectAll('produtos');
-        return view('site/produtos', compact("produtos")); 
+        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
+        return view('site/produtos', compact("produtos","categoriasexemplo")); 
     }
 
     public function produtos()
     {
-
-        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         $produtos = App::get('database')->selectAll('produtos');
+        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         return view('admin/produtos', compact("produtos","categoriasexemplo")); 
 
         
@@ -70,6 +70,31 @@ class ProdutosController
         app::get('database')->updateprodutos('produtos', $parameters, $_POST['id']);
         header('location: /admin/produtos'); 
         
+    }
+
+    public function searchprodutos()
+    {
+        $search = $_GET['search'];
+
+        $produtos = app::get('database')->searchprodutos('produtos', $search);
+        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
+        return view('admin/produtos', compact('produtos','categoriasexemplo')); 
+    }
+
+    public function searchcatalogo()
+    {
+        $search = $_GET['search'];
+
+        $produtos = app::get('database')->searchcatalogo('produtos', $search);
+        return view('site/produtos', compact('produtos')); 
+    }
+
+    public function categoriacatalogo()
+    {
+        $categoria = $_GET['categoria'];
+
+        $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
+        return view('site/produtos', compact('produtos')); 
     }
 
 

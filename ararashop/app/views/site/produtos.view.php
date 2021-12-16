@@ -17,30 +17,36 @@
 
              <div class="menufiltro">
 
-                  <div class="input-group barrabusca">
-                    <input type="search" class="form-control rounded" placeholder="Digite aqui" aria-label="Search"
-                    aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-white">Buscar</button>
-                  </div>
+                    <form action="produtos/searchcatalogo" method="GET">
+                      <div class="input-group barrabusca">
+                        <input type="search" name="search" class="form-control rounded" placeholder="Digite aqui" aria-label="Search"
+                        aria-describedby="search-addon" />
+                        <button type="submit" class="btn btn-outline-white">Buscar</button>
+                      </div>
+                    </form>
 
-                  <div class="dropdown menumenu">
-                    <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Produto
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu listamenu">
-                      <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
-                      <li><a class="filtroselect" href="#">Camisas</a></li>
-                      <li><a class="filtroselect" href="#">Moletons</a></li>
-                      <li><a class="filtroselect" href="#">Conjuntos</a></li>
-                      <li><a class="filtroselect" href="#">Cosplays</a></li>
-                      <li><a class="filtroselect" href="#">Brindes</a></li>
-                    </ul>
-                  </div>
+                    <form action="produtos/categoriacatalogo" method="GET">
+                      <div class="dropdown menumenu">
+                        <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Busca por Categoria
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu listamenu">
+                            <?php foreach ($categoriasexemplo as $cat) : ?>
+                            <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
+                            <li class="filtroselect"><button type="submit" value="<?= $cat->categ ?>" name="categoria"><?= $cat->categ ?></button></li>
+                            <!-- <li><a class="filtroselect" href="#">Camisas</a></li>
+                            <li><a class="filtroselect" href="#">Moletons</a></li>
+                            <li><a class="filtroselect" href="#">Conjuntos</a></li>
+                            <li><a class="filtroselect" href="#">Cosplays</a></li>
+                            <li><a class="filtroselect" href="#">Brindes</a></li> -->
+                            <?php endforeach; ?>
+                          </ul>
+                        </div>
+                      </form>
 
-                  <div class="dropdown menumenu">
+                  <!-- <div class="dropdown menumenu">
                     <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Animes
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu listamenu">
-                      <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
                       <li><a class="filtroselect" href="#">Naruto</a></li>
                       <li><a class="filtroselect" href="#">Jujutsu Kaizen</a></li>
                       <li><a class="filtroselect" href="#">Konosuba</a></li>
@@ -51,13 +57,12 @@
                       <li><a class="filtroselect" href="#">Kaguya-sama</a></li>
                       <li><a class="filtroselect" href="#">Boku no Hero</a></li>
                     </ul>
-                  </div>
+                  </div> -->
 
-                  <div class="dropdown menumenu">
+                  <!-- <div class="dropdown menumenu">
                     <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Cor
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu listamenu">
-                      <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
                       <li><a class="filtroselect" href="#">Preto</a></li>
                       <li><a class="filtroselect" href="#">Branco</a></li>
                       <li><a class="filtroselect" href="#">Azul</a></li>
@@ -68,13 +73,12 @@
                       <li><a class="filtroselect" href="#">Amarelo</a></li>
                       <li><a class="filtroselect" href="#">Rosa</a></li>
                     </ul>
-                  </div>
+                  </div> -->
 
-                  <div class="dropdown menumenu">
+                  <!-- <div class="dropdown menumenu">
                     <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Tamanho
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu listamenu">
-                      <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
                       <li><a class="filtroselect" href="#">PP</a></li>
                       <li><a class="filtroselect" href="#">P</a></li>
                       <li><a class="filtroselect" href="#">M</a></li>
@@ -83,7 +87,7 @@
                       <li><a class="filtroselect" href="#">XG</a></li>
                       <li><a class="filtroselect" href="#">XGG</a></li>
                     </ul>
-                  </div>
+                  </div> -->
 
               </div>
 
