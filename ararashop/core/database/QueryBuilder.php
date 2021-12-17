@@ -45,21 +45,6 @@ class QueryBuilder
     }
 }
 
-    public function select($table)
-    {
-        $sql = "SELECT * FROM {$table} LIMIT 10";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
     public function paginacao($table, $pagina, $itens_pagina){
 
         $n1_pagina = $pagina * ($itens_pagina);
@@ -108,7 +93,7 @@ class QueryBuilder
          
     }
 
-    public function delete($table, $idp)
+    public function deleteCategoria($table, $idp)
     {
         $sql = "delete from {$table} where id = {$idp}";
 
