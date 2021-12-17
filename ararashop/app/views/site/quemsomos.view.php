@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem1">
-                    <img src="../../public/img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
+                    <img src="../../public/img/qs_img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
                 </div>
     
             </div> 
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem2">
-                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
+                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/qs_img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
                 </div>
             </div>
             <div class="col-sm">
@@ -103,7 +103,7 @@
             </div>
             <div class="col-sm">
                 <div class="imagem3">
-                    <img src="../..//public/img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
+                    <img src="../..//public/img/qs_img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
                 </div>   
             </div>
         </div>   
@@ -121,7 +121,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem4">
-                    <img src="../../public/img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
+                    <img src="../../public/img/qs_img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
                 </div>    
             </div>
             <div class="col-sm">

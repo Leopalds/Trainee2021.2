@@ -10,8 +10,8 @@ html, body {
 .container {
     height: 100%;
     width: 100%;
-    padding: 0px;
-    margin: 0;
+    margin-top: 5%;
+    padding-top: 4%;
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
 }
@@ -123,11 +123,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back6.png);
+        background-image: url(../img/dashboard_imgs/back6.png);
     }
     
     .main2 {
-        background-image: url(../img/back6.png);
+        background-image: url(../img/dashboard_imgs/back6.png);
     }
 }
 
@@ -142,11 +142,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back3.png);
+        background-image: url(../img/dashboard_imgs/back3.png);
     }
 
     .main2 {
-        background-image: url(../img/back3.png);
+        background-image: url(../img/dashboard_imgs/back3.png);
     }
 }
 
@@ -161,11 +161,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back7.png);
+        background-image: url(../img/dashboard_imgs/back7.png);
     }
     
     .main2 {
-        background-image: url(../img/back7.png);
+        background-image: url(../img/dashboard_imgs/back7.png);
     }
 }
 
@@ -180,11 +180,11 @@ html, body {
     }
     
     .main1 {
-        background-image: url(../img/back8.png);
+        background-image: url(../img/dashboard_imgs/back8.png);
     }
     
     .main2 {
-        background-image: url(../img/back8.png);
+        background-image: url(../img/dashboard_imgs/back8.png);
     }
 }
 
@@ -200,11 +200,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back23.png);
+        background-image: url(../img/dashboard_imgs/back23.png);
     }
     
     .main2 {
-        background-image: url(../img/back23.png);
+        background-image: url(../img/dashboard_imgs/back23.png);
     }
 }
 
@@ -219,11 +219,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
     
     .main2 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
 }
 
@@ -238,11 +238,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
     
     .main2 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
 }
 
@@ -257,11 +257,11 @@ html, body {
     }
 
     .main1 {
-        background-image: url(../img/back5.png);
+        background-image: url(../img/dashboard_imgs/back5.png);
     }
     
     .main2 {
-        background-image: url(../img/back5.png);
+        background-image: url(../img/dashboard_imgs/back5.png);
     }
 }
 
