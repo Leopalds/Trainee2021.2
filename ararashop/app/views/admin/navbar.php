@@ -16,7 +16,7 @@
                        <a href="/admin/categorias" class="nav_link"> <i class="fas fa-archive"></i> <span class="nav_name">Categorias</span> </a>
                    </div>
                </div>
-               <a href="/admin/login" class="nav_link"> <i class="fas fa-sign-out-alt"></i><span class="nav_name">Sair</span> </a>
+               <a href="/admin/dashboard/logout" class="nav_link"> <i class="fas fa-sign-out-alt"></i><span class="nav_name">Sair</span> </a>
            </nav>
        </div>
    </div>
