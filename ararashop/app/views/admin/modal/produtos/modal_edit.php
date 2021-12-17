@@ -42,7 +42,7 @@
 
                                                  <p>Mudança de Categoria:</p>
 
-                                                 <?php foreach ($categoriasexemplo as $cat) : ?>
+                                                 <?php foreach ($categorias as $cat) : ?>
                                                     <div class="form-check form-check-inline">
                                                       <input <?php if($cat->nome == $produtoad->categoria) {echo "checked";} ?>
                                                        class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->nome ?>" value="<?= $cat->nome ?>">

@@ -13,10 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-
+  <!-- NavBarAdm  -->
+    <link rel="stylesheet" href="../../..//public/css/navbar-adm.css">
+    <script src="../../../public/js/navbarAdm.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7a3ef7191d.js" crossorigin="anonymous"></script>
+  <!-- Fim NavBarAdm -->
 </head>
 
-
+<?php require 'navbar.php' ?>
 
 <body>
 
@@ -57,7 +66,7 @@
 
                   <p>CATEGORIA:</p>
 
-                  <?php foreach ($categoriasexemplo as $cat) : ?>
+                  <?php foreach ($categorias as $cat) : ?>
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->nome ?>" value="<?= $cat->nome ?>">
                     <label class="form-check-label" for="cat-<?= $cat->nome ?>">
