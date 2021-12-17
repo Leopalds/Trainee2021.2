@@ -41,22 +41,22 @@
             <div class="row d-flex">
                     <div class="form-group col-12">
                         <label for="formControlImputName">Nome</label>
-                        <input type="text" name="nome"class="form-control" id="nameFormInput" placeholder="Violet Evergarden">
+                        <input required type="text" name="nome"class="form-control"  id="nameFormInput" placeholder="Violet Evergarden">
                     </div>
                     <div class="form-group col-12">
                         <label for="exampleFormControlInput1">Seu Email</label>
-                        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="hinata@example.com">
+                        <input required type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="hinata@example.com">
                     </div>
                     <div class="form-group col-12">
                         <label for="formControlImputName">Assunto</label>
-                        <input type="text" name="assunto" class="form-control" id="nameFormInput" placeholder="Exame Hunter">
+                        <input required type="text" name="assunto" class="form-control" id="nameFormInput" placeholder="Exame Hunter">
                     </div>
                     <div class="form-group col-12">
                         <label for="exampleFormControlTextarea1">Digite sua mensagem!</label>
-                        <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3" placeholder="Onde esta o One Piece?"></textarea>
+                        <textarea required class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3" placeholder="Onde esta o One Piece?"></textarea>
                     </div>
                     <div class="form-group col-12 d-flex justify-content-end">
-                        <button type="submit" class="btn btn-lg btn-secondary">Enviar</button>
+                        <button type="submit" class="btn btn-lg btn-secondary modbut">Enviar</button>
                     </div>
                 </div>
 

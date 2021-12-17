@@ -1,12 +1,18 @@
 <?php
 
 namespace App\Controllers;
-
+use PHPMailer\PHPMailer\PHPMailer;
 use App\Core\App;
 use Exception;
 
 class PagesController
 {
+
+
+    public function contato(){
+        return view('site/contato');
+    }
+
 
     public function enviarEmail(){
         $parameters = [
@@ -16,10 +22,10 @@ class PagesController
             'mensagem' => $_POST['mensagem']
         ];
 
-        require 'mailer/PHPMailerAutoload.php';
 
+        
+        
         $mail = new PHPMailer;
-        die(var_dump("lool"));
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
