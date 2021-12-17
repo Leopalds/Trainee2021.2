@@ -21,10 +21,9 @@
             <div class="menu">
                 <div class="menu-content">
                     <div class="menu-title">
-                        <img src="../../public/img/dashboard_imgs/tanjnezu.png"> 
+                        <img src="../../public/img/tanjnezu.png"> 
                         <h2>Dashboard samurai</h2>
                     </div> 
-                    <br>
                     <div class="elementos">
                         <ul>
                             <li><a href=""><button id="botaoprod">Produtos</button></a></li>
@@ -34,11 +33,11 @@
                     </div>
 
                     <div class="sair">
-                        <a href=""><button id="botaosair">Sair</button></a>
+                        <a href="/admin/dashboard/logout"><button id="botaosair">Sair</button></a>
                     </div>
 
                     <div class="menu-foot">
-                        <a href="https://www.youtube.com/watch?v=5Agee8BzqwI&ab_channel=shinya"><img src="../../public/img/dashboard_imgs/inosuke2.png"></a>
+                        <a href="https://www.youtube.com/watch?v=5Agee8BzqwI&ab_channel=shinya"><img src="../../public/img/inosuke2.png"></a>
                     </div>
                 </div>
             </div>    

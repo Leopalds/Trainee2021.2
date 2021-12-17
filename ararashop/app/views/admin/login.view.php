@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="../../public/css/login.css" rel="stylesheet">
+    <link href="../../../public/css/login.css" rel="stylesheet">
     <title>Login</title>
 </head>
 
@@ -24,20 +28,31 @@
     </div>
 
     <div class="titulo">
-        <img class="img-fluid" src="../../public/img/login_imgs/logo-ara-ara.png" alt="logo-ara-ara">
+        <img class="img-fluid" src="../../../public/img/login_imgs/logo-ara-ara.png" alt="logo-ara-ara">
     </div>
+
+    <?php
+    if(isset($_SESSION['nao_autenticado'])):
+    ?>
+    <div class="erro">
+        <p>Erro: email ou senha inválidos</p>
+    </div>
+    <?php
+    endif;
+    unset($_SESSION['nao_autenticado']);
+    ?>
 
     <div class="container-logar">
         <div class="container container-form">
-            <form>
+            <form action="/admin/login/validacao" method="POST">
                 <div class="form-group">
                     <label style="font-size: 20px;" for="exampleInputEmail">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="akeno@hotmail.com">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="akeno@hotmail.com">
 
                 </div>
                 <div class="form-group">
                     <label style="font-size: 20px;" for="exampleInputEmail">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="***********">
                 </div>
                 <div class="form-group form-check">
 
@@ -47,7 +62,7 @@
                 <button type="submit" style="background-color: #ff7700; border-color: #343A40;" class="btn btn-primary">Entrar</button>
             </form>
 
-            <img src="../../public/img/login_imgs/gif_login.gif" alt="gif_login" srcset="">
+            <img src="../../../public/img/login_imgs/gif_login.gif" alt="gif_login" srcset="">
         </div>
 
         <!--
