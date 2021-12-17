@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: 'Oswald', sans-serif;
     padding: 100px 0;
     background-color: #343A40;
@@ -14,7 +14,7 @@ body {
     padding: 0 1rem;
     font-size: 1rem;
     transition: 0.5s;
-}
+} */
 
 a {
     text-decoration: none;
@@ -136,8 +136,8 @@ a {
 
 @media screen and (min-width: 768px) {
     body {
-        margin: calc(3rem + 1rem) 0 0 0;
-        padding-left: calc(68px + 2rem);
+        /* margin: calc(3rem + 1rem) 0 0 0; */
+       /* padding-left: calc(68px + 2rem); */
     }
     .header {
         height: calc(3rem + 1rem);

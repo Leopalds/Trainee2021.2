@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/css/dashboard.css">
+    <link rel="stylesheet" href="../../public/css/dashboard.css?v=2">
 
     <link rel="stylesheet" href="../../..//public/css/navbar-adm.css">
     <script src="../../../public/js/navbarAdm.js"></script>
@@ -31,7 +31,7 @@
 
 <?php require 'navbar.php'; ?>
    
-    <div class="container">
+    <div class="container-adm">
             <div class="main1"></div>
             <div class="menu">
                 <div class="menu-content">

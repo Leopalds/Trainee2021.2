@@ -7,11 +7,10 @@ html, body {
     background-color: #343a40;
 }
 
-.container {
+.container-adm {
     height: 100%;
     width: 100%;
-    margin-top: 5%;
-    padding-top: 4%;
+    padding: 0;
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
 }
@@ -114,7 +113,7 @@ html, body {
 
 @media (max-width: 2800px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -133,7 +132,7 @@ html, body {
 
 @media (max-width: 1600px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -152,7 +151,7 @@ html, body {
 
 @media (max-width: 1300px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -171,7 +170,7 @@ html, body {
 
 @media (max-width: 1040px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -191,7 +190,7 @@ html, body {
 
 @media (max-width: 767px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -210,7 +209,7 @@ html, body {
 
 @media (max-width: 600px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -229,7 +228,7 @@ html, body {
 
 @media (max-width: 500px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -248,7 +247,7 @@ html, body {
 
 @media (max-width: 400px) {
 
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
