@@ -1,7 +1,7 @@
 <div class="modal deleta-categoria" tabindex="-1" role="dialog" id="deleta-categoria-<?= $categoria->id ?>">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="/categorias/delete" method="POST">
+            <form action="/admin/categorias/delete" method="POST">
                 <div class="modal-header">
                     <h5 class="modal-title">DELETAR CATEGORIA</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -9,6 +9,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                <!-- <label class="elemento-visualiza" for="exampleFormControlTextarea1">Nome da
+                    categoria</label> -->
+                <input class="form-control elemento-visualiza" type="text" placeholder="<?= $categoria->nome?>" readonly>
                     <p>Tem certeza de que quer deletar essa categoria?</p>
                 </div>
                 <div class="modal-footer">

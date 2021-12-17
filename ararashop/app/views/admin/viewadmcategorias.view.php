@@ -29,13 +29,11 @@
                 <button class="btn btn-white my-2 my-sm-0" type="submit">Pesquisar</button>
             </form>
 
-            
-            <?php require 'modal/categorias/adiciona.view.php'?>
+
+            <?php require 'modal/categorias/adiciona.view.php' ?>
 
             <button type="button" class="btn-lg btn-block modal-adiciona-categoria" data-toggle="modal" data-target="#modal-adiciona-categoria">Adicionar Categoria +</button>
-            
 
-            
             <div class="lista-de-categorias">
                 <table class="table table-dark">
                     <thead>
@@ -46,34 +44,43 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($categorias as $categoria): ?>
-                            <?php require 'modal/categorias/edit.view.php'?>
-                            <?php require 'modal/categorias/visualiza.view.php'?>
-                            <?php require 'modal/categorias/deleta.view.php'?>
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <?php require 'modal/categorias/edit.view.php' ?>
+                            <?php require 'modal/categorias/visualiza.view.php' ?>
+                            <?php require 'modal/categorias/deleta.view.php' ?>
+                            <tr>
+                                <th scope='row'><?= $categoria->id ?></th>
+                                <td> <?= $categoria->nome ?> </td>
 
-                        <tr>
-                            <th scope="row"><?= $categoria->id ?></th>
-                            <td> <?= $categoria->nome ?> </td>
+                                <td>
+                                    <ul>
+                                        <li><button id=<?php $categoria->id ?> class='btn btn-outline-dark' data-toggle='modal' data-target='#edita-categoria-<?= $categoria->id ?>'><i class='fas fa-edit'></i></button>
+                                        </li>
 
-                            <td>
-                                <ul>
-                                    <li><button id= <?php $categoria->id?> class="btn btn-outline-dark" data-toggle="modal" data-target="#edita-categoria-<?= $categoria->id?>"><i class="fas fa-edit"></i></button>
-                                    </li>
+                                        <li><button id=<?php $categoria->id ?> class='btn btn-outline-dark' data-toggle='modal' data-target='#visualiza-categoria-<?= $categoria->id ?>'><i class='fas fa-eye'></i></button>
+                                        </li>
 
-                                    <li><button id= <?php $categoria->id?> class="btn btn-outline-dark" data-toggle="modal" data-target="#visualiza-categoria-<?= $categoria->id?>"><i class="fas fa-eye"></i></button>
-                                    </li>
+                                        <li><button id=<?php $categoria->id ?> class='btn botao-deleta-categoria btn-outline-dark' data-toggle='modal' data-target='#deleta-categoria-<?= $categoria->id ?>'><i class='fas fa-trash-alt'></i></button>
+                                        </li>
+                                    </ul>
+                                </td>
 
-                                    <li><button id= <?php $categoria->id?> class="btn botao-deleta-categoria btn-outline-dark" data-toggle="modal" data-target="#deleta-categoria-<?= $categoria->id?>"><i class="fas fa-trash-alt"></i></button>
-                                    </li>
-                                </ul>
-                            </td>
-
-                        </tr>
-                        <?php endforeach; ?>
+                            </tr>
+                            <?php endforeach; ?>";
                     </tbody>
                 </table>
             </div>
 
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-sm">
+                    <li class='page-item'><a class='page-link' href='view'>Primeira</a></li>
+                    <li class='page-item active'><a class='page-link' href='#'></a></li>
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina + 1?>'><?= $pagina + 1?></a></li>
+                    <li class='page-item'><a class='page-link' href='#'></a></li>
+                    <li class='page-item'><a class='page-link' href='#'>Última</a></li>
+                </ul>
+            </nav>
 
         </div>
 
@@ -85,6 +92,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../../../public/js/paginacaoadmcategorias.js"></script>
 
 
 </body>

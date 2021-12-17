@@ -1,11 +1,11 @@
 <?php
 
-    $router->get('viewadmcategorias', 'CategoriasController@viewadmcategorias');
+    $router->get('admin/categorias', 'CategoriasController@viewadmcategorias');
 
-    $router->post('categorias/create', 'CategoriasController@create');
+    $router->post('admin/categorias/create', 'CategoriasController@create');
 
-    $router->post('categorias/delete', 'CategoriasController@delete');
+    $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
-    $router->post('categorias/update', 'CategoriasController@update');
+    $router->post('admin/categorias/update', 'CategoriasController@update');
 
 ?>

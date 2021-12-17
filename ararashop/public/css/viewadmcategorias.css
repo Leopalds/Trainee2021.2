@@ -42,7 +42,6 @@ button {
     width: 40%;
     height: 40% !important;
     margin-top: 5%;
-    color: #343A40;
     border-radius: 7px;
     border-color: #414141;
     margin-left: 10%;
@@ -106,11 +105,11 @@ button {
     margin-left: 0% !important;
 }
 
-.seletor-de-cor {
+/* .seletor-de-cor {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-}
+} */
 
 .elemento-visualiza {
     margin-top: 2% !important;

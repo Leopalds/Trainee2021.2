@@ -30,9 +30,51 @@ class QueryBuilder
         }
     }
 
-    public function select()
-    {
+   public function numLinhas($table){
 
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchColumn();
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+
+    public function select($table)
+    {
+        $sql = "SELECT * FROM {$table} LIMIT 10";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginacao($table, $pagina, $itens_pagina){
+
+        $n1_pagina = $pagina * ($itens_pagina);
+
+        $sql = "SELECT * FROM {$table} LIMIT {$n1_pagina}, {$itens_pagina}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function insertCategoria($table, $parametro)

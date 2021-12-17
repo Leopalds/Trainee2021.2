@@ -1,9 +1,7 @@
-
-
 <div class="modal fade bd-example-modal-xl adiciona-categoria" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modal-adiciona-categoria">
     <div class="modal-dialog modal-xl modal-grande">
         <div class="modal-content conteudo-modal">
-            <form action="/categorias/create" method="POST">
+            <form action="/admin/categorias/create" method="POST">
                 <div class="form-group formulario-modal">
 
                     <h1>Adicionar categoria</h1>
@@ -13,7 +11,12 @@
 
                     <label for="exampleFormControlTextarea1">Nome da categoria</label>
 
-                    <input type="text" name="nome">
+                    <div class="input-group mb-3">
+                        <!-- <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Padrão</span>
+                        </div> -->
+                        <input type="text" class="form-control" aria-label="nome da categoria" aria-describedby="inputGroup-sizing-default" name="nome">
+                    </div>
                 </div>
 
                 <!-- <div class="form-group formulario-modal">

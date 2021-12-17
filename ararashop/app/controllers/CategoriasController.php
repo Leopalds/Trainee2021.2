@@ -8,12 +8,19 @@ use Exception;
 class CategoriasController {
 
     public function viewadmcategorias(){
+        if(isset($_GET['pagina'])){
+            $pagina = $_GET['pagina'];
+        } else {
+            $pagina = 1;
+        }
 
-        $categorias = App::get('database') ->selectAll('categorias');
+        $total_categorias = App::get('database') ->numLinhas('categorias');
 
-        
+        $total_paginas = ceil($total_categorias / 10);
 
-        return view('admin/viewadmcategorias', compact('categorias'));
+        $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10);
+
+        return view('admin/viewadmcategorias', compact('categorias', 'pagina', 'total_paginas'));
     }
 
     public function create(){
@@ -25,7 +32,7 @@ class CategoriasController {
         ];
         app::get('database')->insertCategoria('categorias', $parameters);
 
-        header('Location: /viewadmcategorias');
+        header('Location: /admin/categorias');
     }
 
     public function update(){
@@ -35,7 +42,7 @@ class CategoriasController {
         
         app::get('database')->updateCategoria('categorias', $nome, $idp);
 
-        header('Location: /viewadmcategorias');
+        header('Location: /admin/categorias');
     }
 
     public function delete(){
@@ -44,10 +51,17 @@ class CategoriasController {
 
         app::get('database')->delete('categorias', $idp);
 
-        header('Location: /viewadmcategorias');
+        header('Location: /admin/categorias');
     }
     
 }
+
+// class Paginação{
+
+//     public function cres() {
+
+//     }
+// }
 
 
 ?>
