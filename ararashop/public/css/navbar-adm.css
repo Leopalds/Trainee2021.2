@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Oswald', sans-serif;
-    padding: 100px 0;
-    background-color: #343A40;
-    color: #FBFBFB;
-    position: relative;
-    margin: 3rem 0 0 0;
-    padding: 0 1rem;
-    font-size: 1rem;
-    transition: 0.5s;
-}
-
 a {
     text-decoration: none;
     color: #FBFBFB;
@@ -61,7 +49,7 @@ a {
     width: 70px;
     height: 100%;
     background-color: #FF7700;
-    padding: .5rem 1rem 0 0;
+    padding: -5rem 1rem 0 0;
     transition: .5s;
 }
 
