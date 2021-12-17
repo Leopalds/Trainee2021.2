@@ -1,7 +1,10 @@
 <?php
-    use App\Core\Router;
+
+use App\Controllers\PagesController;
+use App\Core\Router;
 
     $router->get('contato', 'UsuariosController@contato');
+    $router->post('contato/enviarEmail', 'PagesController@enviarEmail');
 
     $router->get('admin/usuarios', 'UsuariosController@usuarios');
 

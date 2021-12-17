@@ -16,6 +16,8 @@ class UsuariosController
         return view('site/contato');
     }
 
+    
+
     public function usuarios()
     {
 

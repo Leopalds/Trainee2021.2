@@ -36,27 +36,27 @@
 
         <div class="contact">
             <h2 class="div-tittle">Alguma dúvida? Fale conosco!</h2>
-            <form>
+            <form action="/contato/enviarEmail" method="POST">
 
-                <div class="row d-flex">
+            <div class="row d-flex">
                     <div class="form-group col-12">
                         <label for="formControlImputName">Nome</label>
-                        <input type="text" class="form-control" id="nameFormInput" placeholder="Violet Evergarden">
+                        <input type="text" name="nome"class="form-control" id="nameFormInput" placeholder="Violet Evergarden">
                     </div>
                     <div class="form-group col-12">
                         <label for="exampleFormControlInput1">Seu Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="hinata@example.com">
+                        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="hinata@example.com">
                     </div>
                     <div class="form-group col-12">
                         <label for="formControlImputName">Assunto</label>
-                        <input type="text" class="form-control" id="nameFormInput" placeholder="Exame Hunter">
+                        <input type="text" name="assunto" class="form-control" id="nameFormInput" placeholder="Exame Hunter">
                     </div>
                     <div class="form-group col-12">
                         <label for="exampleFormControlTextarea1">Digite sua mensagem!</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Onde esta o One Piece?"></textarea>
+                        <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3" placeholder="Onde esta o One Piece?"></textarea>
                     </div>
                     <div class="form-group col-12 d-flex justify-content-end">
-                        <button type="button" class="btn btn-lg btn-secondary">Enviar</button>
+                        <button type="submit" class="btn btn-lg btn-secondary">Enviar</button>
                     </div>
                 </div>
 
