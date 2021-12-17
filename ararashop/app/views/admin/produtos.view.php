@@ -25,10 +25,10 @@
   <!-- Fim NavBarAdm -->
 </head>
 
-<?php require 'navbar.php' ?>
 
 <body>
-
+  
+  <?php require 'navbar.php' ?>
   
 
   <!-- Modal Adiconar Produto -->
@@ -168,25 +168,8 @@
             </tbody>
           </table>
       </div>    
-                          
-                         
-
-
-
-
-
-        
-
-
-              
-              
-
-
-
   </div>
-
-
-
+ 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5d99e3d3ae.js" crossorigin="anonymous"></script>
 
