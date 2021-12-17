@@ -15,14 +15,36 @@ class ProdutosController
 
     public function produtoscatalogo()
     {
+        
+        if(isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $produtos = app::get('database')->searchprodutos('produtos', $search);
+        }
+        else if(isset($_GET['categoria']))
+        {
+            $categoria = $_GET['categoria'];
+            $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
+        }
+        else
+        {
         $produtos = App::get('database')->selectAll('produtos');
+        }
         $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         return view('site/produtos', compact("produtos","categoriasexemplo")); 
     }
 
     public function produtos()
     {
+        if(isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $produtos = app::get('database')->searchprodutos('produtos', $search);
+        }
+        else
+        {
         $produtos = App::get('database')->selectAll('produtos');
+        }
         $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
         return view('admin/produtos', compact("produtos","categoriasexemplo")); 
 
@@ -81,20 +103,13 @@ class ProdutosController
         return view('admin/produtos', compact('produtos','categoriasexemplo')); 
     }
 
-    public function searchcatalogo()
-    {
-        $search = $_GET['search'];
-
-        $produtos = app::get('database')->searchcatalogo('produtos', $search);
-        return view('site/produtos', compact('produtos')); 
-    }
-
     public function categoriacatalogo()
     {
         $categoria = $_GET['categoria'];
 
         $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
-        return view('site/produtos', compact('produtos')); 
+        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
+        return view('site/produtos', compact('produtos','categoriasexemplo')); 
     }
 
 

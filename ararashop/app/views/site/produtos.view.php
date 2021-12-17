@@ -17,7 +17,7 @@
 
              <div class="menufiltro">
 
-                    <form action="produtos/searchcatalogo" method="GET">
+                    <form action="/produtos" method="GET">
                       <div class="input-group barrabusca">
                         <input type="search" name="search" class="form-control rounded" placeholder="Digite aqui" aria-label="Search"
                         aria-describedby="search-addon" />
@@ -25,19 +25,15 @@
                       </div>
                     </form>
 
-                    <form action="produtos/categoriacatalogo" method="GET">
+                    <form action="/produtos" method="GET">
                       <div class="dropdown menumenu">
                         <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Busca por Categoria
                           <span class="caret"></span></button>
                           <ul class="dropdown-menu listamenu">
                             <?php foreach ($categoriasexemplo as $cat) : ?>
-                            <!-- <li><a class="filtroselect" chref="#">HTML</a></li> -->
-                            <li class="filtroselect"><button type="submit" value="<?= $cat->categ ?>" name="categoria"><?= $cat->categ ?></button></li>
-                            <!-- <li><a class="filtroselect" href="#">Camisas</a></li>
-                            <li><a class="filtroselect" href="#">Moletons</a></li>
-                            <li><a class="filtroselect" href="#">Conjuntos</a></li>
-                            <li><a class="filtroselect" href="#">Cosplays</a></li>
-                            <li><a class="filtroselect" href="#">Brindes</a></li> -->
+                           
+                            <li class="filtroselect"><button type="submit" value="<?= $cat->nome ?>" name="categoria"><?= $cat->nome ?></button></li>
+  
                             <?php endforeach; ?>
                           </ul>
                         </div>
@@ -98,9 +94,9 @@
                   <div class="card m-2 ccprod" style="width: 18rem;">
                       <img class="card-img-top img-responsive cim" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Card image cap">
                       <div class="card-body">
-                      <p class="card-text nomeproduto"><?= $produtoad->nome ?></p>
-                      <p class="card-text precoproduto"> R$ <?= number_format($produtoad->preco ,2,',') ?></p>
-                      <p class="card-text categoriaproduto">Produto: <?= $produtoad->categoria ?></p>
+                        <p class="card-text nomeproduto"><?= $produtoad->nome ?></p>
+                        <p class="card-text precoproduto"> R$ <?= number_format($produtoad->preco ,2,',') ?></p>
+                        <p class="card-text categoriaproduto">Produto: <?= $produtoad->categoria ?></p>
                       </div>
                   </div>
                 </a>

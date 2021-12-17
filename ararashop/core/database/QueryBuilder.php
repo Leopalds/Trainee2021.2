@@ -199,29 +199,10 @@ class QueryBuilder
       }
     }
 
-    public function searchcatalogo($table, $searcher)
-    {
-      $sql = "SELECT * FROM {$table} WHERE nome LIKE '%{$searcher}%' ";
-
-      try 
-      {
-          $stmt = $this->pdo->prepare($sql);
-          $stmt->execute();
-
-          return $stmt->fetchAll(PDO::FETCH_CLASS);
-      }
-
-      catch (Exception $e)
-      {
-
-         die($e->getMessage());
-
-      }
-    }
 
     public function categoriacatalogo($table, $ctgr)
     {
-      $sql = "SELECT * FROM {$table} WHERE categoria = {$ctgr}";
+      $sql = "SELECT * FROM {$table} WHERE categoria = '{$ctgr}'";
 
       try 
       {

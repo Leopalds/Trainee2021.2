@@ -26,9 +26,6 @@
     $router->post('admin/produtos/createprodutos','ProdutosController@createprodutos');
     $router->post('admin/produtos/deleteprodutos','ProdutosController@deleteprodutos');
     $router->post('admin/produtos/updateprodutos','ProdutosController@updateprodutos');
-    $router->get('admin/produtos/searchprodutos','ProdutosController@searchprodutos');
-    $router->get('produtos/searchcatalogo','ProdutosController@searchcatalogo');
-    $router->get('produtos/categoriacatalogo','ProdutosController@categoriacatalogo');
 
 
     

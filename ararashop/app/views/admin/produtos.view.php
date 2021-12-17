@@ -59,9 +59,9 @@
 
                   <?php foreach ($categoriasexemplo as $cat) : ?>
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->categ ?>" value="<?= $cat->categ ?>">
-                    <label class="form-check-label" for="cat-<?= $cat->categ ?>">
-                      <?= $cat->categ ?> 
+                    <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->nome ?>" value="<?= $cat->nome ?>">
+                    <label class="form-check-label" for="cat-<?= $cat->nome ?>">
+                      <?= $cat->nome ?> 
                     </label>
                   </div>
                   <?php endforeach; ?>
@@ -90,9 +90,9 @@
   <div class="container">
     
 
-    <form action="/admin/produtos/searchprodutos" method="GET">
+    <form action="/admin/produtos" method="GET">
         <div class="input-group barrabusca">
-          <input type="search" name="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
+          <input type="search" name="search" value="<?= $_GET['search'] ?? null ?>" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
             aria-describedby="search-addon" />
           <button type="submit" class="btn btn-outline-white">Buscar</button>
         </div>
