@@ -15,7 +15,10 @@
     <title>Quem Somos - AraAra Shop</title>
 
 </head>
+
 <body>
+
+<?php require 'navbar.php'; ?>
 
     <div class="caminho">    
         <h2>Home > Quem Somos?</h2>
@@ -25,13 +28,11 @@
         <h1>Um pouco sobre nós..</h1>
     </div>
 
-    <br>
-
     <div class="container c1">
         <div class="row">
             <div class="col-sm">
                 <div class="imagem1">
-                    <img src="../../public/img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
+                    <img src="../../public/img/qs_img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
                 </div>
     
             </div> 
@@ -71,7 +72,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem2">
-                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
+                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/qs_img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
                 </div>
             </div>
             <div class="col-sm">
@@ -102,7 +103,7 @@
             </div>
             <div class="col-sm">
                 <div class="imagem3">
-                    <img src="../..//public/img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
+                    <img src="../..//public/img/qs_img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
                 </div>   
             </div>
         </div>   
@@ -120,7 +121,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem4">
-                    <img src="../../public/img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
+                    <img src="../../public/img/qs_img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
                 </div>    
             </div>
             <div class="col-sm">
@@ -137,6 +138,9 @@
             </div>
         </div>
     </div>
+
+    <?php require 'footer.php'; ?>
+
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
