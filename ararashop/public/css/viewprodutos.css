@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../img/fundositeview.png);
+    background-image: url(../img/backgroundviewprodutos.png);
     background-attachment: fixed;
     background-size:100% 100%;
     background-repeat: no-repeat;
@@ -64,9 +64,9 @@ body {
   color: #FBFBFB;
 }
 
-.card {
-    font-family: 'Oswald', sans-serif;
-}
+/* .card {
+    
+} */
 
 .cadiv {
   display: inline-block;
@@ -74,6 +74,8 @@ body {
 
 .ccprod {
   max-width: 300px;
+  min-height: 450px;
+  font-family: 'Oswald', sans-serif;
   /* max-height: 500px; */
 }
 

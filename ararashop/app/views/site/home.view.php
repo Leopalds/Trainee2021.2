@@ -47,8 +47,6 @@
                   <div class="banner">
                       <img src="../../public/img/bnbnatt.png">
                   </div>
-                  <br><br>
-
 
                   <div class="rowcar d-flex flex-wrap justify-content-center">
 
@@ -71,9 +69,7 @@
                   <div class="callaction">
 
                       <a href="#"><img src="../../public/img/quemsomosatt.png" alt="Quem somos?"></a>
-                      <br><br>
                       <a href="#"><img src="../../public/img/contatoatt.png" alt="Contato"></a>
-                      <br><br><br>
 
                   </div>
 

@@ -2,7 +2,7 @@
 
 namespace App\Core\Database;
 
-use PDO;
+use PDO, Exception;
 
 class QueryBuilder
 {
@@ -223,6 +223,26 @@ class QueryBuilder
     public function produtocategoria($table, $searcher, $ctgr)
     {
       $sql = "SELECT * FROM {$table} WHERE categoria = '{$ctgr}' AND nome LIKE '%{$searcher}%'";
+
+      try 
+      {
+          $stmt = $this->pdo->prepare($sql);
+          $stmt->execute();
+
+          return $stmt->fetchAll(PDO::FETCH_CLASS);
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+    }
+
+    public function searchusuarios($table, $searcher)
+    {
+      $sql = "SELECT * FROM {$table} WHERE nome LIKE '%{$searcher}%' ";
 
       try 
       {

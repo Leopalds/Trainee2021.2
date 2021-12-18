@@ -29,6 +29,20 @@ html, body {
     background-color:#212429;
 }
 
+.barrabusca {
+    padding-top: 1%;
+    margin-bottom: 30px;
+    max-width: 300px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .barrabusca button {
+    background-color: #FF7700;
+    color: #FBFBFB;
+  }
+
 table {
     width: auto;
 }

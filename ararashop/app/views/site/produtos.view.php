@@ -44,11 +44,11 @@
 
               </div>
 
-            <div class="row d-flex flex-wrap justify-content-center card-deck card-columns cadiv">
+            <div class="row d-flex flex-wrap justify-content-center card-columns cadiv">
   
                 <?php foreach ($produtos as $produtoad) : ?>
                 <a class="linkproduto" href="#">
-                  <div class="card m-2 ccprod" style="width: 18rem;">
+                  <div class="card m-2 align-baseline ccprod" style="width: 16rem;">
                       <img class="card-img-top img-responsive cim" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text nomeproduto"><?= $produtoad->nome ?></p>
