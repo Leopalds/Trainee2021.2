@@ -75,7 +75,7 @@ a {
 }
 
 .nav_list {
-    padding-top: 20%;
+    padding-top: 30%;
 }
 
 .nav_logo,
@@ -149,6 +149,7 @@ a {
     .header_img img {
         width: 45px;
     }
+    .nav_list i {}
     .l-navbar {
         left: 0;
         padding: 1rem 1rem 0 0;

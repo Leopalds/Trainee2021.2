@@ -34,12 +34,15 @@ class PagesController
         $mail->Password = 'araaralojashop';
         $mail->Port = 587;
 
-        $mail->setFrom('lojaaraarashop@gmail.com');
-        $mail->addAddress($parameters['email']);
+        $mail->setFrom($parameters['email']);
+        $mail->addAddress('lojaaraarashop@gmail.com');
+
 
         $mail->isHTML(true);
         $mail->Subject = $parameters['assunto'];
-        $mail->Body    = nl2br($parameters['mensagem']);
+        $mail->Body    = nl2br("Nome: {$parameters['nome']}<br>
+                                Email: {$parameters['email']}<br>
+                                Mensagem: {$parameters['mensagem']}");
         $mail->AltBody = nl2br(strip_tags($parameters['mensagem']));
 
         if (!$mail->send()) {
