@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-color: #343A40;
     background-position: center center;
+    font-family: 'Oswald', sans-serif !important;
 }
 
 .container {

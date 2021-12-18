@@ -68,8 +68,8 @@
 
                   <div class="callaction">
 
-                      <a href="#"><img src="../../public/img/quemsomosatt.png" alt="Quem somos?"></a>
-                      <a href="#"><img src="../../public/img/contatoatt.png" alt="Contato"></a>
+                      <a href="/quemsomos"><img src="../../public/img/quemsomosatt.png" alt="Quem somos?"></a>
+                      <a href="/contato"><img src="../../public/img/contatoatt.png" alt="Contato"></a>
 
                   </div>
 

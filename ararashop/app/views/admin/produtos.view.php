@@ -74,16 +74,6 @@
               </div>
             <?php endforeach; ?>
 
-
-                  <?php foreach ($categorias as $cat) : ?>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->nome ?>" value="<?= $cat->nome ?>">
-                    <label class="form-check-label" for="cat-<?= $cat->nome ?>">
-                      <?= $cat->nome ?> 
-                    </label>
-                  </div>
-                  <?php endforeach; ?>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
