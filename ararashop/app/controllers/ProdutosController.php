@@ -23,9 +23,9 @@ class ProdutosController
     {
         include('verificalogin.php');
 
-        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
+        $categorias = App::get('database')->selectAll('categorias');
         $produtos = App::get('database')->selectAll('produtos');
-        return view('admin/produtos', compact("produtos","categoriasexemplo")); 
+        return view('admin/produtos', compact("produtos","categorias")); 
 
         
     }

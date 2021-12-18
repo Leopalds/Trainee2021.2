@@ -21,7 +21,7 @@ session_start();
 
     <div class="caminho">
         <ul>
-            <li><a href="../site/home.html" style="color: #fbfbfb !important">Home</a></li>
+            <li><a href="./" style="color: #fbfbfb !important">Home</a></li>
             <li> > </li>
             <li>Login</li>
         </ul>
