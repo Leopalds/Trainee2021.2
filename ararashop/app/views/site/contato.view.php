@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7a3ef7191d.js" crossorigin="anonymous"></script>
+    <!-- <link href="../../../public/css/navbarfooter.css" rel="stylesheet"> -->
     <link href="../../../public/css/contato.css" rel="stylesheet">
-    <link href="../../../public/css/navbarfooter.css" rel="stylesheet">
 
     <title>Contato</title>
 </head>
 
 <body>
-    <?php require 'navbar.php' ?>
+    <?php require 'navbar.php'; ?>
     <div class="caminho">
         <ul>
             <li><a href="/" style="color: #fbfbfb !important">Home</a></li>
@@ -95,7 +95,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.139460868239!2d-43.35196755009029!3d-21.77486288552834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b69c914a28f%3A0xf85b3ff7e358eecf!2sBar%20do%20Zezinho!5e0!3m2!1spt-BR!2sbr!4v1635478808285!5m2!1spt-BR!2sbr" allowfullscreen></iframe>
     </div>
 
-    <?php require 'footer.php' ?>
+    <?php require 'footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
