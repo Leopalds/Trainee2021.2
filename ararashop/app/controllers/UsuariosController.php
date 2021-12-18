@@ -15,6 +15,14 @@ class UsuariosController
     public function usuarios()
     {
         include('verificalogin.php');
+        
+        if(isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $usuarios = App::get('database')->searchusuarios('usuarios', $search);
+        }
+        else
+        {
 
         $usuarios = App::get('database')->selectAll('usuarios');
         $tables = [
@@ -22,8 +30,9 @@ class UsuariosController
             'usuarios' => $usuarios,
 
         ];
+        }
 
-        return view('admin/usuarios', $tables);
+        return view('admin/usuarios', compact("usuarios"));
     }
     
 

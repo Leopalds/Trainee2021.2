@@ -12,7 +12,7 @@
                                             </button>
                                         </div>
 
-                                            <form action="/produtos/updateprodutos" method="POST">
+                                            <form action="/admin/produtos/updateprodutos" method="POST">
                                              <div class="modal-body">
 
                                              
@@ -44,10 +44,10 @@
 
                                                  <?php foreach ($categorias as $cat) : ?>
                                                     <div class="form-check form-check-inline">
-                                                      <input <?php if($cat->categ == $produtoad->categoria) {echo "checked";} ?>
-                                                       class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->categ ?>" value="<?= $cat->categ ?>">
-                                                      <label class="form-check-label" for="cat-<?= $cat->categ ?>">
-                                                        <?= $cat->categ ?> 
+                                                      <input <?php if($cat->nome == $produtoad->categoria) {echo "checked";} ?>
+                                                       class="form-check-input" type="radio" name="categoria" id="cat-<?= $cat->nome ?>" value="<?= $cat->nome ?>">
+                                                      <label class="form-check-label" for="cat-<?= $cat->nome ?>">
+                                                        <?= $cat->nome ?> 
                                                       </label>
                                                     </div>
                                                 <?php endforeach; ?>

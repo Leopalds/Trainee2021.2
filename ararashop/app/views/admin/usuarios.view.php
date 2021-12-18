@@ -30,8 +30,17 @@
 </head>
 <body>
 
-<?php require 'navbar.php'; ?>
+  
+  <?php require 'navbar.php'; ?>
   <div class="container-fluid-ds">
+    
+    <form action="/admin/usuarios" method="GET">
+        <div class="input-group barrabusca">
+          <input type="search" name="search" value="<?= $_GET['search'] ?? null ?>" class="form-control rounded" placeholder="Nome Usuário" aria-label="Search"
+            aria-describedby="search-addon" />
+          <button type="submit" class="btn btn-outline-white">Buscar</button>
+        </div>
+    </form>
     
     <table class="table table-dark">
       <?php require 'modal/usuarios/modal-create.php' ?>

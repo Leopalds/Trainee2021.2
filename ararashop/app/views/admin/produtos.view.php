@@ -11,28 +11,24 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../../public/css/view_ADM_produtos.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
   <!-- NavBarAdm  -->
     <link rel="stylesheet" href="../../..//public/css/navbar-adm.css">
     <script src="../../../public/js/navbarAdm.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E%22%3E
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7a3ef7191d.js" crossorigin="anonymous"></script>
   <!-- Fim NavBarAdm -->
-
-
 </head>
 
 
-
 <body>
-
+  
   <?php require 'navbar.php' ?>
+  
 
   <!-- Modal Adiconar Produto -->
   <div class="modal fade modal-adicionar-produto modais" id="modal-adicionar-produto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -45,7 +41,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/produtos/createprodutos" method="POST">
+          <form action="/admin/produtos/createprodutos" method="POST">
 
             <div class="form-group">
               <label for="input-nome">Nome Produto</label>
@@ -78,8 +74,6 @@
               </div>
             <?php endforeach; ?>
 
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary modbut" data-dismiss="modal">Fechar</button>
@@ -102,92 +96,77 @@
   <div class="container">
 
 
-    <div class="input-group barrabusca">
-      <input type="search" class="form-control rounded" placeholder="Nome Produto" aria-label="Search" aria-describedby="search-addon" />
-      <button type="button" class="btn btn-outline-white">Buscar</button>
-    </div>
+    <form action="/admin/produtos" method="GET">
+        <div class="input-group barrabusca">
+          <input type="search" name="search" value="<?= $_GET['search'] ?? null ?>" class="form-control rounded" placeholder="Nome Produto" aria-label="Search"
+            aria-describedby="search-addon" />
+          <button type="submit" class="btn btn-outline-white">Buscar</button>
+        </div>
+    </form>
 
     <!-- Botão Modal Adicionar Produto -->
     <button type="button" class="btn btn-secondary btn-lg btn-block botaoadd" data-toggle="modal" data-target=".modal-adicionar-produto">Adiconar Produto</button>
 
     <!-- Tabela de Itens -->
 
-    <div class="table-responsive">
+      <div class="table-responsive">
 
-      <table class="table table-hover table-dark table-responsive{-sm|-md|-lg|-xl} tabelinha">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Categoria</th>
-            <th class="acoes" scope="col">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
+          <table class="table table-hover table-dark table-responsive{-sm|-md|-lg|-xl} tabelinha">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th class="acoes" scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
 
-          <tr>
-            <?php
-            foreach ($produtos as $produtoad) : ?>
+              <tr>
+                <?php foreach ($produtos as $produtoad) : ?>
 
-              <?php require 'modal/produtos/modal-view.php' ?>
-              <?php require 'modal/produtos/modal_edit.php' ?>
-              <?php require 'modal/produtos/modal-excluir.php' ?>
+                  <?php require 'modal/produtos/modal-view.php' ?>
+                  <?php require 'modal/produtos/modal_edit.php' ?>
+                  <?php require 'modal/produtos/modal-excluir.php' ?>
+                
+                <th class="id" scope="row"><?= $produtoad->id ?></th>
+                <th class="nome"><?= $produtoad->nome ?></th>
+                <td class="descricao"><?= $produtoad->descricao ?></td>
+                <td class="preco"> R$ <?= number_format($produtoad->preco ,2) ?></td>
+                <td class="categoria"><?= $produtoad->categoria ?></td>
+                <td class="colunaacoes">
+                  <div class="btn-group listaacoes">
 
-              <th class="id" scope="row"><?= $produtoad->id ?></th>
-              <th class="nome"><?= $produtoad->nome ?></th>
-              <td class="descricao"><?= $produtoad->descricao ?></td>
-              <td class="preco"> R$ <?= number_format($produtoad->preco, 2) ?></td>
-              <td class="categoria"><?= $produtoad->categoria ?></td>
-              <td class="colunaacoes">
-                <div class="btn-group listaacoes">
+                          <!-- Botão Visualizar -->
+                             <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-visualisar-<?= $produtoad->id ?>">
+                                 <i class="far fa-eye iconebotao"></i>
+                             </button>
+                          <!-- Final Botão Visualizar -->
 
-                  <!-- Botão Visualizar -->
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-visualisar-<?= $produtoad->id ?>">
-                    <i class="far fa-eye iconebotao"></i>
-                  </button>
-                  <!-- Final Botão Visualizar -->
+                          <!-- Botão Editar -->
+                             <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-editar-produto-<?= $produtoad->id ?>">
+                                  <i class="far fa-edit iconebotao"></i>
+                             </button>
+                          <!-- Final Botão Editar -->
+                         
+                          <!-- Botão Excluir -->
+                            <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-excluir-produto-<?= $produtoad->id ?>">
+                                 <i class="far fa-trash-alt iconebotao"></i>
+                           </button>
+                           <!-- Final Botão Excluir -->
 
-                  <!-- Botão Editar -->
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-editar-produto-<?= $produtoad->id ?>">
-                    <i class="far fa-edit iconebotao"></i>
-                  </button>
-                  <!-- Final Botão Editar -->
-
-                  <!-- Botão Excluir -->
-                  <button type="button" class="btn btn-primary botaoacao" data-toggle="modal" data-target="#modal-excluir-produto-<?= $produtoad->id ?>">
-                    <i class="far fa-trash-alt iconebotao"></i>
-                  </button>
-                  <!-- Final Botão Excluir -->
-
-                </div>
-              </td>
-          </tr>
-
-
-
-
-
-
-
-
-        <?php endforeach; ?>
-        </tbody>
-      </table>
-
-    </div>
-
-
-
-
-
-
-
+                  </div>
+                </td>
+              </tr>
+                          
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+      </div>    
   </div>
-
-
-
+ 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5d99e3d3ae.js" crossorigin="anonymous"></script>
 
