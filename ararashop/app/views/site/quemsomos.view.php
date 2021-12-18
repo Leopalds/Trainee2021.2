@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../..//public/css/quem-somos.css">
+    <link rel="stylesheet" href="../../public/css/navbarfooter.css">
+    <link rel="stylesheet" href="../../public/css/quem-somos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -15,7 +16,10 @@
     <title>Quem Somos - AraAra Shop</title>
 
 </head>
+
 <body>
+
+<?php require 'navbar.php'; ?>
 
     <div class="caminho">    
         <h2>Home > Quem Somos?</h2>
@@ -25,13 +29,11 @@
         <h1>Um pouco sobre nós..</h1>
     </div>
 
-    <br>
-
     <div class="container c1">
         <div class="row">
             <div class="col-sm">
                 <div class="imagem1">
-                    <img src="../../public/img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
+                    <img src="../../public/img/qs_img/trabalho.jpg" class="img-fluid" alt="foto falsa do grupo">
                 </div>
     
             </div> 
@@ -71,7 +73,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem2">
-                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
+                    <a href="https://www.youtube.com/watch?v=IsJALkCyB58&ab_channel=OTAKUNERD"><img src="../..//public/img/qs_img/datt2.gif" class="img-fluid" alt="narutinho"></a>       
                 </div>
             </div>
             <div class="col-sm">
@@ -102,7 +104,7 @@
             </div>
             <div class="col-sm">
                 <div class="imagem3">
-                    <img src="../..//public/img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
+                    <img src="../..//public/img/qs_img/luffy.jpg" class="img-fluid" alt="piratinha que estica">
                 </div>   
             </div>
         </div>   
@@ -120,7 +122,7 @@
         <div class="row">
             <div class="col-sm">
                 <div class="imagem4">
-                    <img src="../../public/img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
+                    <img src="../../public/img/qs_img/apertodemaos.gif" class="img-fluid" alt="aperto de mão">
                 </div>    
             </div>
             <div class="col-sm">
@@ -137,6 +139,9 @@
             </div>
         </div>
     </div>
+
+    <?php require 'footer.php'; ?>
+
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

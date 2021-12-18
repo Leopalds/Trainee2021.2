@@ -15,15 +15,15 @@ html, body {
     font-family: 'Oswald', sans-serif;
 }
 
-.container-fluid {
-    padding-top: 4%;
+.container-fluid-ds {
+    padding-top: 6%;
     padding-left: 8%;
     padding-right: 8%;
     max-width: 2000px;
 }
 
 
-.container-fluid button {
+.container-fluid-ds button {
     margin-left: 2%;
     border: 0;
     background-color:#212429;
@@ -44,6 +44,8 @@ html, body {
   }
 
 table {
+    margin-left: 4%;
+    max-width: 2000px;
     width: auto;
 }
 
@@ -87,6 +89,10 @@ table {
 
 #add {
     margin: 0;
+    padding-left: 4%;
+    padding-right: 8%;
+    margin-left: 4%;
+    max-width: 2000px;
 }
 
 #td {
@@ -106,6 +112,150 @@ table {
     border-radius: 20px;
 }
 
+@media (max-width: 2200px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1800px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1800px;
+        width: auto;
+    }    
+}
+
+@media (max-width: 2000px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1700px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1700px;
+        width: auto;
+    }    
+}
+
+@media (max-width: 1850px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1600px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1600px;
+        width: auto;
+    }    
+}
+
+@media (max-width: 1700px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1500px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1500px;
+        width: auto;
+    }    
+}
+
+@media (max-width: 1600px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1400px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1400px;
+        width: auto;
+    }    
+}
+@media (max-width: 1500px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1300px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1300px;
+        width: auto;
+    }    
+}
+@media (max-width: 1400px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1200px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1200px;
+        width: auto;
+    }    
+}
+@media (max-width: 1300px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1100px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1100px;
+        width: auto;
+    }    
+}
+@media (max-width: 1200px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 1000px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1000px;
+        width: auto;
+    }    
+}
+@media (max-width: 1100px) {
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 900px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 1200px;
+        width: auto;
+    }    
+}
 @media (max-width: 1043px) {
     html, body {
         padding: 0;
@@ -123,9 +273,22 @@ table {
         background-position: center center;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
+    }
+
+    table {
+        margin-left: 4%;
+        max-width: 900px;
+        width: auto;
+    }
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 900px;
     }
 
 }
@@ -147,10 +310,29 @@ table {
         width: 10%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
     }
+
+    table {
+        margin-left: 4%;
+        max-width: 900px;
+        width: auto;
+    }
+
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 900px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 900px;
+        width: auto;
+    }   
 
 
 }
@@ -172,11 +354,23 @@ table {
         width: 12%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
     }
 
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 800px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 800px;
+        width: auto;
+    }   
 }
 
 @media (max-width: 750px) {
@@ -196,10 +390,22 @@ table {
         width: 16%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
+    } 
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 600px;
     }
+    table {
+        margin-left: 4%;
+        max-width: 600px;
+        width: auto;
+    }   
 
 }
 
@@ -220,10 +426,22 @@ table {
         width: 20%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
     }
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 500px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 500px;
+        width: auto;
+    }   
 
 }
 
@@ -244,10 +462,22 @@ table {
         width: 24%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
     }
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 400px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 400px;
+        width: auto;
+    }   
 
 }
 
@@ -268,11 +498,22 @@ table {
         width: 28%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
     }
-
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 300px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 300px;
+        width: auto;
+    }   
 }
 
 @media (max-width: 421px) {
@@ -299,10 +540,23 @@ table {
         align-content: flex-end;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back1.png);
     }
+
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 300px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 300px;
+        width: auto;
+    }   
 
 }
   
@@ -325,10 +579,22 @@ table {
         margin-left: 60%;
     }
 
-    .container-fluid {
+    .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back1.png);
     }
+    #add {
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 8%;
+        margin-left: 4%;
+        max-width: 250px;
+    }
+    table {
+        margin-left: 4%;
+        max-width: 250px;
+        width: auto;
+    }   
 
 }
 

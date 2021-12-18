@@ -11,24 +11,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../..//public/css/dashboard.css">
+    <link rel="stylesheet" href="../../public/css/dashboard.css?v=2">
+
+    <link rel="stylesheet" href="../../..//public/css/navbar-adm.css">
+    <script src="../../../public/js/navbarAdm.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7a3ef7191d.js" crossorigin="anonymous"></script>
+    
     <title>Dashboard Admin</title>
 </head>
 <body>
+
+<?php require 'navbar.php'; ?>
    
-    <div class="container">
+    <div class="container-adm">
             <div class="main1"></div>
             <div class="menu">
                 <div class="menu-content">
                     <div class="menu-title">
-                        <img src="../../public/img/tanjnezu.png"> 
+                        <img src="../../public/img/dashboard_imgs/tanjnezu.png"> 
                         <h2>Dashboard samurai</h2>
                     </div> 
                     <div class="elementos">
                         <ul>
-                            <li><a href=""><button id="botaoprod">Produtos</button></a></li>
-                            <li><a href=""><button id="botaocat">Categorias</button></a></li>
-                            <li><a href=""><button id="botaousu">Usuários</button></a></li>
+                            <li><a href="/admin/produtos"><button id="botaoprod">Produtos</button></a></li>
+                            <li><a href="/admin/categorias"><button id="botaocat">Categorias</button></a></li>
+                            <li><a href="/admin/usuarios"><button id="botaousu">Usuários</button></a></li>
                         </ul>
                     </div>
 
@@ -37,7 +52,7 @@
                     </div>
 
                     <div class="menu-foot">
-                        <a href="https://www.youtube.com/watch?v=5Agee8BzqwI&ab_channel=shinya"><img src="../../public/img/inosuke2.png"></a>
+                        <a href="https://www.youtube.com/watch?v=5Agee8BzqwI&ab_channel=shinya"><img src="../../public/img/dashboard_imgs/inosuke2.png"></a>
                     </div>
                 </div>
             </div>    

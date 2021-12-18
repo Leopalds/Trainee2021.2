@@ -42,6 +42,8 @@ class ProdutosController
 
     public function produtos()
     {
+        include('verificalogin.php');
+
         if(isset($_GET['search']))
         {
             $search = $_GET['search'];
@@ -56,8 +58,6 @@ class ProdutosController
 
         
     }
-
-
 
     public function createprodutos()
     {

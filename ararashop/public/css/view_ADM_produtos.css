@@ -1,14 +1,17 @@
 body {
     background-image: url(../img/fundoadmprodum.png);
     background-attachment: fixed;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: #343A40;
     background-position: center center;
 }
 
-.btn-secondary.focus, .btn-secondary:focus, .btn-primary.focus, .btn-primary:focus {
-  box-shadow: none !important;
+.btn-secondary.focus,
+.btn-secondary:focus,
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: none !important;
 }
 
 .barrabusca {
@@ -19,12 +22,13 @@ body {
     font-family: 'Oswald', sans-serif;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .barrabusca button {
+    padding-top: 50px;
+}
+
+.barrabusca button {
     background-color: #FF7700;
     color: #FBFBFB;
-  }
+}
 
   .botaoadd {
     background-color: #343A40 !important;
@@ -41,10 +45,10 @@ body {
 }
 
 .listaacoes {
-  width: 100%;
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .botaoacao {
@@ -65,25 +69,25 @@ body {
 }
 
 .botaoacao:hover {
-  background: transparent;
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-  outline: none !important;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    outline: none !important;
 }
 
 .botaoacao:active {
-  outline: none !important;
-  border: none;
+    outline: none !important;
+    border: none;
 }
 
 .botaoacao:focus {
-  outline: 0;
-  outline: none !important;
+    outline: 0;
+    outline: none !important;
 }
 
 .iconebotao {
-  color: #FBFBFB;
+    color: #FBFBFB;
 }
 
 .modais {
@@ -105,35 +109,33 @@ body {
 }
 
 .textview {
-  font-size: 18px;
-  text-align: center;
-  padding-top: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .imgview {
-  max-width: 300px;
-  text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 40px;
+    max-width: 300px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 700px) {
-  .listaacoes {
-    display: block;
-  }
+    .listaacoes {
+        display: block;
+    }
 }
 
 @media (max-width: 520px) {
-  .listaacoes {
-    display: block;
-  }
-
-  .tabelinha {
-    max-width: 80%;
-    font-size: 14.5px;
-  }
-
+    .listaacoes {
+        display: block;
+    }
+    .tabelinha {
+        max-width: 80%;
+        font-size: 14.5px;
+    }
 }
