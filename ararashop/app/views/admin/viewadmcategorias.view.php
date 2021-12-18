@@ -66,19 +66,27 @@
                                 </td>
 
                             </tr>
-                            <?php endforeach; ?>";
+                            <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
 
 
-            <nav aria-label="Page navigation example">
-                <ul class="pagination pagination-sm">
-                    <li class='page-item'><a class='page-link' href='view'>Primeira</a></li>
-                    <li class='page-item active'><a class='page-link' href='#'></a></li>
+            <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= 1?>'>Primeira</a></li>
+                    <?php if($pagina - 2 > 0){ ?>
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina - 2?>'><?= $pagina - 2?></a></li>
+                    <?php } if($pagina - 1 > 0){ ?>
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina + 1?>'><?= $pagina - 1?></a></li>
+                    <?php } ?>
+                    <li class='page-item active'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina?>'><?= $pagina?></a></li>
+                    <?php if($pagina + 1 <= $total_paginas){ ?>
                     <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina + 1?>'><?= $pagina + 1?></a></li>
-                    <li class='page-item'><a class='page-link' href='#'></a></li>
-                    <li class='page-item'><a class='page-link' href='#'>Última</a></li>
+                    <?php } if($pagina + 2 <= $total_paginas){ ?>
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $pagina + 1?>'><?= $pagina + 2?></a></li>
+                    <?php } ?>
+                    <li class='page-item'><a class='page-link' href='/admin/categorias?pagina=<?= $total_paginas?>'>Última</a></li>
                 </ul>
             </nav>
 

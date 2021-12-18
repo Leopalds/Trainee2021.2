@@ -15,8 +15,23 @@ class ProdutosController
 
     public function produtoscatalogo()
     {
-        $produtos = App::get('database')->selectAll('produtos');
-        return view('site/produtos', compact("produtos")); 
+
+        if(isset($_GET['pagina'])){
+            $pagina = $_GET['pagina'];
+        } else {
+            $pagina = 1;
+        }
+
+        $total_produtos = App::get('database') ->numLinhas('produtos');
+
+        $total_paginas = ceil($total_produtos / 9);
+
+        $produtos = App::get('database') ->paginacao('produtos', $pagina - 1, 9);
+
+        return view('site/produtos', compact('produtos', 'pagina', 'total_paginas'));
+
+        // $produtos = App::get('database')->selectAll('produtos');
+        // return view('site/produtos', compact("produtos")); 
     }
 
     public function produtos()
@@ -70,6 +85,23 @@ class ProdutosController
         app::get('database')->updateprodutos('produtos', $parameters, $_POST['id']);
         header('location: /admin/produtos'); 
         
+    }
+
+    public function viewproduto(){
+        if(isset($_GET['pagina'])){
+            $pagina = $_GET['pagina'];
+        } else {
+            $pagina = 1;
+        }
+
+        $total_produtos = App::get('database') ->numLinhas('produtos');
+
+        $total_paginas = ceil($total_produtos / 10);
+
+        $produtos = App::get('database') ->paginacao('produto', $pagina - 1, 10);
+
+        return view('produto', compact('produtos', 'pagina', 'total_paginas'));
+
     }
 
 

@@ -65,7 +65,7 @@ class QueryBuilder
     }
 
 
-    public function select($idp, $table, $parametros)
+    public function select($idp, $table,)
     {
         $sql = "select * from '{$table}' WHERE id = {$idp}";
 

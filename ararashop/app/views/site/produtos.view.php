@@ -104,18 +104,22 @@
   
             </div>
                 
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center navpgit">
-                <li class="page-item pgit">
-                  <a class="page-link pgit" href="#" tabindex="-1">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link pgit" href="#">1</a></li>
-                <li class="page-item"><a class="page-link pgit" href="#">2</a></li>
-                <li class="page-item"><a class="page-link pgit" href="#">3</a></li>
-                <li class="page-item pgit">
-                  <a class="page-link pgit" href="#">Próxima</a>
-                </li>
-              </ul>
+            <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= 1?>'>Primeira</a></li>
+                    <?php if($pagina - 2 > 0){ ?>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 2?>'><?= $pagina - 2?></a></li>
+                    <?php } if($pagina - 1 > 0){ ?>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina - 1?></a></li>
+                    <?php } ?>
+                    <li class='page-item active'><a class='page-link' href='/produtos?pagina=<?= $pagina?>'><?= $pagina?></a></li>
+                    <?php if($pagina + 1 <= $total_paginas){ ?>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina + 1?></a></li>
+                    <?php } if($pagina + 2 <= $total_paginas){ ?>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina + 2?></a></li>
+                    <?php } ?>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $total_paginas?>'>Última</a></li>
+                </ul>
             </nav>
   
     </div> <!-- Fim container -->

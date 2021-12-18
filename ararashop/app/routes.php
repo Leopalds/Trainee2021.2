@@ -11,13 +11,16 @@
 
     $router->get('admin/usuarios/show', 'UsuariosController@showusuario');
 
+
     $router->get('admin/login', 'LoginController@login');
 
     $router->post('admin/login/validacao', 'LoginController@loginvalidacao');
 
+
     $router->get('admin/dashboard', 'DashboardController@dash');
 
     $router->get('admin/dashboard/logout', 'DashboardController@sair');
+
 
     $router->get('', 'ProdutosController@home');
     $router->get('produtos', 'ProdutosController@produtoscatalogo');
@@ -26,6 +29,7 @@
     $router->post('produtos/createprodutos','ProdutosController@createprodutos');
     $router->post('produtos/deleteprodutos','ProdutosController@deleteprodutos');
     $router->post('produtos/updateprodutos','ProdutosController@updateprodutos');
+    $router->get('produto', 'ProdutosController@viewproduto');
     
 
     $router->get('admin/categorias', 'CategoriasController@viewadmcategorias');
@@ -35,5 +39,6 @@
     $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
     $router->post('admin/categorias/update', 'CategoriasController@update');
+
 
 ?>
