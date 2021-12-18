@@ -18,13 +18,7 @@
 
 <body>
     <?php require 'navbar.php'; ?>
-    <div class="caminho">
-        <ul>
-            <li><a href="/" style="color: #fbfbfb !important">Home</a></li>
-            <li> > </li>
-            <li>Login</li>
-        </ul>
-    </div>
+
 
     <div class="title">
         <h1>Contato </h1>
