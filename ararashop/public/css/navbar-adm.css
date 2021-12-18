@@ -134,6 +134,14 @@ a {
     height: 100vh;
 }
 
+@media (max-width: 768px) {
+    .l-navbar span {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(3rem + 1rem) 0 0 0;

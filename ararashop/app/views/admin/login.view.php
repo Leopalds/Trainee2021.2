@@ -13,23 +13,21 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../../../public/css/navbarfooter.css" rel="stylesheet">
     <link href="../../../public/css/login.css" rel="stylesheet">
     <title>Login</title>
 </head>
 
 <body>
-
+    
     <div class="caminho">
         <ul>
-            <li><a href="./" style="color: #fbfbfb !important">Home</a></li>
+            <li><a href="/" style="color: #fbfbfb !important">Home</a></li>
             <li> > </li>
             <li>Login</li>
         </ul>
     </div>
 
-    <div class="titulo">
-        <img class="img-fluid" src="../../../public/img/login_imgs/logo-ara-ara.png" alt="logo-ara-ara">
-    </div>
 
     <?php
     if(isset($_SESSION['nao_autenticado'])):
