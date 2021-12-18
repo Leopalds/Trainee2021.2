@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7a3ef7191d.js" crossorigin="anonymous"></script>
-    <!-- <link href="../../../public/css/navbarfooter.css" rel="stylesheet"> -->
+    <link href="../../../public/css/navbarfooter.css" rel="stylesheet">
     <link href="../../../public/css/contato.css" rel="stylesheet">
 
     <title>Contato</title>
@@ -27,7 +27,6 @@
     </div>
 
     <div class="title">
-        <img class="img-fluid" src="../../public/img/logo-ara-ara.png" alt="logo-ara-ara">
         <h1>Contato </h1>
         <hr>
     </div>
