@@ -126,7 +126,8 @@ button {
     margin-right: 5%;
 }
 
-.lista-de-categorias ul button{
+table ul button{
+    border-style: none;
     background-color: #272626;
     border-radius: 5px;
     border: #272626;

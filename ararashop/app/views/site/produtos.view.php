@@ -90,7 +90,7 @@
             <div class="row d-flex flex-wrap justify-content-center card-deck card-columns cadiv">
   
                 <?php foreach ($produtos as $produtoad) : ?>
-                <a class="linkproduto" href="#">
+                <a class="linkproduto" href="/produto?id=<?= $produtoad->id?>">
                   <div class="card m-2 ccprod" style="width: 18rem;">
                       <img class="card-img-top img-responsive cim" src="../../public/img/produtos/<?= $produtoad->imagem ?>" alt="Card image cap">
                       <div class="card-body">
@@ -110,13 +110,13 @@
                     <?php if($pagina - 2 > 0){ ?>
                     <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 2?>'><?= $pagina - 2?></a></li>
                     <?php } if($pagina - 1 > 0){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina - 1?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 1?>'><?= $pagina - 1?></a></li>
                     <?php } ?>
                     <li class='page-item active'><a class='page-link' href='/produtos?pagina=<?= $pagina?>'><?= $pagina?></a></li>
                     <?php if($pagina + 1 <= $total_paginas){ ?>
                     <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina + 1?></a></li>
                     <?php } if($pagina + 2 <= $total_paginas){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina + 2?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 2?>'><?= $pagina + 2?></a></li>
                     <?php } ?>
                     <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $total_paginas?>'>Última</a></li>
                 </ul>

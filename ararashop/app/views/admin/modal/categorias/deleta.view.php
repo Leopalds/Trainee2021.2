@@ -9,8 +9,6 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <!-- <label class="elemento-visualiza" for="exampleFormControlTextarea1">Nome da
-                    categoria</label> -->
                 <input class="form-control elemento-visualiza" type="text" placeholder="<?= $categoria->nome?>" readonly>
                     <p>Tem certeza de que quer deletar essa categoria?</p>
                 </div>

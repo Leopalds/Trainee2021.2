@@ -8,6 +8,9 @@
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="../../public/css/navbar-adm.css" rel="stylesheet">
+    <script src="../../public/js/navbarAdm.js"></script>
 
     <link rel="stylesheet" href="../../../public/css/viewadmcategorias.css">
 
@@ -20,6 +23,8 @@
 </head>
 
 <body>
+
+    <?php require 'navbar.php'?>
 
     <div class="categorias-adm col-12">
 

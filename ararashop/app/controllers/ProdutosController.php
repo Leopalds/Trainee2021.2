@@ -88,20 +88,26 @@ class ProdutosController
     }
 
     public function viewproduto(){
-        if(isset($_GET['pagina'])){
-            $pagina = $_GET['pagina'];
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
         } else {
-            $pagina = 1;
+            return view('site/produto');
         }
 
-        $total_produtos = App::get('database') ->numLinhas('produtos');
+        // $colunas = App::get('database')->selectAll('produtos');
 
-        $total_paginas = ceil($total_produtos / 10);
+        // die(var_dump($colunas));
 
-        $produtos = App::get('database') ->paginacao('produto', $pagina - 1, 10);
+        $produto = App::get('database')->selectProduto('produtos', $id);
+        if($produto != NULL) {
+            $produto = $produto[0];
+        } else {
+            return view('site/produto');
+        }
 
-        return view('produto', compact('produtos', 'pagina', 'total_paginas'));
-
+        //die(var_dump($produto));
+        
+        return view('site/produto', compact('produto', 'id')); 
     }
 
 
