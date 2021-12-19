@@ -30,12 +30,12 @@ html, body {
 }
 
 .barrabusca {
+    padding-top: 1%;
     margin-bottom: 30px;
     max-width: 300px;
     font-family: 'Oswald', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 30px;
   }
   
   .barrabusca button {
@@ -302,13 +302,7 @@ table {
         width: auto;
     }
 
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 10%;
-    }
+  
 
     .container-fluid-ds {
         height: 100%;
@@ -346,14 +340,7 @@ table {
         width: auto;
     }
 
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 12%;
-    }
-
+    
     .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
@@ -382,13 +369,7 @@ table {
         width: auto;
     }
 
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 16%;
-    }
+    
 
     .container-fluid-ds {
         height: 100%;
@@ -418,13 +399,7 @@ table {
         width: auto;
     }
 
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 20%;
-    }
+   
 
     .container-fluid-ds {
         height: 100%;
@@ -454,13 +429,7 @@ table {
         width: auto;
     }
 
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
 
-    #usubutton, #editbutton, #excluibutton {
-        width: 24%;
-    }
 
     .container-fluid-ds {
         height: 100%;
@@ -489,15 +458,7 @@ table {
     #adicionar, #addbutton {
         width: auto;
     }
-
-    #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 28%;
-    }
-
+   
     .container-fluid-ds {
         height: 100%;
         background-image: url(../img/adm_usuarios/back2.png);
@@ -526,14 +487,7 @@ table {
     }
 
     #usuario, #editar, #excluir{
-        width: 100%;
-    }
-
-    #usubutton, #editbutton, #excluibutton {
-        width: 32%;
-        display: block;
-        margin-right: 0;
-        margin-left: 70%;
+        width: 40px;
     }
 
     #tdbutton {
@@ -570,14 +524,9 @@ table {
     }
 
     #usuario, #editar, #excluir{
-        width: 100%;
+        width: 40px;
     }
 
-    #usubutton, #editbutton, #excluibutton {
-        width: 42%;
-        margin-right: 0;
-        margin-left: 60%;
-    }
 
     .container-fluid-ds {
         height: 100%;
@@ -609,4 +558,50 @@ table {
     .table, #nomebutton {
         font-size: 48px;
     }
+}
+
+.listaacoes {
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.botaoacao {
+    display: inline-block !important;
+    list-style-type: none !important;
+    width: 100% !important;
+    padding-left: 0px !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    outline: none !important;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.botaoacao:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    outline: none !important;
+}
+
+.botaoacao:active {
+    outline: none !important;
+    border: none;
+}
+
+.botaoacao:focus {
+    outline: 0;
+    outline: none !important;
+}
+
+.iconebotao {
+    color: #FBFBFB;
 }
