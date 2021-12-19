@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff7700;" height="90px">
-  <a href="#" class="navbar-left"><img src="../../public/img/logo-ara-ara.png" width="150px" height="90px" padding-top="-10px" padding-bottom="-10px"></a>
+  <a href="/" class="navbar-left"><img src="../../public/img/logo-ara-ara.png" width="150px" height="90px" padding-top="-10px" padding-bottom="-10px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
