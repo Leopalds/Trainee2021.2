@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Senha:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name='senha' value="<?=$function->senha?>" placeholder="">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name='senha' value="<?=$function->senha?>" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Informações extras sobre o usuário:</label>
