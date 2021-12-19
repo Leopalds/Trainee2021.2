@@ -3,6 +3,7 @@ body{
 }
 
 .categorias-adm {
+    padding-top: 3%;
     background-color: #00000000;
     width: 80%;
     height: 100%;
@@ -27,7 +28,6 @@ button {
     background-color: #ff7700;
     color: #343A40;
     transition: 200ms;
-    opacity: 0.9;
 }
 
 .barra-de-pesquisa button:hover {
@@ -148,7 +148,33 @@ table ul button{
  
 nav {
     width: 100% !important;
-} 
+}
+
+.page-link {
+    background-color: #FF7700;
+    color: white;
+  }
+  
+  .page-link:hover {
+    background-color: #343A40;
+    color: white;
+  }
+  
+  .page-link:active {
+    background-color: #343A40;
+    color: white;
+  }
+  
+  .page-link:focus {
+    background-color: #343A40;
+    color: white;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #343A40;
+    color: white;
+    border-color: white;
+  }
 
 @media (min-width: 1044px){
 
