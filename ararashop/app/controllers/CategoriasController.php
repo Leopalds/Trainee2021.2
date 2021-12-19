@@ -8,17 +8,20 @@ use Exception;
 class CategoriasController {
 
     public function viewadmcategorias(){
+
+        include('verificalogin.php');
+
         if(isset($_GET['pagina'])){
             $pagina = $_GET['pagina'];
         } else {
             $pagina = 1;
         }
 
-        $total_categorias = App::get('database') ->numLinhas('categorias');
+        $total_categorias = App::get('database') ->numLinhas('categorias', '', '');
 
         $total_paginas = ceil($total_categorias / 10);
 
-        $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10);
+        $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10, '', '');
 
         return view('admin/viewadmcategorias', compact('categorias', 'pagina', 'total_paginas'));
     }

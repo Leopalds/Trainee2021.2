@@ -30,8 +30,8 @@
             </li>  
               
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Ex: Camisa naruto" aria-label="Ex: Camisa naruto">
+          <form class="form-inline my-2 my-lg-0" method="GET" action="/produtos">
+            <input class="form-control mr-sm-2" type="search" placeholder="Ex: Camisa naruto" aria-label="Ex: Camisa naruto" name="search">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
           <nav class="navbar navbar-light">
