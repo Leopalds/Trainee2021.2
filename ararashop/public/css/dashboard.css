@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -7,12 +8,12 @@ html, body {
     background-color: #343a40;
 }
 
-.container {
+.container-adm {
     height: 100%;
+    width: 100%;
     padding: 0;
-    margin: 0;
     display: grid;
-    grid-template-columns: 29.3vw 40vw 29.3vw;
+    grid-template-columns: 30vw 40vw 30vw;
 }
 
 .main1 {
@@ -26,6 +27,7 @@ html, body {
     grid-column: 3/4;
     border-radius: 30px;
 }
+
 .menu {
     height: 100%;
     background-color: #fbfbfb;
@@ -34,6 +36,7 @@ html, body {
 }
 
 .menu-title {
+    padding-top: 10%;
     text-align: center;
 }
 
@@ -112,155 +115,129 @@ html, body {
 }
 
 @media (max-width: 2800px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 25vw 50vw 25vw;
     }
-
     .main1 {
-        background-image: url(../img/back6.png);
+        background-image: url(../img/dashboard_imgs/back6.png);
     }
-    
     .main2 {
-        background-image: url(../img/back6.png);
+        background-image: url(../img/dashboard_imgs/back6.png);
     }
 }
 
 @media (max-width: 1600px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 25vw 50vw 25vw;
     }
-
     .main1 {
-        background-image: url(../img/back3.png);
+        background-image: url(../img/dashboard_imgs/back3.png);
     }
-
     .main2 {
-        background-image: url(../img/back3.png);
+        background-image: url(../img/dashboard_imgs/back3.png);
     }
 }
 
 @media (max-width: 1300px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 25vw 50vw 25vw;
     }
-
     .main1 {
-        background-image: url(../img/back7.png);
+        background-image: url(../img/dashboard_imgs/back7.png);
     }
-    
     .main2 {
-        background-image: url(../img/back7.png);
+        background-image: url(../img/dashboard_imgs/back7.png);
     }
 }
 
 @media (max-width: 1040px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 20vw 60vw 20vw;
     }
-    
     .main1 {
-        background-image: url(../img/back8.png);
+        background-image: url(../img/dashboard_imgs/back8.png);
     }
-    
     .main2 {
-        background-image: url(../img/back8.png);
+        background-image: url(../img/dashboard_imgs/back8.png);
     }
 }
 
-
 @media (max-width: 767px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 20vw 60vw 20vw;
     }
-
     .main1 {
-        background-image: url(../img/back23.png);
+        background-image: url(../img/dashboard_imgs/back23.png);
     }
-    
     .main2 {
-        background-image: url(../img/back23.png);
+        background-image: url(../img/dashboard_imgs/back23.png);
     }
 }
 
 @media (max-width: 600px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 20vw 60vw 20vw;
     }
-
     .main1 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
-    
     .main2 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
 }
 
 @media (max-width: 500px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 20vw 60vw 20vw;
     }
-
     .main1 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
-    
     .main2 {
-        background-image: url(../img/back4.png);
+        background-image: url(../img/dashboard_imgs/back4.png);
     }
 }
 
 @media (max-width: 400px) {
-
-    .container {
+    .container-adm {
         height: 100%;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 15vw 70vw 15vw;
     }
-
     .main1 {
-        background-image: url(../img/back5.png);
+        background-image: url(../img/dashboard_imgs/back5.png);
     }
-    
     .main2 {
-        background-image: url(../img/back5.png);
+        background-image: url(../img/dashboard_imgs/back5.png);
     }
 }
-

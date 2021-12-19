@@ -12,7 +12,7 @@ nav {
     align-items: center;
 }
 
-.navbar-brand img{
+.navbar-brand img {
     padding-right: -90px !important;
     padding-left: -10px !important;
 }
@@ -22,8 +22,7 @@ nav {
     padding-left: 20px;
 }
 
-.nav-item{
-
+.nav-item {
     padding-right: 20px;
 }
 
@@ -31,6 +30,7 @@ footer {
     margin-top: 0px;
     background-color: #484848;
 }
+
 .row {
     width: 100%;
     justify-content: center;
@@ -60,15 +60,14 @@ footer .form-group {
 .informacoes {
     font-size: 16px;
     color: #ff7700;
-    
 }
 
-.informacoes a{
+.informacoes a {
     color: white;
     line-height: 35px !important;
 }
 
-.informacoes h1{
+.informacoes h1 {
     font-size: 20px;
 }
 
@@ -77,20 +76,20 @@ footer .form-group {
     font-size: 16px;
 }
 
-.formas-de-pagamento h1{
+.formas-de-pagamento h1 {
     font-size: 20px;
 }
 
-.formas-de-envio{
+.formas-de-envio {
     color: #ff7700;
     font-size: 16px;
 }
 
-.formas-de-envio h1{
+.formas-de-envio h1 {
     font-size: 20px;
 }
 
-.formas-de-envio img{
+.formas-de-envio img {
     text-align: left;
 }
 

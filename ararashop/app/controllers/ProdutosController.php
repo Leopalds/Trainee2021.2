@@ -21,6 +21,26 @@ class ProdutosController
         } else {
             $pagina = 1;
         }
+        if (isset($_GET['search']) && isset($_GET['categoria']))
+        {
+            $search = $_GET['search'];
+            $categoria = $_GET['categoria'];
+            $produtos = app::get('database')->produtocategoria('produtos', $search, $categoria);
+        }
+        else if(isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $produtos = app::get('database')->searchprodutos('produtos', $search);
+        }
+        else if(isset($_GET['categoria']))
+        {
+            $categoria = $_GET['categoria'];
+            $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
+        }
+        else
+        {
+        $produtos = App::get('database')->selectAll('produtos');
+        }
 
         $total_produtos = App::get('database') ->numLinhas('produtos');
 
@@ -32,19 +52,29 @@ class ProdutosController
 
         // $produtos = App::get('database')->selectAll('produtos');
         // return view('site/produtos', compact("produtos")); 
+        
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('site/produtos', compact("produtos","categorias")); 
     }
 
     public function produtos()
     {
+        include('verificalogin.php');
 
-        $categoriasexemplo = App::get('database')->selectAll('categoriasexemplo');
+        if(isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $produtos = app::get('database')->searchprodutos('produtos', $search);
+        }
+        else
+        {
         $produtos = App::get('database')->selectAll('produtos');
-        return view('admin/produtos', compact("produtos","categoriasexemplo")); 
+        }
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('admin/produtos', compact("produtos","categorias")); 
 
         
     }
-
-
 
     public function createprodutos()
     {
@@ -108,6 +138,34 @@ class ProdutosController
         //die(var_dump($produto));
         
         return view('site/produto', compact('produto', 'id')); 
+    }
+    
+    public function searchprodutos()
+    {
+        $search = $_GET['search'];
+
+        $produtos = app::get('database')->searchprodutos('produtos', $search);
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('admin/produtos', compact('produtos','categorias')); 
+    }
+
+    public function categoriacatalogo()
+    {
+        $categoria = $_GET['categoria'];
+
+        $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('site/produtos', compact('produtos','categorias')); 
+    }
+
+    public function produtocategoria()
+    {
+        $search = $_GET['search'];
+        $categoria = $_GET['categoria'];
+
+        $produtos = app::get('database')->produtocategoria('produtos', $search, $categoria);
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('site/produtos', compact('produtos','categorias')); 
     }
 
 

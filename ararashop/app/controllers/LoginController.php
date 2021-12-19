@@ -40,7 +40,6 @@ class LoginController
         $query = "select id from usuarios where email = '{$email}' and senha = '{$senha}' "; 
 
         $result = mysqli_query($conexao, $query);
-
         $row = mysqli_num_rows($result);
 
         if($row == 1){
