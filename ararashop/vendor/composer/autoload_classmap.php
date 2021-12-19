@@ -18,8 +18,8 @@ return array(
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
-    'ComposerAutoloaderInitc4f0820aa77ebfdad494c9b6ecf69049' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderInit77d18dcc81140e6fe6e1cf916f541701' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInitc4f0820aa77ebfdad494c9b6ecf69049' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\Autoload\\ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
