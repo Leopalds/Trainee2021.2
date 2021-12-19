@@ -25,6 +25,8 @@ use App\Core\Router;
     $router->get('produtos', 'ProdutosController@produtoscatalogo');
     $router->get('admin/produtos', 'ProdutosController@produtos');
 
+    
+    $router->get('produto', 'ProdutosController@viewproduto');
     $router->post('admin/produtos/createprodutos','ProdutosController@createprodutos');
     $router->post('admin/produtos/deleteprodutos','ProdutosController@deleteprodutos');
     $router->post('admin/produtos/updateprodutos','ProdutosController@updateprodutos');

@@ -57,7 +57,7 @@
                               <div class="card-body">
                                   <h5 class="card-title"><?= $produtoad->nome ?></h5>
                                   <p class="card-text"> R$ <?= number_format($produtoad->preco, 2, ',') ?></p>
-                                  <a href="#" class="btn btn-primary quadradin">Conferir agora!</a>
+                                  <a href="/produto?id=<?= $produtoad->id?>" class="btn btn-primary quadradin">Conferir agora!</a>
                               </div>
                           </div>
 
