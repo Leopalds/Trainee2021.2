@@ -17,11 +17,21 @@ class CategoriasController {
             $pagina = 1;
         }
 
+        if (isset($_GET['search']))
+        {
+            $search = $_GET['search'];
+            $categorias = App::get('database') ->searchcategorias('categorias', $search, $pagina - 1, 10, '', '');
+        }
+        else
+        {
+            $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10, '', '');
+        }
+
         $total_categorias = App::get('database') ->numLinhas('categorias', '', '');
 
         $total_paginas = ceil($total_categorias / 10);
 
-        $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10, '', '');
+        // $categorias = App::get('database') ->paginacao('categorias', $pagina - 1, 10, '', '');
 
         return view('admin/viewadmcategorias', compact('categorias', 'pagina', 'total_paginas'));
     }
@@ -56,6 +66,14 @@ class CategoriasController {
 
         header('Location: /admin/categorias');
     }
+
+    // public function searchcategorias()
+    // {
+    //     $search = $_GET['search'];
+
+    //     $categorias = App::get('database')->searchcategorias('categorias', $search);
+    //     return view('admin/categorias', compact('categorias')); 
+    // }
     
 }
 

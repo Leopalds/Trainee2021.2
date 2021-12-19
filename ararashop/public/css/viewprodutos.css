@@ -114,6 +114,34 @@ body {
     color: #FBFBFB;
 }
 
+.page-link {
+  background-color: #FF7700;
+  color: white;
+}
+
+.page-link:hover {
+  background-color: #343A40;
+  color: white;
+}
+
+.page-link:active {
+  background-color: #343A40;
+  color: white;
+}
+
+.page-link:focus {
+  background-color: #343A40;
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: #343A40;
+  color: white;
+  border-color: white;
+}
+
+
+
 /* .megumegu img {
     max-width:500px;
     max-height:250px;
