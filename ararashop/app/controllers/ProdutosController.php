@@ -21,40 +21,34 @@ class ProdutosController
         } else {
             $pagina = 1;
         }
-        if (isset($_GET['search']) && isset($_GET['categoria']))
-        {
-            $search = $_GET['search'];
-            $categoria = $_GET['categoria'];
-            $produtos = app::get('database')->produtocategoria('produtos', $search, $categoria);
-        }
-        else if(isset($_GET['search']))
-        {
-            $search = $_GET['search'];
-            $produtos = app::get('database')->searchprodutos('produtos', $search);
-        }
-        else if(isset($_GET['categoria']))
-        {
-            $categoria = $_GET['categoria'];
-            $produtos = app::get('database')->categoriacatalogo('produtos', $categoria);
-        }
-        else
-        {
-        $produtos = App::get('database')->selectAll('produtos');
+
+        if(isset($_GET['categoria'])){
+            $filtro = $_GET['categoria'];
+        } else {
+            $filtro = '';
         }
 
-        $total_produtos = App::get('database') ->numLinhas('produtos');
+        if(isset($_GET['search'])){
+            $busca = $_GET['search'];
+        } else {
+            $busca = '';
+        }
+
+        
+        $total_produtos = App::get('database') ->numLinhas('produtos', $filtro, $busca);
+        
+        //die(var_dump($busca));
+        // die(var_dump($total_produtos));
 
         $total_paginas = ceil($total_produtos / 9);
 
-        $produtos = App::get('database') ->paginacao('produtos', $pagina - 1, 9);
 
-        return view('site/produtos', compact('produtos', 'pagina', 'total_paginas'));
+        $produtos = App::get('database') ->paginacao('produtos', $pagina - 1, 9, $filtro, $busca);
 
-        // $produtos = App::get('database')->selectAll('produtos');
-        // return view('site/produtos', compact("produtos")); 
-        
         $categorias = App::get('database')->selectAll('categorias');
-        return view('site/produtos', compact("produtos","categorias")); 
+
+        return view('site/produtos', compact('produtos', 'pagina', 'total_paginas', 'categorias'));
+
     }
 
     public function produtos()
@@ -139,7 +133,7 @@ class ProdutosController
         
         return view('site/produto', compact('produto', 'id')); 
     }
-    
+
     public function searchprodutos()
     {
         $search = $_GET['search'];

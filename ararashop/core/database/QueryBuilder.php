@@ -29,10 +29,16 @@ class QueryBuilder
         }
     }
 
-    public function numLinhas($table)
+    public function numLinhas($table, $filtro, $busca)
     {
 
-        $sql = "SELECT COUNT(*) FROM {$table}";
+        if($filtro != ''){
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE categoria LIKE '%{$filtro}%'";
+        } else if ($busca != ''){
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE nome LIKE '%{$busca}%'";
+        } else {
+            $sql = "SELECT COUNT(*) FROM {$table}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -45,12 +51,24 @@ class QueryBuilder
         }
     }
 
-    public function paginacao($table, $pagina, $itens_pagina)
+    public function paginacao($table, $pagina, $itens_pagina, $filtro, $busca)
     {
-
         $n1_pagina = $pagina * ($itens_pagina);
 
-        $sql = "SELECT * FROM {$table} LIMIT {$n1_pagina}, {$itens_pagina}";
+        //die(var_dump($busca));
+
+        if( $filtro != '' )
+        {
+            $sql = "SELECT * FROM {$table} WHERE categoria LIKE '{$filtro}' LIMIT {$n1_pagina}, {$itens_pagina}";
+        }
+        else if( $busca != '')
+        {
+            $sql = "SELECT * FROM {$table} WHERE nome LIKE '%{$busca}%' LIMIT {$n1_pagina}, {$itens_pagina}";
+            
+        }
+        else{
+            $sql = "select * from {$table} LIMIT {$n1_pagina},{$itens_pagina}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);

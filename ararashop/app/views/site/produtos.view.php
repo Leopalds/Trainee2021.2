@@ -26,9 +26,9 @@
                         aria-describedby="search-addon" />
                         <button type="submit" class="btn btn-outline-white">Buscar</button>
                       </div>
-                    <!-- </form> -->
+                    </form>
 
-                    <!-- <form action="/produtos" method="GET"> -->
+                    <form action="/produtos" method="GET">
                       <div class="dropdown menumenu">
                         <button class="btn btn-outline-dark btn-rounded btn-lg btn-block dropdown-toggle" type="button" data-toggle="dropdown">Busca por Categoria
                           <span class="caret"></span></button>
@@ -63,19 +63,19 @@
                 
             <nav class="d-flex justify-content-center" aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= 1?>'>Primeira</a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=1<?php require 'paginacao.php'?>'>Primeira</a></li>
                     <?php if($pagina - 2 > 0){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 2?>'><?= $pagina - 2?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 2?><?php require 'paginacao.php'?>'><?= $pagina - 2?></a></li>
                     <?php } if($pagina - 1 > 0){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 1?>'><?= $pagina - 1?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina - 1?><?php require 'paginacao.php'?>'><?= $pagina - 1?></a></li>
                     <?php } ?>
-                    <li class='page-item active'><a class='page-link' href='/produtos?pagina=<?= $pagina?>'><?= $pagina?></a></li>
+                    <li class='page-item active'><a class='page-link' href='/produtos?pagina=<?= $pagina?><?php require 'paginacao.php'?>'><?= $pagina?></a></li>
                     <?php if($pagina + 1 <= $total_paginas){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?>'><?= $pagina + 1?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 1?><?php require 'paginacao.php'?>'><?= $pagina + 1?></a></li>
                     <?php } if($pagina + 2 <= $total_paginas){ ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 2?>'><?= $pagina + 2?></a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $pagina + 2?><?php require 'paginacao.php'?>'><?= $pagina + 2?></a></li>
                     <?php } ?>
-                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $total_paginas?>'>Última</a></li>
+                    <li class='page-item'><a class='page-link' href='/produtos?pagina=<?= $total_paginas?><?php require 'paginacao.php'?>'>Última</a></li>
                 </ul>
             </nav>
   
