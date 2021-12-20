@@ -15,14 +15,13 @@ body {
 }
 
 .barrabusca {
-    padding-top: 4%;
-    margin-top: 5%;
+    padding-top: 7%;
     margin-bottom: 30px;
     max-width: 300px;
     font-family: 'Oswald', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
+    position: relative;
 }
 
 .barrabusca button {
@@ -30,14 +29,14 @@ body {
     color: #FBFBFB;
 }
 
-  .botaoadd {
+.botaoadd {
     background-color: #343A40 !important;
     font-family: 'Oswald', sans-serif !important;
-  }
+}
 
-  .botaoadd:hover {
+.botaoadd:hover {
     background-color: #FF7700 !important;
-  }
+}
 
 .tabelinha {
     font-family: 'Oswald', sans-serif !important;
@@ -91,21 +90,21 @@ body {
 }
 
 .modais {
-  font-family: 'Oswald', sans-serif !important;
+    font-family: 'Oswald', sans-serif !important;
 }
 
 .modais .modbut {
-  background-color: #FF7700 !important;
-  outline: black !important;
-  box-shadow: #343A40 !important;
-  border: none !important;
+    background-color: #FF7700 !important;
+    outline: black !important;
+    box-shadow: #343A40 !important;
+    border: none !important;
 }
 
 .modais .modbut:hover {
-  background-color: black !important;
-  outline: black !important;
-  border: none !important;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.281) !important;
+    background-color: black !important;
+    outline: black !important;
+    border: none !important;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.281) !important;
 }
 
 .textview {

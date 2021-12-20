@@ -76,7 +76,7 @@ a {
 }
 
 .nav_list {
-    padding-top: 30%;
+    padding-top: 30% !important;
 }
 
 .nav_logo,

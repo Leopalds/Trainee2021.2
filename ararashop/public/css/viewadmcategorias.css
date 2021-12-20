@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -9,25 +9,26 @@ body{
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 5px;
+    padding-top: 7% !important;
 }
 
 .barra-de-pesquisa {
     width: 40%;
-    height: 40% !important; 
+    height: 40%;
     margin-left: 5%;
-    margin-top: 5% !important;
-
+    margin-top: 5%;
+    padding-top: 7%;
 }
 
 button {
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 .barra-de-pesquisa button {
     background-color: #ff7700;
     color: #343A40;
     transition: 200ms;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .barra-de-pesquisa button:hover {
@@ -80,10 +81,9 @@ button {
     width: 80%;
     margin-left: 5%;
     margin-right: 5%;
-
 }
 
-.formulario-modal h1{
+.formulario-modal h1 {
     font-size: 20px;
     margin-top: 5%;
 }
@@ -92,7 +92,7 @@ button {
     color: #343A40;
 }
 
-.conteudo-modal h2{
+.conteudo-modal h2 {
     font-size: 16px;
     margin-left: 5%;
 }
@@ -103,7 +103,7 @@ button {
 
 .elemento-visualiza {
     margin-top: 2% !important;
-    margin-bottom: 2% !important;  
+    margin-bottom: 2% !important;
 }
 
 .lista-de-categorias {
@@ -126,7 +126,7 @@ button {
     margin-right: 5%;
 }
 
-table ul button{
+table ul button {
     border-style: none;
     background-color: #272626;
     border-radius: 5px;
@@ -145,80 +145,96 @@ table ul button{
 .deleta-categoria h5 {
     color: #ff0211;
 }
- 
+
+.page-link {
+    background-color: #FF7700;
+    color: white;
+}
+
+.page-link:hover {
+    background-color: #343A40;
+    color: white;
+}
+
+.page-link:active {
+    background-color: #343A40;
+    color: white;
+}
+
+.page-link:focus {
+    background-color: #343A40;
+    color: white;
+}
+
+.page-item.active .page-link {
+    background-color: #343A40;
+    color: white;
+    border-color: white;
+}
+
 nav {
     width: 100% !important;
-} 
+}
 
-@media (min-width: 1044px){
-
+@media (min-width: 1044px) {
     body {
-    background-image: url("../img/fundoviewadmcategoria.png");
-    background-attachment: fixed;
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-color: #343A40;
-    background-position: center center;
+        background-image: url("../img/fundoviewadmcategoria.png");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: #343A40;
+        background-position: center center;
     }
 }
 
-@media (max-width: 1043px){
-    body{
-    background-image: url("../img/backnuvem.png");
-    background-attachment: fixed;
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-color: #343A40;
-    background-position: center center;
+@media (max-width: 1043px) {
+    body {
+        background-image: url("../img/backnuvem.png");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: #343A40;
+        background-position: center center;
     }
 }
 
 @media (max-width: 420px) {
-    body{
-    background-image: url("../img/back1.png");
-    background-attachment: fixed;
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-color: #343A40;
-    background-position: center center;
+    body {
+        background-image: url("../img/back1.png");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: #343A40;
+        background-position: center center;
     }
-
-   .lista-de-categorias ul li{
+    .lista-de-categorias ul li {
         display: flex;
         margin-top: 2% !important;
         margin-bottom: 2% !important;
         justify-content: center;
     }
-
     .lista-de-categorias button {
         width: 95% !important;
     }
 }
 
 @media (max-width: 620px) {
-
-.row {
-    display: block;
+    .row {
+        display: block;
     }
-
     .row input {
         margin-top: 2%;
         margin-bottom: 1%;
     }
-
     .row button {
         margin-top: 2%;
         margin-bottom: 1%;
     }
-
     .barra-de-pesquisa {
         width: 100%;
     }
-
     .modal-adiciona-categoria {
         width: 100%;
         margin-left: 2%;
     }
-
-    
 }
